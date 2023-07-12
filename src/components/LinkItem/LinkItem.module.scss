@@ -1,0 +1,22 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.link {
+  text-decoration: none;
+
+  .linkText {
+    @include regularFont(16px, normal);
+    color: $color-black;
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      color: $nav-bar_hover;
+    }
+
+    &_active {
+      display: inline;
+      border-bottom: 4px solid $nav-bar_hover;
+      color: $nav-bar_hover;
+    }
+  }
+}
