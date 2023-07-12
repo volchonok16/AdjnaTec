@@ -1,5 +1,10 @@
+import {PageWrapper} from '../../components/PageWrapper/PageWrapper';
+
 export const Collaboration = () => {
     return (
-        <div>Collaboration</div>
+        <PageWrapper title={'Сотрудничество'} rightBtn={false}>
+            <div>Collaboration</div>
+        </PageWrapper>
+
     )
 }

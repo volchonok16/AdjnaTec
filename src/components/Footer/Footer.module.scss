@@ -5,7 +5,7 @@
   position: relative;
 
   .background {
-    min-height: 450px;
+    min-height: 300px;
     width: 100%;
     position: absolute;
     background: linear-gradient(180deg, rgba(100, 149, 237, 0.00) 14.70%, #6495ED 100%);
@@ -16,8 +16,8 @@
     position: relative;
     z-index: 1;
     @include flexBox(23px, column, normal, flex-end);
-    min-height: 450px;
-    padding: 0 100px 107px 100px;
+    min-height: 300px;
+    padding: 0 100px 50px 100px;
 
     .content {
       @include flexBox(0, row, normal, space-between);
