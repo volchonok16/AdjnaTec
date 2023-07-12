@@ -1,0 +1,69 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.footerContainer {
+  position: relative;
+
+  .background {
+    min-height: 450px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(100, 149, 237, 0.00) 14.70%, #6495ED 100%);
+    filter: blur(75px);
+  }
+
+  .footerContent {
+    position: relative;
+    z-index: 1;
+    @include flexBox(23px, column, normal, flex-end);
+    min-height: 450px;
+    padding: 0 100px 107px 100px;
+
+    .content {
+      @include flexBox(0, row, normal, space-between);
+
+      .textWrapper {
+        @include flexBox(12px, column, normal, normal);
+
+        .companyName {
+          @include regularFont(25px, normal);
+          color: $color-black;
+        }
+
+        .info {
+          @include flexBox(0, column, normal, normal);
+
+          .text {
+            @include regularFont(20px, normal);
+            color: $color-black;
+          }
+        }
+      }
+
+      .button {
+        min-width: 250px;
+        width: 656px;
+        height: 82px;
+        border: none;
+
+        border-radius: 50px;
+        background: $button-color;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+        @include regularFont(35px, normal);
+        color: $color-black;
+      }
+    }
+
+    .greyLine {
+      display: inline;
+      border-bottom: 2px solid $color-black;
+      width: 100%;
+    }
+
+    .titleData {
+      @include regularFont(25px, normal);
+      color: $color-black;
+    }
+  }
+}
