@@ -1,0 +1,15 @@
+@mixin flexBox($gap, $direction: row, $align: center, $justify: space-between) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin regularFont($font: 14px, $lh: 20px) {
+  font-family: Roboto, sans-serif;
+  font-size: $font;
+  line-height: $lh;
+  letter-spacing: 0;
+  font-weight: 400;
+}
