@@ -7,13 +7,14 @@ type PageWrapperPropsType = {
     title: string,
     rightBtn?: boolean
     children: React.ReactNode
+    leftBtnFunc:VoidFunction
 }
 
-export const PageWrapper = ({title, rightBtn = true, children}: PageWrapperPropsType) => {
+export const PageWrapper = ({title, rightBtn = true, children, leftBtnFunc}: PageWrapperPropsType) => {
     return (
         <div className={s.wrapperContainer}>
             <div className={s.navigateButtonWrapper}>
-                <img className={s.image} src={leftArrow} alt={'left-button'}/>
+                <img className={s.image} src={leftArrow} alt={'left-button'} onClick={leftBtnFunc}/>
                 {rightBtn && (
                     <img className={s.image} src={rightArrow} alt={'right-button'}/>
                 )}

@@ -1,0 +1,16 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.container {
+  @include flexBox(20px, column, flex-start, normal);
+
+  .usefulText {
+    @include regularFont(31px, normal);
+    color: $color-black;
+  }
+
+  .infoText {
+    @include regularFont(25px, normal);
+    color: $color-black;
+  }
+}
