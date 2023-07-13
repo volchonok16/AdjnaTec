@@ -1,0 +1,29 @@
+@import "../../assets/styles/colors";
+@import "src/assets/styles/utils";
+
+.headerContainer {
+  position: relative;
+  height: 226px;
+  background: $color-white;
+  box-shadow: $color-header-box-shadow;
+  @include flexBox(0, row, center, center);
+
+  .logoContainer {
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+  }
+
+  .navigateContainer {
+    @include flexBox(20px, column, center, center);
+
+    .buttonsBlock {
+      @include flexBox(98px, row, normal, normal);
+    }
+
+    .companyName {
+      @include regularFont(96px, normal);
+      color: $color-black;
+    }
+  }
+}

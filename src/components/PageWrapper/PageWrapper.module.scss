@@ -1,0 +1,28 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.wrapperContainer {
+  @include flexBox(10px, column, flex-start, normal);
+  padding: 25px 120px 0 120px;
+  min-height: 455px;
+
+  .navigateButtonWrapper {
+    width: 100%;
+    @include flexBox(0, row, normal, space-between);
+
+    .image {
+      cursor: pointer;
+    }
+  }
+
+  .contentWrapper {
+    width: 100%;
+    @include flexBox(20px, column, center, normal);
+
+
+    .title {
+      @include regularFont(61px, normal);
+      color: $color-black
+    }
+  }
+}
