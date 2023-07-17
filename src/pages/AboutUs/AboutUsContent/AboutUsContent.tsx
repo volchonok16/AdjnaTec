@@ -1,5 +1,9 @@
+import s from './AboutUsContent.module.scss';
+
 export const AboutUsContent = () => {
     return (
-        <div>About US</div>
+        <div className={s.container}>
+
+        </div>
     )
 }
