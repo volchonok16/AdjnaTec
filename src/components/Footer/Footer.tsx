@@ -7,7 +7,7 @@ export const Footer = () => {
             <div className={s.footerContent}>
                 <div className={s.content}>
                     <div className={s.textWrapper}>
-                        <span className={s.companyName}>{'<AdjinaTech/>'}</span>
+                        <span className={s.companyName}>{'<AdjnaTech/>'}</span>
                         <div className={s.info}>
                             <span className={s.text}>Эффективные решения для</span>
                             <span className={s.text}>перезагрузки вашего бизнеса</span>
