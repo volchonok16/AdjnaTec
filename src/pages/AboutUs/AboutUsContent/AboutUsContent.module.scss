@@ -2,5 +2,81 @@
 @import "src/assets/styles/colors";
 
 .container {
-  @include flexBox(50px, column, flex-start, normal);
+  @include flexBox(50px, column, center, normal);
+
+  .descriptionBlock {
+    @include flexBox(80px, row, normal, normal);
+
+    .info {
+      @font-face {
+        font-family: Oswald;
+        src: url("https://fonts.google.com/specimen/Oswald?query=osw");
+      }
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  .expertiseBlock {
+    @include flexBox(0, column, normal, normal);
+
+    .text {
+      @font-face {
+        font-family: Lalezar;
+        src: url("https://fonts.google.com/specimen/Lalezar?query=lalezar");
+      }
+      font-size: 31px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: $color-black;
+    }
+  }
+
+  .advantageBlock {
+    @include flexBox(75px, column, center, normal);
+
+    .advantageTitle {
+      @font-face {
+        font-family: Lalezar;
+        src: url("https://fonts.google.com/specimen/Lalezar?query=lalezar");
+      }
+      font-size: 31px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: $color-black;
+    }
+
+    .circleContainer {
+      @include flexBox(25px, row, normal, normal);
+
+      .circle {
+        width: 200px;
+        height: 200px;
+        border: 1px solid $nav-bar_hover;
+        border-radius: 50%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .circleText {
+          @font-face {
+            font-family: Oswald;
+            src: url("https://fonts.google.com/specimen/Oswald?query=osw");
+          }
+          color: $nav-bar_hover;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.4px;
+        }
+      }
+    }
+  }
 }
