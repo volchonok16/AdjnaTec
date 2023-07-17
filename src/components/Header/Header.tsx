@@ -58,6 +58,8 @@ export const Header = () => {
         navigate(RoutPath.MainPage)
     }
 
+    const currentURL = window.location.pathname
+
     return (
         <div className={s.headerContainer}>
             <div className={s.logoContainer} onClick={mainPageHandler}>
@@ -67,9 +69,8 @@ export const Header = () => {
                 <div className={s.buttonsBlock}>
                     {
                         NavBarLinks.map((item) => {
-                            return <LinkItem item={item}
+                            return <LinkItem item={item} currentURL={currentURL}
                                              key={item.path}
-                                             activeLink={state}
                                              onActivateLink={activeLinkHandler}/>
                         })
                     }
