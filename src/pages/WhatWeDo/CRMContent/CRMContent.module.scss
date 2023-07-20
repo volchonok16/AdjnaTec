@@ -1,0 +1,43 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.container {
+  width: 100%;
+  @include flexBox(70px, column, center, center);
+
+  .line {
+    width: 90%;
+    border: 1px solid $color-line;
+  }
+
+  .crmBlock {
+    width: 80%;
+    @include flexBox(20px, row, flex-start);
+
+    .text {
+      font-family: Oswald, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: $color-black;
+    }
+
+    .img {
+      border-radius: 10px;
+    }
+  }
+
+  .description {
+    width: 80%;
+    @include flexBox(20px, column, normal, flex-start);
+
+    .descriptionText {
+      font-family: 'Comfortaa', cursive;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
