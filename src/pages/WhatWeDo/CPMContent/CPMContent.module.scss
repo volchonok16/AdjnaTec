@@ -1,0 +1,63 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.container {
+  width: 100%;
+  @include flexBox(100px, column, center, center);
+
+  .resourceBlock {
+    width: 70%;
+    @include flexBox(30px, column);
+
+    .resourceText {
+      @include regularFont(31px, normal);
+      color: $color-black;
+    }
+  }
+
+  .ideaBlock {
+    width: 100%;
+    @include flexBox(80px, column, center, center);
+
+    .ideaTitle {
+      font-family: Comfortaa, sans-serif;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: $color-black;
+    }
+
+    .descriptionBlock {
+      width: 60%;
+
+      .text {
+        @include regularFont(20px, normal);
+        color: $color-black;
+      }
+    }
+
+    .circleBlock {
+      width: 40%;
+      @include flexBox(0, row, center, space-between);
+
+      .circle {
+        width: 200px;
+        height: 200px;
+        border: 1px solid $nav-bar_hover;
+        border-radius: 50%;
+        @include flexBox(0, column, center, center);
+
+        .circleText {
+          font-family: Oswald, sans-serif;
+          color: $nav-bar_hover;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.4px;
+        }
+      }
+    }
+  }
+}
