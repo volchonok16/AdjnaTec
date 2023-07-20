@@ -5,13 +5,11 @@
   @include flexBox(50px, column, center, normal);
 
   .descriptionBlock {
+    width: 80%;
     @include flexBox(80px, row, normal, normal);
 
     .info {
-      @font-face {
-        font-family: Oswald;
-        src: url("https://fonts.google.com/specimen/Oswald?query=osw");
-      }
+      font-family: Oswald, sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 700;
@@ -23,10 +21,7 @@
     @include flexBox(0, column, normal, normal);
 
     .text {
-      @font-face {
-        font-family: Lalezar;
-        src: url("https://fonts.google.com/specimen/Lalezar?query=lalezar");
-      }
+      font-family: Lalezar, sans-serif;
       font-size: 31px;
       font-style: normal;
       font-weight: 400;
@@ -39,10 +34,7 @@
     @include flexBox(75px, column, center, normal);
 
     .advantageTitle {
-      @font-face {
-        font-family: Lalezar;
-        src: url("https://fonts.google.com/specimen/Lalezar?query=lalezar");
-      }
+      font-family: Lalezar, sans-serif;
       font-size: 31px;
       font-style: normal;
       font-weight: 400;
@@ -65,10 +57,7 @@
         justify-content: center;
 
         .circleText {
-          @font-face {
-            font-family: Oswald;
-            src: url("https://fonts.google.com/specimen/Oswald?query=osw");
-          }
+          font-family: Oswald, sans-serif;
           color: $nav-bar_hover;
           font-size: 20px;
           font-style: normal;
