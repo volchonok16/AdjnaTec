@@ -26,7 +26,7 @@
         @include flexBox(12px, column, normal, normal);
 
         .companyName {
-          @include regularFont(25px, normal);
+          @include RobotoRegular(25px, normal);
           color: $color-black;
         }
 
@@ -34,7 +34,7 @@
           @include flexBox(0, column, normal, normal);
 
           .text {
-            @include regularFont(20px, normal);
+            @include RobotoRegular(20px, normal);
             color: $color-black;
           }
         }
@@ -52,7 +52,7 @@
 
         cursor: pointer;
 
-        @include regularFont(35px, normal);
+        @include RobotoRegular(35px, normal);
         color: $color-black;
       }
     }
@@ -64,7 +64,7 @@
     }
 
     .titleData {
-      @include regularFont(25px, normal);
+      @include RobotoRegular(25px, normal);
       color: $color-black;
     }
   }

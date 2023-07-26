@@ -9,11 +9,7 @@
     @include flexBox(80px, row, normal, normal);
 
     .info {
-      font-family: Oswald, sans-serif;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
+      @include OswaldBold(20px, normal);
     }
   }
 
@@ -21,11 +17,7 @@
     @include flexBox(0, column, normal, normal);
 
     .text {
-      font-family: Lalezar, sans-serif;
-      font-size: 31px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include LalezarRegular(31px, normal);
       color: $color-black;
     }
   }
@@ -34,11 +26,7 @@
     @include flexBox(75px, column, center, normal);
 
     .advantageTitle {
-      font-family: Lalezar, sans-serif;
-      font-size: 31px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include LalezarRegular(31px, normal);
       color: $color-black;
     }
 
@@ -51,18 +39,11 @@
         border: 1px solid $nav-bar_hover;
         border-radius: 50%;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flexBox(0, column, center, center);
 
         .circleText {
-          font-family: Oswald, sans-serif;
+          @include OswaldRegular(20px, normal);
           color: $nav-bar_hover;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
           letter-spacing: 0.4px;
         }
       }

@@ -10,13 +10,13 @@
     @include flexBox(30px, column, flex-start);
 
     .ecmEasy {
-      @include regularFont(31px, normal);
+      @include RobotoRegular(31px, normal);
       color: $color-black;
       padding-left: 20px;
     }
 
     .ecmEasyDescription {
-      @include regularFont(20px, normal);
+      @include RobotoRegular(20px, normal);
       color: $color-black;
       padding-left: 20px;
     }
@@ -27,11 +27,7 @@
     @include flexBox(80px, column, center, center);
 
     .regionTitle {
-      font-family: Comfortaa, sans-serif;
-      font-size: 38px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include ComfortaaRegular(38px, normal);
       color: $color-black;
     }
 
@@ -47,12 +43,8 @@
         @include flexBox(0, column, center, center);
 
         .circleText {
-          font-family: Oswald, sans-serif;
+          @include OswaldRegular(20px, normal);
           color: $nav-bar_hover;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
           letter-spacing: 0.4px;
         }
       }
@@ -64,11 +56,7 @@
     @include flexBox(50px, column, flex-start);
 
     .tasksTitle {
-      font-family: Comfortaa, sans-serif;
-      font-size: 38px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include ComfortaaRegular(38px, normal);
       color: $color-black;
     }
 
@@ -76,7 +64,7 @@
       @include flexBox(5px, column, flex-start);
 
       .task {
-        @include regularFont(31px, normal);
+        @include RobotoRegular(31px, normal);
         color: $color-black;
       }
     }

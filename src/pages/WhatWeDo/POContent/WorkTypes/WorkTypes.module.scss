@@ -1,0 +1,45 @@
+@import "src/assets/styles/colors";
+@import "src/assets/styles/utils";
+
+.card {
+  box-sizing: border-box;
+  padding: 3%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  @include flexBox(22px, column, flex-start, normal);
+  height: 225px;
+  border-radius: 10px;
+  border: 2px solid $nav-bar_hover;
+
+  .card_title {
+    @include MonomaniacOneRegular(20px, normal);
+    color: $nav-bar_hover;
+    width: 63%;
+  }
+
+  .card_info {
+    @include MonomaniacOneRegular(16px, normal);
+    color: $color-black;
+    width: 63%;
+  }
+}
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4) {
+  flex-basis: calc(50% - 20px);
+
+  .card_title {
+    @include MonomaniacOneRegular(20px, normal);
+    color: $nav-bar_hover;
+    width: 63%;
+  }
+
+  .card_info {
+    @include MonomaniacOneRegular(16px, normal);
+    color: $color-black;
+    width: 63%;
+  }
+}

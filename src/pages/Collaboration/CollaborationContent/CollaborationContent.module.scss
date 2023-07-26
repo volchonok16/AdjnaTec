@@ -5,12 +5,12 @@
   @include flexBox(20px, column, flex-start, normal);
 
   .usefulText {
-    @include regularFont(31px, normal);
+    @include RobotoRegular(31px, normal);
     color: $color-black;
   }
 
   .infoText {
-    @include regularFont(25px, normal);
+    @include RobotoRegular(25px, normal);
     color: $color-black;
   }
 }

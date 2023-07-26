@@ -5,7 +5,7 @@
   text-decoration: none;
 
   .linkText {
-    @include regularFont(16px, normal);
+    @include RobotoRegular(16px, normal);
     color: $color-black;
     transition: ease-in-out 0.2s;
 
