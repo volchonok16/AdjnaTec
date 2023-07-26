@@ -6,10 +6,50 @@
   gap: $gap;
 }
 
-@mixin regularFont($font: 14px, $lh: 20px) {
+@mixin RobotoRegular($font: 14px, $lh: 20px) {
   font-family: Roboto, sans-serif;
   font-size: $font;
   line-height: $lh;
   letter-spacing: 0;
   font-weight: 400;
+}
+
+@mixin MonomaniacOneRegular($font, $lh) {
+  font-family: Monomaniac One, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $lh;
+}
+
+@mixin OswaldRegular ($font, $lh) {
+  font-family: Oswald, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $lh;
+}
+
+@mixin OswaldBold ($font, $lh) {
+  font-family: Oswald, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 700;
+  line-height: $lh;
+}
+
+@mixin LalezarRegular($font, $lh) {
+  font-family: Lalezar, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $lh;
+}
+
+@mixin ComfortaaRegular($font, $lh) {
+  font-family: Comfortaa, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $lh;
 }

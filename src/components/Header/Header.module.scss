@@ -22,7 +22,7 @@
     }
 
     .companyName {
-      @include regularFont(96px, normal);
+      @include RobotoRegular(96px, normal);
       color: $color-black;
     }
   }
