@@ -1,0 +1,29 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.card {
+  width: 100%;
+  @include flexBox(60px, column);
+
+  .line {
+    width: 100%;
+    border: 1px solid $color-line;
+  }
+
+  .content {
+    width: 100%;
+    @include flexBox(0, row, center, space-between);
+
+    .title {
+      width: 40%;
+      @include MonomaniacOneRegular(39px, normal);
+      color: $color-black;
+    }
+
+    .description {
+      width: 40%;
+      @include RobotoRegular(25px, normal);
+      color: $color-black;
+    }
+  }
+}

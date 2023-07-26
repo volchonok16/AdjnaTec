@@ -1,0 +1,29 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.container {
+  @include flexBox(40px, column);
+
+  .presentation {
+    @include RobotoRegular(20px, normal);
+    width: 70%;
+  }
+
+  .containerWork {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .typeOfPO {
+    margin-top: 50px;
+    @include MonomaniacOneRegular(48px, normal);
+    color: $color-black;
+  }
+
+  .containerPO {
+    width: 70%;
+    @include flexBox(20px, column, center, center);
+  }
+}
