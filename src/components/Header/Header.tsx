@@ -1,5 +1,5 @@
 import s from './Header.module.scss';
-import logo from '../../assets/image/logo.svg'
+import logo from '../../assets/image/color_logo.svg'
 import {NavBarLinks, NavBarLinksType} from './NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
 import {useNavigate} from 'react-router-dom';
@@ -62,20 +62,16 @@ export const Header = () => {
 
     return (
         <div className={s.headerContainer}>
-            <div className={s.logoContainer} onClick={mainPageHandler}>
-                <img src={logo} alt={'logo-img'}/>
-            </div>
-            <div className={s.navigateContainer}>
-                <div className={s.buttonsBlock}>
-                    {
-                        NavBarLinks.map((item) => {
-                            return <LinkItem item={item} currentURL={currentURL}
-                                             key={item.path}
-                                             onActivateLink={activeLinkHandler}/>
-                        })
-                    }
-                </div>
-                <span className={s.companyName}>{'<AdjnaTech/>'}</span>
+            <img src={logo} alt={'logo-img'} className={s.logo}
+                 onClick={mainPageHandler}/>
+            <div className={s.buttonsBlock}>
+                {
+                    NavBarLinks.map((item) => {
+                        return <LinkItem item={item} currentURL={currentURL}
+                                         key={item.path}
+                                         onActivateLink={activeLinkHandler}/>
+                    })
+                }
             </div>
         </div>
     )
