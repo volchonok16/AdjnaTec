@@ -1,29 +1,50 @@
 @import "../../assets/styles/colors";
 @import "src/assets/styles/utils";
 
-.headerContainer {
-  position: relative;
-  height: 226px;
-  background: $color-white;
-  box-shadow: $color-header-box-shadow;
-  @include flexBox(0, row, center, center);
+@media screen and (min-width: 1281px) {
+  .headerContainer {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 999;
+    max-width: 1920px;
+    width: 100%;
+    padding: 5px 4%;
+    fill: rgba(255, 255, 255, 0.60);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: $color-header-box-shadow;
+    @include flexBox(0, row, center, space-between);
 
-  .logoContainer {
-    position: absolute;
-    left: 50px;
-    cursor: pointer;
-  }
-
-  .navigateContainer {
-    @include flexBox(20px, column, center, center);
-
-    .buttonsBlock {
-      @include flexBox(98px, row, normal, normal);
+    .logo {
+      cursor: pointer;
+      scale: inherit;
     }
 
-    .companyName {
-      @include RobotoRegular(96px, normal);
-      color: $color-black;
+    .buttonsBlock {
+      @include flexBox(100px, row, normal, normal);
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+  .headerContainer {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 999;
+    max-width: 1280px;
+    width: 100%;
+    padding: 5px 4%;
+    fill: rgba(255, 255, 255, 0.60);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: $color-header-box-shadow;
+    @include flexBox(0, row, center, space-between);
+
+    .logo {
+      cursor: pointer;
+      scale: inherit;
+    }
+
+    .buttonsBlock {
+      @include flexBox(67px, row, normal, normal);
     }
   }
 }
