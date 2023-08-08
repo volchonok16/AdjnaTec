@@ -3,6 +3,7 @@
 
 @media screen and (min-width: 1281px) {
   .headerContainer {
+    background: rgb(255, 255, 255, 0.8);
     box-sizing: border-box;
     position: fixed;
     z-index: 999;
@@ -27,6 +28,7 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1280px){
   .headerContainer {
+    background: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     position: fixed;
     z-index: 999;
