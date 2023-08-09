@@ -1,6 +1,6 @@
 import s from './MainPage.module.scss'
 import React, {useState, useRef, useEffect} from 'react'
-
+import arrow from '../../assets/image/MainPage/Arrow 1.svg'
 
 export const MainPage = () => {
 
@@ -73,43 +73,53 @@ export const MainPage = () => {
             </div>
             <div ref={(el: HTMLDivElement) => blockRefs.current[2] = el}
                  className={s.about_us_block}>
-                Hay
-            </div>
-            {/*<AdvertBlock/>
-            <ProductBlock/>
-            <div className={s.productBlock}>
-                <div className={s.titleWrapper}>
-                    <span className={s.text1}>Эффективные решения для перезагрузки вашего бизнеса </span>
-                    <span className={s.text2}>движущая  сила ваших перемен</span>
+                <div className={s.img_container}>
+                    <div className={s.cards_container}>
+                        <div className={s.card_1}>
+                            <span className={s.card_text}>ERP системы</span>
+                        </div>
+                        <div className={s.card_without_back}>
+                            <span className={s.card_without_back_text}>Команда AdjnaTech  создает IT-решения, включающее  управление проектом,  составление технических заданий, разработку самой системы, а также её тестирование и дальнейшее сопровождение.
+</span>
+                        </div>
+                        <div className={s.card_2}>
+                            <span className={s.card_text}>Визуализация данных</span>
+                        </div>
+                        <div className={s.card_3}>
+                            <span className={s.card_text}>Управление</span>
+                            <span className={s.card_text}>эффективностью</span>
+                            <span className={s.card_text}>предприятия СРМ</span>
+                        </div>
+                        <div className={s.card_4}>
+                            <span className={s.card_text}>Разработка на заказ</span>
+                        </div>
+                        <div className={s.card_without_back}>
+                            <span className={s.card_without_back_text}>Мы занимаемся разработкой програмного обеспечения. Создаем системы управления данными и оптимизации бизнес-процессов повышающие эффективность
+бизнеса наших клиентов.
+</span>
+                        </div>
+                    </div>
+                    <div className={s.connect_container}>
+                        <div className={s.connect_card}>
+                            <span className={s.connect_card_text}>ЕСМ системы</span>
+                        </div>
+                        <button className={s.button}>
+                            <img src={arrow} alt={'arrow'}/>
+                            <span className={s.button_text}>Связаться</span>
+                        </button>
+                    </div>
                 </div>
-                <div className={s.cardWrapper}>
-                    <div className={s.background}/>
-                    <div className={s.content}>
-                        <div className={s.autoPlan}>
-                            <span className={s.autoPlanText}>Автоплан</span>
-                        </div>
-                        <div className={s.atp_online}>
-                            <span className={s.atp_text1}>Атп-онлайн</span>
-                            <span className={s.atp_text2}>Учет и управление автотранспортным предприятием</span>
-                        </div>
+                <div className={s.footer_container}>
+                    <div className={s.block_1}>
+                        <span className={s.block_1_text_1}>{`<AdjnaTech/>`}</span>
+                        <span className={s.block_1_text_2}>Эффективные решения для перезагрузки вашего бизнеса</span>
+                    </div>
+                    <div className={s.block_2}>
+                        <div className={s.line}/>
+                        <span className={s.block_2_text_1}>@ AdjnaTech 2023</span>
                     </div>
                 </div>
             </div>
-            <div className={s.advertBlock}>
-                <span className={s.companyName}>{'<AdjnaTech/>'}</span>
-            </div>
-            <div className={s.workTypeBlock}>
-                <span className={s.text1}>Наша  команда разработчиков аналитиков и дизайнеров имеет опыт разработки и внедрения систем контроля и автоматизации бизнесс процессов на предприятиях.Мы создадим для вас надежную систему автоматизации которая позволит ускорить работу избежать ошибок связанных с человеческим фактором и оптимировать затраты. </span>
-                <span className={s.text2}>Направления деятельности</span>
-                <span className={s.text3}>
-Наша экспертиза позволяет создавать эффективные индивидуальные решения: мы используем лучший опыт крупнейших ИТ‑проектов в России</span>
-                <div className={s.imgBlock}>
-                    <img src={PO} className={s.PO_img} alt={'PO'}/>
-                    <img src={ECM} className={s.ECM_img} alt={'ECM'}/>
-                    <img src={CRM} className={s.CRM_img} alt={'CRM'}/>
-                    <img src={CPM} className={s.CPM_img} alt={'CPM'}/>
-                </div>
-            </div>*/}
         </div>
     )
 }
