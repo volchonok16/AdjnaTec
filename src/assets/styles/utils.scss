@@ -14,6 +14,14 @@
   font-weight: 400;
 }
 
+@mixin RobotoMedium($font: 14px, $lh: 20px) {
+  font-family: Roboto, sans-serif;
+  font-size: $font;
+  line-height: $lh;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
 @mixin MonomaniacOneRegular($font, $lh) {
   font-family: Monomaniac One, sans-serif;
   font-size: $font;
@@ -67,5 +75,13 @@
   font-size: $font;
   font-style: normal;
   font-weight: 500;
+  line-height: $lh;
+}
+
+@mixin MontserratBolt($font, $lh) {
+  font-family: Montserrat, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 600;
   line-height: $lh;
 }
