@@ -34,11 +34,42 @@ export const MainPage = () => {
         <div className={s.scroll_container} onWheel={handleScroll}>
             <div ref={(el: HTMLDivElement) => blockRefs.current[0] = el}
                  className={s.advert_block}>
-                Hey
+                <div className={s.adjna_block}>
+                    <span className={s.companyName}>{'<AdjnaTech/>'}</span>
+                    <span
+                        className={s.text_2}>уникальные IT-продукты для наших клиентов</span>
+                </div>
+                <div className={s.we_create_container}>
+                    <div className={s.we_create_back}>
+                        <span className={s.we_create_text}>
+Мы создаем системы эффективного контроля и управления, <span
+                            className={s.part_1}>чтобы</span>  <span className={s.part_2}>вы достигли больших результатов</span>
+                        </span>
+                    </div>
+                </div>
             </div>
             <div ref={(el: HTMLDivElement) => blockRefs.current[1] = el}
                  className={s.product_block}>
-                Hoy
+                <span className={s.product_h1}>Сколько стоит содержание авиапарка и куда реально утекают эти деньги?</span>
+                <div className={s.product_container}>
+                    <div className={s.product}>
+                        <div className={s.atp_container}>
+                            <span className={s.avtoplan_text}>Автоплан</span>
+                        </div>
+                        <div className={s.atp_online}>
+                            <span className={s.atp_text_1}>АТП-онлайн</span>
+                            <span className={s.atp_text_2}>Учет и управление автотранспортным предприятием</span>
+                        </div>
+                    </div>
+                    <div className={s.text_container}>
+<span className={s.text}>
+    Программа с простым интерфейсом и сложными алгоритмами работы поможет автоматизировать работу операторов, аналитиков, управленцев и контролеров.
+</span>
+                        <span className={s.text}>
+                            Такой подход позволит свести ручную обработку к минимуму.
+                        </span>
+                    </div>
+                </div>
             </div>
             <div ref={(el: HTMLDivElement) => blockRefs.current[2] = el}
                  className={s.about_us_block}>
