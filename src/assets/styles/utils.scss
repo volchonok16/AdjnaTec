@@ -22,7 +22,7 @@
   line-height: $lh;
 }
 
-@mixin OswaldRegular ($font, $lh) {
+@mixin OswaldRegular($font, $lh) {
   font-family: Oswald, sans-serif;
   font-size: $font;
   font-style: normal;
@@ -30,7 +30,7 @@
   line-height: $lh;
 }
 
-@mixin OswaldBold ($font, $lh) {
+@mixin OswaldBold($font, $lh) {
   font-family: Oswald, sans-serif;
   font-size: $font;
   font-style: normal;
@@ -51,5 +51,21 @@
   font-size: $font;
   font-style: normal;
   font-weight: 400;
+  line-height: $lh;
+}
+
+@mixin MontserratRegular($font, $lh) {
+  font-family: Montserrat, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $lh;
+}
+
+@mixin MontserratMedium($font, $lh) {
+  font-family: Montserrat, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 500;
   line-height: $lh;
 }
