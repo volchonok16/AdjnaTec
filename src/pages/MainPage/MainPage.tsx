@@ -1,12 +1,51 @@
 import s from './MainPage.module.scss'
-import CPM from '../../assets/image/CPM_main.png';
-import CRM from '../../assets/image/CRM_main.png';
-import ECM from '../../assets/image/ECM_main.png';
-import PO from '../../assets/image/PO_main.png';
+import React, {useState, useRef, useEffect} from 'react'
+
 
 export const MainPage = () => {
+
+    const blockRefs = useRef<HTMLDivElement[]>([]);
+
+    const [currentBlock, setCurrentBlock] = useState<number>(0);
+
+    const handleScroll = (e: React.WheelEvent) => {
+        if (e.deltaY > 0) {
+            setCurrentBlock((prevBlock) => Math.min(prevBlock + 1, blockRefs.current.length - 1));
+        } else {
+            setCurrentBlock((prevBlock) => Math.max(prevBlock - 1, 0));
+        }
+    };
+
+    const moveBlocks = () => {
+
+        /*const offset = -currentBlock * 87;*/
+        const offset = currentBlock ? (-currentBlock * 87) : (-currentBlock * 100)
+        blockRefs.current.forEach((block) => {
+            block.style.transform = `translateY(${offset}vh)`;
+        });
+    };
+
+    useEffect(() => {
+        moveBlocks()
+    })
+
+
     return (
-        <div className={s.container}>
+        <div className={s.scroll_container} onWheel={handleScroll}>
+            <div ref={(el: HTMLDivElement) => blockRefs.current[0] = el}
+                 className={s.advert_block}>
+                Hey
+            </div>
+            <div ref={(el: HTMLDivElement) => blockRefs.current[1] = el}
+                 className={s.product_block}>
+                Hoy
+            </div>
+            <div ref={(el: HTMLDivElement) => blockRefs.current[2] = el}
+                 className={s.about_us_block}>
+                Hay
+            </div>
+            {/*<AdvertBlock/>
+            <ProductBlock/>
             <div className={s.productBlock}>
                 <div className={s.titleWrapper}>
                     <span className={s.text1}>Эффективные решения для перезагрузки вашего бизнеса </span>
@@ -39,7 +78,7 @@ export const MainPage = () => {
                     <img src={CRM} className={s.CRM_img} alt={'CRM'}/>
                     <img src={CPM} className={s.CPM_img} alt={'CPM'}/>
                 </div>
-            </div>
+            </div>*/}
         </div>
     )
 }
