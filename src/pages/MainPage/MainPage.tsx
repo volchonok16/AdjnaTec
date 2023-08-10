@@ -108,7 +108,7 @@ export const MainPage = () => {
                             <span className={s.connect_card_text}>ЕСМ системы</span>
                         </div>
                         <button className={s.button}>
-                            <img src={arrow} alt={'arrow'}/>
+                            <img className={s.img} src={arrow} alt={'arrow'}/>
                             <span className={s.button_text}>Связаться</span>
                         </button>
                     </div>
