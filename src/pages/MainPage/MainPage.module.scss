@@ -85,7 +85,6 @@
       .product_h1 {
         @include RobotoRegular(70px, normal);
         color: $color-pink;
-        max-width: 90vw;
       }
 
       .product_container {
@@ -168,6 +167,8 @@
           .card_without_back {
             width: 23vw;
             height: 22.77vh;
+            box-sizing: border-box;
+            padding-left: 10px;
 
             .card_without_back_text {
               @include MontserratRegular(24px, normal);
@@ -384,7 +385,6 @@
       .product_h1 {
         @include RobotoRegular(54px, normal);
         color: $color-pink;
-        max-width: 90vw;
       }
 
       .product_container {
@@ -467,6 +467,8 @@
           .card_without_back {
             width: 23vw;
             height: 22.77vh;
+            box-sizing: border-box;
+            padding-left: 10px;
 
             .card_without_back_text {
               @include MontserratRegular(18px, normal);
@@ -765,6 +767,8 @@
           .card_without_back {
             width: 23vw;
             height: 22.77vh;
+            box-sizing: border-box;
+            padding-left: 10px;
 
             .card_without_back_text {
               @include MontserratRegular(16px, normal);
@@ -981,7 +985,6 @@
       .product_h1 {
         @include RobotoRegular(37px, normal);
         color: $color-pink;
-        max-width: 90vw;
       }
 
       .product_container {
@@ -1064,9 +1067,11 @@
           .card_without_back {
             width: 23vw;
             height: 22.77vh;
+            box-sizing: border-box;
+            padding-left: 10px;
 
             .card_without_back_text {
-              @include MontserratRegular(15px, normal);
+              @include MontserratRegular(14px, normal);
               color: $color-black;
             }
           }
