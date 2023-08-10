@@ -2,7 +2,7 @@
 @import "src/assets/styles/colors";
 
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1441px) {
 
   .link {
     text-decoration: none;
@@ -27,13 +27,63 @@
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px){
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+
+  .link {
+    text-decoration: none;
+
+    .linkText {
+      @include RobotoRegular(14px, normal);
+      color: $color-black;
+      transition: ease-in-out 0.2s;
+
+      &:hover {
+        background: linear-gradient(91deg, rgba(255, 0, 61, 0.60) 0%, rgba(5, 0, 227, 0.60) 50%, #5200FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &_active {
+        background: linear-gradient(91deg, rgba(255, 0, 61, 0.60) 0%, rgba(5, 0, 227, 0.60) 50%, #5200FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
 
   .link {
     text-decoration: none;
 
     .linkText {
       @include RobotoRegular(12px, normal);
+      color: $color-black;
+      transition: ease-in-out 0.2s;
+
+      &:hover {
+        background: linear-gradient(91deg, rgba(255, 0, 61, 0.60) 0%, rgba(5, 0, 227, 0.60) 50%, #5200FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &_active {
+        background: linear-gradient(91deg, rgba(255, 0, 61, 0.60) 0%, rgba(5, 0, 227, 0.60) 50%, #5200FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .link {
+    text-decoration: none;
+
+    .linkText {
+      @include RobotoRegular(10px, normal);
       color: $color-black;
       transition: ease-in-out 0.2s;
 

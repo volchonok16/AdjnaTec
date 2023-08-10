@@ -62,8 +62,10 @@ export const Header = () => {
 
     return (
         <div className={s.headerContainer}>
-            <img src={logo} alt={'logo-img'} className={s.logo}
-                 onClick={mainPageHandler}/>
+            <div className={s.logo_container}>
+                <img src={logo} alt={'logo-img'} className={s.logo}
+                     onClick={mainPageHandler}/>
+            </div>
             <div className={s.buttonsBlock}>
                 {
                     NavBarLinks.map((item) => {
