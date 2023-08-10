@@ -1,39 +1,41 @@
 import s from './MainPage.module.scss'
-import React, {useState, useRef, useEffect} from 'react'
+import React from 'react'
 import arrow from '../../assets/image/MainPage/Arrow 1.svg'
 
 export const MainPage = () => {
 
-    const blockRefs = useRef<HTMLDivElement[]>([]);
+    //Логика бля блочного скролинга контента
+    /*    const blockRefs = useRef<HTMLDivElement[]>([]);
 
-    const [currentBlock, setCurrentBlock] = useState<number>(0);
+        const [currentBlock, setCurrentBlock] = useState<number>(0);
 
-    const handleScroll = (e: React.WheelEvent) => {
-        if (e.deltaY > 0) {
-            setCurrentBlock((prevBlock) => Math.min(prevBlock + 1, blockRefs.current.length - 1));
-        } else {
-            setCurrentBlock((prevBlock) => Math.max(prevBlock - 1, 0));
-        }
-    };
+        const handleScroll = (e: React.WheelEvent) => {
+            if (e.deltaY > 0) {
+                setCurrentBlock((prevBlock) => Math.min(prevBlock + 1, blockRefs.current.length - 1));
+            } else {
+                setCurrentBlock((prevBlock) => Math.max(prevBlock - 1, 0));
+            }
+        };
 
-    const moveBlocks = () => {
+        const moveBlocks = () => {
+            const offset = currentBlock ? (-currentBlock * 87) : (-currentBlock * 100)
+            blockRefs.current.forEach((block) => {
+                block.style.transform = `translateY(${offset}vh)`;
+            });
+        };
 
-        /*const offset = -currentBlock * 87;*/
-        const offset = currentBlock ? (-currentBlock * 87) : (-currentBlock * 100)
-        blockRefs.current.forEach((block) => {
-            block.style.transform = `translateY(${offset}vh)`;
-        });
-    };
-
-    useEffect(() => {
-        moveBlocks()
-    })
+        useEffect(() => {
+            moveBlocks()
+        })*/
 
 
     return (
-        <div className={s.scroll_container} onWheel={handleScroll}>
-            <div ref={(el: HTMLDivElement) => blockRefs.current[0] = el}
-                 className={s.advert_block}>
+        <div className={s.scroll_container}
+            /*onWheel={handleScroll}*/
+        >
+            <div
+                /*ref={(el: HTMLDivElement) => blockRefs.current[0] = el}*/
+                className={s.advert_block}>
                 <div className={s.adjna_block}>
                     <span className={s.companyName}>{'<AdjnaTech/>'}</span>
                     <span
@@ -48,8 +50,9 @@ export const MainPage = () => {
                     </div>
                 </div>
             </div>
-            <div ref={(el: HTMLDivElement) => blockRefs.current[1] = el}
-                 className={s.product_block}>
+            <div
+                /*ref={(el: HTMLDivElement) => blockRefs.current[1] = el}*/
+                className={s.product_block}>
                 <span className={s.product_h1}>Как сократить расходы на содержание автопарка?</span>
                 <div className={s.product_container}>
                     <div className={s.product}>
@@ -71,8 +74,9 @@ export const MainPage = () => {
                     </div>
                 </div>
             </div>
-            <div ref={(el: HTMLDivElement) => blockRefs.current[2] = el}
-                 className={s.about_us_block}>
+            <div
+                /*ref={(el: HTMLDivElement) => blockRefs.current[2] = el}*/
+                className={s.about_us_block}>
                 <div className={s.img_container}>
                     <div className={s.cards_container}>
                         <div className={s.card_1}>
