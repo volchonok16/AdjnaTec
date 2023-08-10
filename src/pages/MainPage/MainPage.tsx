@@ -79,28 +79,32 @@ export const MainPage = () => {
                 className={s.about_us_block}>
                 <div className={s.img_container}>
                     <div className={s.cards_container}>
-                        <div className={s.card_1}>
-                            <span className={s.card_text}>ERP системы</span>
-                        </div>
-                        <div className={s.card_without_back}>
+                        <div className={s.cards_line}>
+                            <div className={s.card_1}>
+                                <span className={s.card_text}>ERP системы</span>
+                            </div>
+                            <div className={s.card_without_back}>
                             <span className={s.card_without_back_text}>Команда AdjnaTech  создает IT-решения, включающее  управление проектом,  составление технических заданий, разработку самой системы, а также её тестирование и дальнейшее сопровождение.
 </span>
+                            </div>
+                            <div className={s.card_2}>
+                                <span className={s.card_text}>Визуализация данных</span>
+                            </div>
                         </div>
-                        <div className={s.card_2}>
-                            <span className={s.card_text}>Визуализация данных</span>
-                        </div>
-                        <div className={s.card_3}>
-                            <span className={s.card_text}>Управление</span>
-                            <span className={s.card_text}>эффективностью</span>
-                            <span className={s.card_text}>предприятия СРМ</span>
-                        </div>
-                        <div className={s.card_4}>
-                            <span className={s.card_text}>Разработка на заказ</span>
-                        </div>
-                        <div className={s.card_without_back}>
+                        <div className={s.cards_line}>
+                            <div className={s.card_3}>
+                                <span className={s.card_text}>Управление</span>
+                                <span className={s.card_text}>эффективностью</span>
+                                <span className={s.card_text}>предприятия СРМ</span>
+                            </div>
+                            <div className={s.card_4}>
+                                <span className={s.card_text}>Разработка на заказ</span>
+                            </div>
+                            <div className={s.card_without_back}>
                             <span className={s.card_without_back_text}>Мы занимаемся разработкой програмного обеспечения. Создаем системы управления данными и оптимизации бизнес-процессов повышающие эффективность
 бизнеса наших клиентов.
 </span>
+                            </div>
                         </div>
                     </div>
                     <div className={s.connect_container}>

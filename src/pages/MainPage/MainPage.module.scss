@@ -159,8 +159,11 @@
         @include flexBox(1.25vw, row, normal, normal);
 
         .cards_container {
-          @include flexBox(1vw, row, normal, normal);
-          flex-wrap: wrap;
+          @include flexBox(1vw, column, normal, normal);
+
+          .cards_line {
+            @include flexBox(1vw, row, normal, normal);
+          }
 
           .card_without_back {
             width: 23vw;
@@ -455,8 +458,11 @@
         @include flexBox(1.25vw, row, normal, normal);
 
         .cards_container {
-          @include flexBox(1vw, row, normal, normal);
-          flex-wrap: wrap;
+          @include flexBox(1vw, column, normal, normal);
+
+          .cards_line {
+            @include flexBox(1vw, row, normal, normal);
+          }
 
           .card_without_back {
             width: 23vw;
@@ -750,8 +756,11 @@
         @include flexBox(1.25vw, row, normal, normal);
 
         .cards_container {
-          @include flexBox(1vw, row, normal, normal);
-          flex-wrap: wrap;
+          @include flexBox(1vw, column, normal, normal);
+
+          .cards_line {
+            @include flexBox(1vw, row, normal, normal);
+          }
 
           .card_without_back {
             width: 23vw;
@@ -1046,8 +1055,11 @@
         @include flexBox(1.25vw, row, normal, normal);
 
         .cards_container {
-          @include flexBox(1vw, row, normal, normal);
-          flex-wrap: wrap;
+          @include flexBox(1vw, column, normal, normal);
+
+          .cards_line {
+            @include flexBox(1vw, row, normal, normal);
+          }
 
           .card_without_back {
             width: 23vw;
