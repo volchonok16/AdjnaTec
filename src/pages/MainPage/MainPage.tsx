@@ -50,7 +50,7 @@ export const MainPage = () => {
             </div>
             <div ref={(el: HTMLDivElement) => blockRefs.current[1] = el}
                  className={s.product_block}>
-                <span className={s.product_h1}>Сколько стоит содержание авиапарка и куда реально утекают эти деньги?</span>
+                <span className={s.product_h1}>Как сократить расходы на содержание автопарка?</span>
                 <div className={s.product_container}>
                     <div className={s.product}>
                         <div className={s.atp_container}>
@@ -63,10 +63,10 @@ export const MainPage = () => {
                     </div>
                     <div className={s.text_container}>
 <span className={s.text}>
-    Программа с простым интерфейсом и сложными алгоритмами работы поможет автоматизировать работу операторов, аналитиков, управленцев и контролеров.
+    Наше решение – автоплан. Программный комплекс нового поколения для автоматизации управления, учета и документооборота любой транспортной компании.
 </span>
                         <span className={s.text}>
-                            Такой подход позволит свести ручную обработку к минимуму.
+                            Такой подход к организации рабочих процессов позволит максимально исключить «человеческий фактор» и повысить эффективность ваших расходов.
                         </span>
                     </div>
                 </div>
