@@ -158,7 +158,7 @@
         @include flexBox(1.25vw, row, normal, normal);
 
         .cards_container {
-          @include flexBox(1vw, column, normal, normal);
+          @include flexBox(2vh, column, normal, normal);
 
           .cards_line {
             @include flexBox(1vw, row, normal, normal);
@@ -458,7 +458,7 @@
         @include flexBox(1.25vw, row, normal, normal);
 
         .cards_container {
-          @include flexBox(1vw, column, normal, normal);
+          @include flexBox(1.5vh, column, normal, normal);
 
           .cards_line {
             @include flexBox(1vw, row, normal, normal);
@@ -758,7 +758,7 @@
         @include flexBox(1.25vw, row, normal, normal);
 
         .cards_container {
-          @include flexBox(1vw, column, normal, normal);
+          @include flexBox(2vh, column, normal, normal);
 
           .cards_line {
             @include flexBox(1vw, row, normal, normal);
@@ -1058,7 +1058,7 @@
         @include flexBox(1.25vw, row, normal, normal);
 
         .cards_container {
-          @include flexBox(1vw, column, normal, normal);
+          @include flexBox(2vh, column, normal, normal);
 
           .cards_line {
             @include flexBox(1vw, row, normal, normal);
