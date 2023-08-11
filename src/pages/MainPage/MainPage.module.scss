@@ -399,7 +399,7 @@
             border-radius: 15px;
             background: #F4F9F8;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
-            filter: blur(6px);
+            filter: blur(4.5px);
             @include flexBox(0, column, center, center);
 
             .avtoplan_text {
@@ -699,12 +699,12 @@
             border-radius: 15px;
             background: #F4F9F8;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
-            filter: blur(6px);
+            filter: blur(4px);
             @include flexBox(0, column, center, center);
 
             .avtoplan_text {
               @include RobotoRegular(40px, normal);
-              filter: blur(2px);
+              filter: blur(1px);
             }
           }
 
@@ -999,7 +999,7 @@
             border-radius: 15px;
             background: #F4F9F8;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
-            filter: blur(6px);
+            filter: blur(3px);
             @include flexBox(0, column, center, center);
 
             .avtoplan_text {
