@@ -2,7 +2,7 @@
 @import "src/assets/styles/colors";
 
 
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1601px) {
 
   .link {
     text-decoration: none;
@@ -19,6 +19,36 @@
 
       &:hover {
         background-position: -100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &_active {
+        background: linear-gradient(91deg, rgba(255, 0, 61, 0.60) 0%, rgba(5, 0, 227, 0.60) 50%, #5200FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+
+  .link {
+    text-decoration: none;
+
+    .linkText {
+      @include RobotoRegular(16px, normal);
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 0, 61, 0.60) 0%, rgba(5, 0, 227, 0.60) 50%, #5200FF 100%);
+      background-size: 200% 100%;
+      background-position: -100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-position: 0;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
