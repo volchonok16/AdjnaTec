@@ -10,15 +10,15 @@
     .linkText {
       @include RobotoRegular(18px, normal);
       position: relative;
-      background-image: linear-gradient(to right, rgba(255, 0, 61, 0.60) 0%, rgba(5, 0, 227, 0.60) 50%, #5200FF 100%);
+      background-image: linear-gradient(to left, rgba(255, 0, 61, 0.60) 0%, rgba(5, 0, 227, 0.60) 50%, #5200FF 100%);
       background-size: 200% 100%;
-      background-position: -100%;
+      background-position: 0;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        background-position: 0;
+        background-position: -100%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
