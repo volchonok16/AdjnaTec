@@ -65,8 +65,8 @@ export const MainPage = () => {
                         </div>
                     </div>
                     <div className={s.text_container}>
-<span className={s.text}>
-    Наше решение – автоплан. Программный комплекс нового поколения для автоматизации управления, учета и документооборота любой транспортной компании.
+                        <span className={s.product_name}>Наше решение - АТП-онлайн</span>
+                        <span className={s.text}>Программный комплекс нового поколения для автоматизации управления, учета и документооборота любой транспортной компании.
 </span>
                         <span className={s.text}>
                             Такой подход к организации рабочих процессов позволит максимально исключить «человеческий фактор» и повысить эффективность ваших расходов.
@@ -115,6 +115,50 @@ export const MainPage = () => {
                             <img className={s.img} src={arrow} alt={'arrow'}/>
                             <span className={s.button_text}>Связаться</span>
                         </button>
+                    </div>
+                </div>
+                <div className={s.img_container_tablet}>
+                    <div className={s.cards_container_tablet}>
+                        <div className={s.cards_column}>
+                            <div className={s.card_1}>
+                                <span className={s.card_text}>ERP системы</span>
+                            </div>
+                            <div className={s.card_4}>
+                                <span className={s.card_text}>Разработка на заказ</span>
+                            </div>
+                        </div>
+                        <div className={s.cards_column}>
+                            <div className={s.card_3}>
+                                <span
+                                    className={s.card_text}>Управление эффективностью</span>
+                                <span className={s.card_text}>предприятия СРМ</span>
+                            </div>
+                            <div className={s.card_without_back_tablet}>
+        <span className={s.card_without_back_text_tablet}>Команда AdjnaTech  создает IT-решения, включающее  управление проектом,  составление технических заданий, разработку самой системы, а также её тестирование дальнейшее сопровождение.
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={s.cards_container_tablet}>
+                        <div className={s.cards_column}>
+                            <div className={s.card_without_back_tablet}>
+                                <span className={s.card_without_back_text_tablet}>Мы занимаемся разработкой програмного обеспечения. Создаем системы управления данными и оптимизации бизнес-процессов повышающие эффективность бизнеса наших клиентов.
+                                </span>
+                            </div>
+                            <div className={s.card_2}>
+                                <span className={s.card_text}>Виртуализация данных</span>
+                            </div>
+                        </div>
+                        <div className={s.cards_column}>
+                            <div className={s.connect_card_tablet}>
+                                <span
+                                    className={s.connect_card_text_tablet}>ЕСМ системы</span>
+                            </div>
+                            <button className={s.button}>
+                                <img className={s.img} src={arrow} alt={'arrow'}/>
+                                <span className={s.button_text}>Связаться</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className={s.footer_container}>
