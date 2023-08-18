@@ -1,7 +1,7 @@
 @import "../../assets/styles/colors";
 @import "src/assets/styles/utils";
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1920px) {
   .headerContainer {
     background: rgb(255, 255, 255, 0.8);
     box-sizing: border-box;
@@ -34,13 +34,13 @@
   }
 }
 
-@media screen and (min-width: 1441px) and (max-width: 1600px) {
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
   .headerContainer {
     background: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     position: fixed;
     z-index: 999;
-    max-width: 1600px;
+    max-width: 1919px;
     width: 100%;
     height: 7.4vh;
     padding: 0 4%;
@@ -65,13 +65,13 @@
   }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1440px) {
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
   .headerContainer {
     background: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     position: fixed;
     z-index: 999;
-    max-width: 1440px;
+    max-width: 1599px;
     width: 100%;
     height: 7.4vh;
     padding: 0 4%;
@@ -96,13 +96,13 @@
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
   .headerContainer {
     background: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     position: fixed;
     z-index: 999;
-    max-width: 1280px;
+    max-width: 1439px;
     width: 100%;
     height: 7.4vh;
     padding: 0 4%;
@@ -127,13 +127,13 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
   .headerContainer {
     background: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     position: fixed;
     z-index: 999;
-    max-width: 1024px;
+    max-width: 1279px;
     width: 100%;
     height: 7.4vh;
     padding: 0 4%;
@@ -154,6 +154,37 @@
 
     .buttonsBlock {
       @include flexBox(53px, row, normal, normal);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .headerContainer {
+    background: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 999;
+    max-width: 1023px;
+    width: 100%;
+    height: 7.4vh;
+    padding: 0 4%;
+    fill: rgba(255, 255, 255, 0.60);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: $color-header-box-shadow;
+    @include flexBox(0, row, center, space-between);
+
+    .logo_container {
+      height: 97%;
+
+      .logo {
+        cursor: pointer;
+        height: inherit;
+        width: auto;
+      }
+    }
+
+    .buttonsBlock {
+      @include flexBox(40px, row, normal, normal);
     }
   }
 }

@@ -1,7 +1,7 @@
 @import "src/assets/styles/colors";
 @import "src/assets/styles/utils";
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1920px) {
   .scroll_container {
     @include flexBox(0, column, flex-start, normal);
 
@@ -83,7 +83,7 @@
       @include flexBox(8vh, column, normal, normal);
 
       .product_h1 {
-        @include RobotoRegular(70px, normal);
+        @include RobotoBolt(70px, normal);
         color: $color-pink;
       }
 
@@ -97,14 +97,13 @@
             width: 31vw;
             height: 26vh;
             border-radius: 15px;
-            background: #F4F9F8;
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
-            filter: blur(6px);
+            background: #FFF;
+            box-shadow: 0 4px 5px 0 rgba(120, 168, 194, 0.50);
             @include flexBox(0, column, center, center);
 
             .avtoplan_text {
               @include RobotoRegular(60px, normal);
-              filter: blur(2px);
+              filter: blur(4.5px);
             }
           }
 
@@ -116,8 +115,8 @@
             left: 45%;
             padding-top: 10%;
             border-radius: 15px;
-            background: rgba(176, 218, 240, 0.90);
-            box-shadow: 0 4px 20px 0 #78A8C2;
+            background: rgba(150, 197, 239, 0.90);
+            box-shadow: 2px 2px 5px 0 #78A8C2;
             @include flexBox(10px, column, normal, normal);
 
             .atp_text_1 {
@@ -138,6 +137,11 @@
         .text_container {
           max-width: 39vw;
           @include flexBox(25px, column, normal, normal);
+
+          .product_name {
+            @include MontserratBolt(46px, normal);
+            color: #8FBBE2;
+          }
 
           .text {
             @include MontserratRegular(36px, normal);
@@ -258,6 +262,10 @@
         }
       }
 
+      .img_container_tablet {
+        display: none;
+      }
+
       .footer_container {
         @include flexBox(1.7vh, column, normal, normal);
 
@@ -301,7 +309,7 @@
   }
 }
 
-@media screen and (min-width: 1441px) and (max-width: 1600px) {
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
   .scroll_container {
     @include flexBox(0, column, flex-start, normal);
 
@@ -383,7 +391,7 @@
       @include flexBox(8vh, column, normal, normal);
 
       .product_h1 {
-        @include RobotoRegular(58px, normal);
+        @include RobotoBolt(58px, normal);
         color: $color-pink;
       }
 
@@ -397,27 +405,26 @@
             width: 31vw;
             height: 26vh;
             border-radius: 15px;
-            background: #F4F9F8;
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
-            filter: blur(6px);
+            background: #FFF;
+            box-shadow: 0 4px 5px 0 rgba(120, 168, 194, 0.50);
             @include flexBox(0, column, center, center);
 
             .avtoplan_text {
               @include RobotoRegular(50px, normal);
-              filter: blur(1.5px);
+              filter: blur(4px);
             }
           }
 
           .atp_online {
             position: absolute;
             width: 31vw;
-            height: 24vh;
-            top: 43%;
+            height: 21vh;
+            top: 40%;
             left: 45%;
             padding-top: 10%;
             border-radius: 15px;
-            background: rgba(176, 218, 240, 0.90);
-            box-shadow: 0 4px 20px 0 #78A8C2;
+            background: rgba(150, 197, 239, 0.90);
+            box-shadow: 2px 2px 5px 0 #78A8C2;
             @include flexBox(10px, column, normal, normal);
 
             .atp_text_1 {
@@ -438,6 +445,11 @@
         .text_container {
           max-width: 39vw;
           @include flexBox(28px, column, normal, normal);
+
+          .product_name {
+            @include MontserratBolt(38px, normal);
+            color: #8FBBE2;
+          }
 
           .text {
             @include MontserratRegular(30px, normal);
@@ -558,6 +570,10 @@
         }
       }
 
+      .img_container_tablet {
+        display: none;
+      }
+
       .footer_container {
         @include flexBox(1.7vh, column, normal, normal);
 
@@ -601,7 +617,7 @@
   }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1440px) {
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
   .scroll_container {
     @include flexBox(0, column, flex-start, normal);
 
@@ -683,7 +699,7 @@
       @include flexBox(8vh, column, normal, normal);
 
       .product_h1 {
-        @include RobotoRegular(54px, normal);
+        @include RobotoBolt(54px, normal);
         color: $color-pink;
       }
 
@@ -697,27 +713,26 @@
             width: 31vw;
             height: 26vh;
             border-radius: 15px;
-            background: #F4F9F8;
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
-            filter: blur(4.5px);
+            background: #FFF;
+            box-shadow: 0 4px 5px 0 rgba(120, 168, 194, 0.50);
             @include flexBox(0, column, center, center);
 
             .avtoplan_text {
               @include RobotoRegular(46px, normal);
-              filter: blur(2px);
+              filter: blur(3.5px);
             }
           }
 
           .atp_online {
             position: absolute;
             width: 31vw;
-            height: 24vh;
+            height: 22vh;
             top: 52%;
             left: 45%;
             padding-top: 10%;
             border-radius: 15px;
-            background: rgba(176, 218, 240, 0.90);
-            box-shadow: 0 4px 20px 0 #78A8C2;
+            background: #96C5EF;
+            box-shadow: 2px 2px 5px 0 #78A8C2;
             @include flexBox(9px, column, normal, normal);
 
             .atp_text_1 {
@@ -738,6 +753,11 @@
         .text_container {
           max-width: 39vw;
           @include flexBox(22px, column, normal, normal);
+
+          .product_name {
+            @include MontserratBolt(31px, normal);
+            color: #8FBBE2;
+          }
 
           .text {
             @include MontserratRegular(24px, normal);
@@ -858,6 +878,10 @@
         }
       }
 
+      .img_container_tablet {
+        display: none;
+      }
+
       .footer_container {
         @include flexBox(1.7vh, column, normal, normal);
 
@@ -901,7 +925,7 @@
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
   .scroll_container {
     @include flexBox(0, column, flex-start, normal);
 
@@ -983,7 +1007,7 @@
       @include flexBox(8vh, column, normal, normal);
 
       .product_h1 {
-        @include RobotoRegular(50px, normal);
+        @include RobotoBolt(48px, normal);
         color: $color-pink;
       }
 
@@ -997,26 +1021,26 @@
             width: 31vw;
             height: 26vh;
             border-radius: 15px;
-            background: #F4F9F8;
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
-            filter: blur(4px);
+            background: #FFFFFF;
+            box-shadow: 0 4px 5px 0 rgba(120, 168, 194, 0.50);
             @include flexBox(0, column, center, center);
 
             .avtoplan_text {
               @include RobotoRegular(40px, normal);
-              filter: blur(1px);
+              color: rgba(51, 51, 51, 0.80);
+              filter: blur(3px);
             }
           }
 
           .atp_online {
             position: absolute;
             width: 31vw;
-            height: 24vh;
+            height: 22vh;
             top: 42%;
             left: 45%;
             padding-top: 10%;
             border-radius: 15px;
-            background: rgba(176, 218, 240, 0.90);
+            background: #96C5EF;
             box-shadow: 0 4px 20px 0 #78A8C2;
             @include flexBox(8px, column, normal, normal);
 
@@ -1038,6 +1062,11 @@
         .text_container {
           max-width: 39vw;
           @include flexBox(18px, column, normal, normal);
+
+          .product_name {
+            @include MontserratBolt(31px, normal);
+            color: #8FBBE2;
+          }
 
           .text {
             @include MontserratRegular(24px, normal);
@@ -1158,6 +1187,10 @@
         }
       }
 
+      .img_container_tablet {
+        display: none;
+      }
+
       .footer_container {
         @include flexBox(1.7vh, column, normal, normal);
 
@@ -1201,7 +1234,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
   .scroll_container {
     @include flexBox(0, column, flex-start, normal);
 
@@ -1283,7 +1316,7 @@
       @include flexBox(8vh, column, normal, normal);
 
       .product_h1 {
-        @include RobotoRegular(37px, normal);
+        @include RobotoBolt(37px, normal);
         color: $color-pink;
       }
 
@@ -1295,15 +1328,15 @@
 
           .atp_container {
             width: 31vw;
-            height: 26vh;
+            height: 22vh;
             border-radius: 15px;
-            background: #F4F9F8;
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
-            filter: blur(3px);
+            background: #FFFFFF;
+            box-shadow: 0 4px 5px 0 rgba(120, 168, 194, 0.50);
             @include flexBox(0, column, center, center);
 
             .avtoplan_text {
               @include RobotoRegular(32px, normal);
+              color: rgba(51, 51, 51, 0.80);
               filter: blur(2px);
             }
           }
@@ -1311,13 +1344,13 @@
           .atp_online {
             position: absolute;
             width: 31vw;
-            height: 24vh;
-            top: 47%;
+            height: 20vh;
+            top: 41%;
             left: 45%;
             padding-top: 10%;
             border-radius: 15px;
-            background: rgba(176, 218, 240, 0.90);
-            box-shadow: 0 4px 20px 0 #78A8C2;
+            background: #96C5EF;
+            box-shadow: 2px 2px 5px 0 #78A8C2;
             @include flexBox(7px, column, normal, normal);
 
             .atp_text_1 {
@@ -1329,8 +1362,8 @@
             .atp_text_2 {
               @include MontserratRegular(18px, normal);
               color: $color-white;
-              max-width: 50%;
-              padding-left: 40%;
+              max-width: 65%;
+              padding-left: 35%;
             }
           }
         }
@@ -1338,6 +1371,11 @@
         .text_container {
           max-width: 39vw;
           @include flexBox(14px, column, normal, normal);
+
+          .product_name {
+            @include MontserratBolt(25px, normal);
+            color: #8FBBE2;
+          }
 
           .text {
             @include MontserratRegular(20px, normal);
@@ -1462,6 +1500,10 @@
         }
       }
 
+      .img_container_tablet {
+        display: none;
+      }
+
       .footer_container {
         @include flexBox(1.7vh, column, normal, normal);
 
@@ -1480,7 +1522,7 @@
             @include MontserratRegular(12px, normal);
             color: $color-black;
             letter-spacing: 0.24px;
-            max-width: 18vw;
+            max-width: 20vw;
           }
         }
 
@@ -1505,3 +1547,311 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .scroll_container {
+    @include flexBox(0, column, flex-start, normal);
+
+    .advert_block {
+      width: 100%;
+      height: 100vh;
+      background-image: url("../../assets/image/MainPage/advert_block_background.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 0.5s ease;
+      @include flexBox(12vh, column, flex-start, normal);
+      box-sizing: border-box;
+      padding: 20vh 2vw;
+
+      .adjna_block {
+        box-sizing: border-box;
+        @include flexBox(0, column, flex-start, normal);
+
+        .companyName {
+          @include RobotoRegular(80px, normal);
+          background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 49.46%, rgba(43, 1, 134, 0.50) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .text_2 {
+          padding-left: 26.6vw;
+          @include MontserratMedium(14.4px, normal);
+          color: $color-advert-text;
+        }
+      }
+
+      .we_create_container {
+        width: 100%;
+        @include flexBox(0, row, normal, flex-end);
+
+        .we_create_back {
+          box-sizing: border-box;
+          width: 76.25vw;
+          height: auto;
+          padding: 2% 1.84%;
+          border-radius: 40px;
+          background: rgba(255, 255, 255, 0.60);
+
+          .we_create_text {
+            @include MontserratRegular(16px, normal);
+            opacity: 0.5;
+            background: linear-gradient(270deg, #FF003D 0%, #0500E3 51.04%, #2B0186 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            .part_1 {
+              @include MontserratRegular(16px, normal);
+              background: linear-gradient(272deg, #2B0186 0%, #0600E0 51.03%, rgba(5, 0, 227, 0.50) 51.04%, #FF003D 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+
+            .part_2 {
+              @include MontserratRegular(16px, normal);
+              background: linear-gradient(272deg, #FF003D 0%, #0500E3 51.04%, #2B0186 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .product_block {
+      width: 100%;
+      height: 100vh;
+      background-image: url("../../assets/image/MainPage/product_block_background.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 0.5s ease;
+      box-sizing: border-box;
+      padding: 17vh 2vw;
+      @include flexBox(8vh, column, normal, normal);
+
+      .product_h1 {
+        @include RobotoBolt(28px, normal);
+        color: $color-pink;
+      }
+
+      .product_container {
+        @include flexBox(0, row, normal, space-between);
+
+        .product {
+          position: relative;
+
+          .atp_container {
+            width: 31vw;
+            height: 26vh;
+            border-radius: 15px;
+            background: #FFFFFF;
+            box-shadow: 2px 2px 5px 0 rgba(120, 168, 194, 0.50);
+            @include flexBox(0, column, center, center);
+
+            .avtoplan_text {
+              @include RobotoRegular(24px, normal);
+              color: rgba(51, 51, 51, 0.80);
+              filter: blur(2px);
+            }
+          }
+
+          .atp_online {
+            position: absolute;
+            width: 31vw;
+            height: 24vh;
+            top: 39%;
+            left: 45%;
+            padding-top: 10%;
+            border-radius: 15px;
+            background: #96C5EF;
+            box-shadow: 2px 2px 5px 0 rgba(120, 168, 194, 0.50);
+            @include flexBox(5px, column, normal, normal);
+
+            .atp_text_1 {
+              @include RobotoRegular(22px, normal);
+              color: $color-white;
+              padding-left: 7%;
+            }
+
+            .atp_text_2 {
+              @include MontserratRegular(14px, normal);
+              color: $color-white;
+              max-width: 65%;
+              padding-left: 35%;
+            }
+          }
+        }
+
+        .text_container {
+          max-width: 45vw;
+          @include flexBox(12px, column, normal, normal);
+
+          .product_name {
+            @include MontserratBolt(22px, normal);
+            color: #8FBBE2;
+          }
+
+          .text {
+            @include MontserratRegular(15px, normal);
+          }
+        }
+      }
+    }
+
+    .about_us_block {
+      width: 100%;
+      transition: transform 0.5s ease;
+      box-sizing: border-box;
+      padding: 20vh 2vw 6vh 2vw;
+      @include flexBox(10vh, column, normal, normal);
+
+      .img_container {
+        display: none;
+      }
+
+      .img_container_tablet {
+        @include flexBox(2vh, column, normal, normal);
+
+        .cards_container_tablet {
+          @include flexBox(0, row, normal, space-between);
+
+          .cards_column {
+            @include flexBox(10px, column, normal, normal);
+          }
+
+          .card_without_back_tablet {
+            width: 47vw;
+            height: 150px;
+            box-sizing: border-box;
+            padding-left: 10px;
+            @include flexBox(0, column, center, center);
+
+            .card_without_back_text_tablet {
+              @include MontserratRegular(15px, normal);
+              color: $color-black;
+            }
+          }
+
+          .card_1 {
+            width: 47vw;
+            height: 150px;
+            background-image: url("../../assets/image/MainPage/ERP.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            @include flexBox(0, column, center, center);
+          }
+
+          .card_2 {
+            width: 47vw;
+            height: 150px;
+            background-image: url("../../assets/image/MainPage/Vertyalization.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            @include flexBox(0, column, center, center);
+          }
+
+          .card_3 {
+            width: 47vw;
+            height: 150px;
+            background-image: url("../../assets/image/MainPage/CPM.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            @include flexBox(0, column, center, center);
+          }
+
+          .card_4 {
+            width: 47vw;
+            height: 150px;
+            background-image: url("../../assets/image/MainPage/DevelopForOrder.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            @include flexBox(0, column, center, center);
+          }
+
+          .card_text {
+            @include MontserratBolt(16px, normal);
+            color: $color-white;
+          }
+
+          .connect_card_tablet {
+            @include flexBox(0, column, center, center);
+            width: 47vw;
+            height: 248px;
+            background-image: url("../../assets/image/MainPage/ECM.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+
+            .connect_card_text_tablet {
+              @include MontserratBolt(16px, normal);
+              color: $color-white;
+            }
+          }
+
+          .button {
+            @include flexBox(20px, row, center, center);
+            width: 47vw;
+            height: 52px;
+            border-radius: 20px;
+            background-color: #7CB5FF;
+            border: 5px solid #7CB5FF;
+            padding-left: 5px;
+
+            .img {
+              scale: 90%;
+            }
+
+            .button_text {
+              @include MontserratMedium(20px, normal);
+              letter-spacing: 0.4px;
+              color: $color-white;
+            }
+          }
+        }
+      }
+
+      .footer_container {
+        @include flexBox(1.7vh, column, normal, normal);
+
+        .block_1 {
+          @include flexBox(1.85vh, column, normal, normal);
+
+          .block_1_text_1 {
+            padding-left: 1vw;
+            @include RobotoMedium(11px, normal);
+            color: $color-black;
+            letter-spacing: 0.22px;
+          }
+
+          .block_1_text_2 {
+            padding-left: 1vw;
+            @include MontserratRegular(9px, normal);
+            color: $color-black;
+            letter-spacing: 0.18px;
+            max-width: 20vw;
+          }
+        }
+
+        .block_2 {
+          @include flexBox(0.8vh, column, normal, normal);
+
+          .line {
+            display: inline;
+            border-bottom: 2px solid $color-black;
+            width: 100%;
+          }
+
+          .block_2_text_1 {
+            padding-left: 1vw;
+            @include RobotoMedium(11px, normal);
+            color: $color-black;
+            letter-spacing: 0.22px;
+          }
+        }
+      }
+    }
+  }
+}
