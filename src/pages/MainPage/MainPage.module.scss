@@ -148,6 +148,10 @@
           }
         }
       }
+
+      .product_container_mobile {
+        display: none;
+      }
     }
 
     .about_us_block {
@@ -263,6 +267,10 @@
       }
 
       .img_container_tablet {
+        display: none;
+      }
+
+      .img_container_mobile {
         display: none;
       }
 
@@ -456,6 +464,10 @@
           }
         }
       }
+
+      .product_container_mobile {
+        display: none;
+      }
     }
 
     .about_us_block {
@@ -571,6 +583,10 @@
       }
 
       .img_container_tablet {
+        display: none;
+      }
+
+      .img_container_mobile {
         display: none;
       }
 
@@ -764,6 +780,10 @@
           }
         }
       }
+
+      .product_container_mobile {
+        display: none;
+      }
     }
 
     .about_us_block {
@@ -879,6 +899,10 @@
       }
 
       .img_container_tablet {
+        display: none;
+      }
+
+      .img_container_mobile {
         display: none;
       }
 
@@ -1073,6 +1097,10 @@
           }
         }
       }
+
+      .product_container_mobile {
+        display: none;
+      }
     }
 
     .about_us_block {
@@ -1188,6 +1216,10 @@
       }
 
       .img_container_tablet {
+        display: none;
+      }
+
+      .img_container_mobile {
         display: none;
       }
 
@@ -1382,6 +1414,10 @@
           }
         }
       }
+
+      .product_container_mobile {
+        display: none;
+      }
     }
 
     .about_us_block {
@@ -1501,6 +1537,10 @@
       }
 
       .img_container_tablet {
+        display: none;
+      }
+
+      .img_container_mobile {
         display: none;
       }
 
@@ -1695,6 +1735,10 @@
           }
         }
       }
+
+      .product_container_mobile {
+        display: none;
+      }
     }
 
     .about_us_block {
@@ -1813,6 +1857,10 @@
         }
       }
 
+      .img_container_mobile {
+        display: none;
+      }
+
       .footer_container {
         @include flexBox(1.7vh, column, normal, normal);
 
@@ -1851,6 +1899,288 @@
             letter-spacing: 0.22px;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .scroll_container {
+    @include flexBox(0, column, flex-start, normal);
+
+    .advert_block {
+      width: 100%;
+      height: 100vh;
+      background-image: url("../../assets/image/MainPage/advert_block_background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform 0.5s ease;
+      @include flexBox(20vh, column, flex-start, normal);
+      box-sizing: border-box;
+      padding: 20vh 2vw;
+
+      .adjna_block {
+        box-sizing: border-box;
+        @include flexBox(0, column, flex-start, normal);
+
+        .companyName {
+          @include RobotoRegular(40px, normal);
+          background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 49.46%, rgba(43, 1, 134, 0.50) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .text_2 {
+          padding-left: 16.6vw;
+          @include MontserratMedium(10px, normal);
+          color: $color-advert-text;
+        }
+      }
+
+      .we_create_container {
+        width: 100%;
+        @include flexBox(0, row, normal, flex-end);
+
+        .we_create_back {
+          box-sizing: border-box;
+          width: 85.25vw;
+          height: auto;
+          padding: 2% 6.84%;
+          border-radius: 16px;
+          background: rgba(255, 255, 255, 0.60);
+
+          .we_create_text {
+            @include MontserratRegular(12px, normal);
+            opacity: 0.5;
+            background: linear-gradient(270deg, #FF003D 0%, #0500E3 51.04%, #2B0186 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            .part_1 {
+              @include MontserratRegular(12px, normal);
+              background: linear-gradient(272deg, #2B0186 0%, #0600E0 51.03%, rgba(5, 0, 227, 0.50) 51.04%, #FF003D 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+
+            .part_2 {
+              @include MontserratRegular(12px, normal);
+              background: linear-gradient(272deg, #FF003D 0%, #0500E3 51.04%, #2B0186 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .product_block {
+      width: 100%;
+      height: auto;
+      background-image: url("../../assets/image/MainPage/product_block_background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform 0.5s ease;
+      box-sizing: border-box;
+      padding: 12vh 4vw;
+      @include flexBox(20px, column, normal, normal);
+
+      .product_h1 {
+        @include RobotoBolt(22px, normal);
+        color: $color-pink;
+      }
+
+      .product_container {
+        display: none;
+      }
+
+      .product_container_mobile {
+        @include flexBox(20px, column, normal, normal);
+
+        .text_container_mobile {
+          @include flexBox(3px, column, normal, normal);
+          box-sizing: border-box;
+          padding-left: 20%;
+
+          .product_name_mobile {
+            @include MontserratBolt(15px, normal);
+            color: #8FBBE2;
+          }
+
+          .text_mobile {
+            @include MontserratRegular(14px, normal);
+          }
+        }
+
+        .product_mobile {
+          position: relative;
+
+          .atp_container_mobile {
+            width: 58.7vw;
+            height: 100px;
+            border-radius: 15px;
+            background: #FFFFFF;
+            box-shadow: 2px 2px 5px 0 rgba(120, 168, 194, 0.50);
+            @include flexBox(0, column, center, center);
+
+            .avtoplan_text_mobile {
+              @include RobotoRegular(22px, normal);
+              color: rgba(51, 51, 51, 0.80);
+              filter: blur(2px);
+            }
+          }
+
+          .atp_online_mobile {
+            position: absolute;
+            width: 58.7vw;
+            height: 90px;
+            top: 65%;
+            left: 35%;
+            padding-top: 4%;
+            border-radius: 15px;
+            background: #96C5EF;
+            box-shadow: 2px 2px 5px 0 rgba(120, 168, 194, 0.50);
+            @include flexBox(5px, column, normal, normal);
+
+            .atp_text_1_mobile {
+              @include RobotoRegular(20px, normal);
+              color: $color-white;
+              padding-left: 7%;
+            }
+
+            .atp_text_2_mobile {
+              @include MontserratRegular(12px, normal);
+              color: $color-white;
+              max-width: 65%;
+              padding-left: 30%;
+            }
+          }
+        }
+
+        .text_2_mobile {
+          padding-top: 75px;
+          @include MontserratRegular(14px, normal);
+        }
+      }
+    }
+
+    .about_us_block {
+      width: 100%;
+      transition: transform 0.5s ease;
+      box-sizing: border-box;
+      padding: 10vh 4vw 6vh 4vw;
+      @include flexBox(10vh, column, normal, normal);
+
+      .img_container {
+        display: none;
+      }
+
+      .img_container_tablet {
+        display: none;
+      }
+
+      .img_container_mobile {
+        @include flexBox(20px, column, flex-end, normal);
+
+        .card_without_back_text_mobile {
+          @include MontserratRegular(12px, normal);
+          color: $color-black;
+        }
+
+        .cards_block_mobile {
+          width: 100%;
+          @include flexBox(0, row, normal, space-between);
+
+          .cards_column_mobile {
+            @include flexBox(10px, column, normal, normal);
+
+            .card_1_mobile {
+              width: 45vw;
+              height: 100px;
+              background-image: url("../../assets/image/MainPage/ERP.png");
+              background-size: cover;
+              background-repeat: no-repeat;
+              border-radius: 16px;
+              @include flexBox(0, column, center, center);
+            }
+
+            .card_2_mobile {
+              width: 45vw;
+              height: 100px;
+              background-image: url("../../assets/image/MainPage/Vertyalization.png");
+              background-size: cover;
+              background-repeat: no-repeat;
+              border-radius: 16px;
+              @include flexBox(0, column, center, center);
+            }
+
+            .card_3_mobile {
+              width: 45vw;
+              height: 100px;
+              background-image: url("../../assets/image/MainPage/CPM.png");
+              background-size: cover;
+              background-repeat: no-repeat;
+              border-radius: 16px;
+              @include flexBox(0, column, center, center);
+            }
+
+            .card_4_mobile {
+              width: 45vw;
+              height: 100px;
+              background-image: url("../../assets/image/MainPage/DevelopForOrder.png");
+              background-size: cover;
+              background-repeat: no-repeat;
+              border-radius: 16px;
+              @include flexBox(0, column, center, center);
+            }
+
+            .card_text_mobile {
+              @include MontserratBolt(13px, normal);
+              color: $color-white;
+            }
+
+            .connect_card_tablet_mobile {
+              @include flexBox(0, column, center, center);
+              width: 45vw;
+              height: 212px;
+              background-image: url("../../assets/image/MainPage/ECM.png");
+              background-size: cover;
+              background-repeat: no-repeat;
+              border-radius: 16px;
+
+              .connect_card_text_tablet_mobile {
+                @include MontserratBolt(14px, normal);
+                color: $color-white;
+              }
+            }
+          }
+        }
+
+        .button {
+          @include flexBox(5px, row, center, center);
+          width: 188px;
+          height: 36px;
+          border-radius: 20px;
+          background-color: #7CB5FF;
+          border: 5px solid #7CB5FF;
+          padding-left: 5px;
+
+          .img {
+            scale: 50%;
+          }
+
+          .button_text {
+            @include MontserratMedium(16px, normal);
+            letter-spacing: 0.32px;
+            color: $color-white;
+          }
+        }
+      }
+
+      .footer_container {
+        display: none;
       }
     }
   }
