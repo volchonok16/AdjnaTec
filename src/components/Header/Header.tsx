@@ -1,5 +1,6 @@
 import s from './Header.module.scss';
-import logo from '../../assets/image/color_logo.svg'
+import logo from '../../assets/image/Header/color_logo.svg'
+import burger from '../../assets/image/Header/burger.svg'
 import {NavBarLinks, NavBarLinksType} from './NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
 import {useNavigate} from 'react-router-dom';
@@ -75,6 +76,7 @@ export const Header = () => {
                     })
                 }
             </div>
+            <img className={s.burger_menu} src={burger} alt={'burger menu'}/>
         </div>
     )
 }

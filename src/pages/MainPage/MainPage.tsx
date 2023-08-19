@@ -73,6 +73,27 @@ export const MainPage = () => {
                         </span>
                     </div>
                 </div>
+                <div className={s.product_container_mobile}>
+                    <div className={s.text_container_mobile}>
+                        <span
+                            className={s.product_name_mobile}>Наше решение - АТП-онлайн</span>
+                        <span className={s.text_mobile}>Программный комплекс нового поколения для автоматизации управления, учета и документооборота любой транспортной компании.
+</span>
+                    </div>
+                    <div className={s.product_mobile}>
+                        <div className={s.atp_container_mobile}>
+                            <span className={s.avtoplan_text_mobile}>Автоплан</span>
+                        </div>
+                        <div className={s.atp_online_mobile}>
+                            <span className={s.atp_text_1_mobile}>АТП-онлайн</span>
+                            <span className={s.atp_text_2_mobile}>Учет и управление автотранспортным предприятием</span>
+                        </div>
+                    </div>
+                    <span className={s.text_2_mobile}>
+                        Такой подход к организации рабочих процессов позволит максимально исключить «человеческий фактор»
+и повысить эффективность ваших расходов.
+                    </span>
+                </div>
             </div>
             <div
                 /*ref={(el: HTMLDivElement) => blockRefs.current[2] = el}*/
@@ -160,6 +181,51 @@ export const MainPage = () => {
                             </button>
                         </div>
                     </div>
+                </div>
+                <div className={s.img_container_mobile}>
+                    <span className={s.card_without_back_text_mobile}
+                          style={{paddingLeft: '20%'}}>
+                        Команда AdjnaTech  создает IT-решения, включающее  управление проектом,  составление технических заданий, разработку самой системы, а также её тестирование и дальнейшее сопровождение.
+                    </span>
+                    <div className={s.cards_block_mobile}>
+                        <div className={s.cards_column_mobile}>
+                            <div className={s.card_1_mobile}>
+                                <span className={s.card_text_mobile}>ERP системы</span>
+                            </div>
+                            <div className={s.card_3_mobile}>
+                                <span className={s.card_text_mobile}>Управление</span>
+                                <span className={s.card_text_mobile}>эффективностью</span>
+                                <span
+                                    className={s.card_text_mobile}>предприятия СРМ</span>
+                            </div>
+                            <div className={s.card_2_mobile}>
+                                <span className={s.card_text_mobile}>Визуалтзация</span>
+                                <span className={s.card_text_mobile}>данных</span>
+                            </div>
+                        </div>
+                        <div className={s.cards_column_mobile}>
+                            <div className={s.card_4_mobile}>
+                                <span className={s.card_text_mobile}>
+                                    Разработка
+                                </span>
+                                <span className={s.card_text_mobile}>
+                                    на заказ
+                                </span>
+                            </div>
+                            <div className={s.connect_card_tablet_mobile}>
+                                <span className={s.connect_card_text_tablet_mobile}>
+                                    ECM системы
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <span className={s.card_without_back_text_mobile}>
+                        Мы занимаемся разработкой програмного обеспечения. Создаем системы управления данными и оптимизации бизнес-процессов повышающие эффективность бизнеса наших клиентов.
+                    </span>
+                    <button className={s.button}>
+                        <img className={s.img} src={arrow} alt={'arrow'}/>
+                        <span className={s.button_text}>Связаться</span>
+                    </button>
                 </div>
                 <div className={s.footer_container}>
                     <div className={s.block_1}>
