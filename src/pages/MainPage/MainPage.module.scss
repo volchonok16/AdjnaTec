@@ -1925,15 +1925,15 @@
         @include flexBox(0, column, flex-start, normal);
 
         .companyName {
-          @include RobotoRegular(40px, normal);
+          @include RobotoRegular(calc(40px + 40 * ((100vw - 320px) / 448)), normal);
           background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 49.46%, rgba(43, 1, 134, 0.50) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
 
         .text_2 {
-          padding-left: 16.6vw;
-          @include MontserratMedium(10px, normal);
+          padding-left: 12.6vw;
+          @include MontserratMedium(calc(10px + 5 * ((100vw - 320px) / 448)), normal);
           color: $color-advert-text;
         }
       }
@@ -1951,21 +1951,21 @@
           background: rgba(255, 255, 255, 0.60);
 
           .we_create_text {
-            @include MontserratRegular(12px, normal);
+            @include MontserratRegular(calc(12px + 4 * ((100vw - 320px) / 448)), normal);
             opacity: 0.5;
             background: linear-gradient(270deg, #FF003D 0%, #0500E3 51.04%, #2B0186 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
             .part_1 {
-              @include MontserratRegular(12px, normal);
+              @include MontserratRegular(calc(12px + 4 * ((100vw - 320px) / 448)), normal);
               background: linear-gradient(272deg, #2B0186 0%, #0600E0 51.03%, rgba(5, 0, 227, 0.50) 51.04%, #FF003D 100%);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
 
             .part_2 {
-              @include MontserratRegular(12px, normal);
+              @include MontserratRegular(calc(12px + 4 * ((100vw - 320px) / 448)), normal);
               background: linear-gradient(272deg, #FF003D 0%, #0500E3 51.04%, #2B0186 100%);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
@@ -1988,7 +1988,7 @@
       @include flexBox(20px, column, normal, normal);
 
       .product_h1 {
-        @include RobotoBolt(22px, normal);
+        @include RobotoBolt(calc(22px + 6 * ((100vw - 320px) / 448)), normal);
         color: $color-pink;
       }
 
@@ -2005,12 +2005,12 @@
           padding-left: 20%;
 
           .product_name_mobile {
-            @include MontserratBolt(15px, normal);
+            @include MontserratBolt(calc(15px + 7 * ((100vw - 320px) / 448)), normal);
             color: #8FBBE2;
           }
 
           .text_mobile {
-            @include MontserratRegular(14px, normal);
+            @include MontserratRegular(calc(14px + 1 * ((100vw - 320px) / 448)), normal);
           }
         }
 
@@ -2019,6 +2019,7 @@
 
           .atp_container_mobile {
             width: 58.7vw;
+            max-width: 300px;
             height: 100px;
             border-radius: 15px;
             background: #FFFFFF;
@@ -2026,7 +2027,7 @@
             @include flexBox(0, column, center, center);
 
             .avtoplan_text_mobile {
-              @include RobotoRegular(22px, normal);
+              @include RobotoRegular(calc(22px + 2 * ((100vw - 320px) / 448)), normal);
               color: rgba(51, 51, 51, 0.80);
               filter: blur(2px);
             }
@@ -2035,6 +2036,7 @@
           .atp_online_mobile {
             position: absolute;
             width: 58.7vw;
+            max-width: 300px;
             height: 90px;
             top: 65%;
             left: 35%;
@@ -2045,13 +2047,13 @@
             @include flexBox(5px, column, normal, normal);
 
             .atp_text_1_mobile {
-              @include RobotoRegular(20px, normal);
+              @include RobotoRegular(calc(20px + 2 * ((100vw - 320px) / 448)), normal);
               color: $color-white;
               padding-left: 7%;
             }
 
             .atp_text_2_mobile {
-              @include MontserratRegular(12px, normal);
+              @include MontserratRegular(calc(12px + 2 * ((100vw - 320px) / 448)), normal);
               color: $color-white;
               max-width: 65%;
               padding-left: 30%;
@@ -2061,7 +2063,7 @@
 
         .text_2_mobile {
           padding-top: 75px;
-          @include MontserratRegular(14px, normal);
+          @include MontserratRegular(calc(14px + 1 * ((100vw - 320px) / 448)), normal);
         }
       }
     }
@@ -2085,7 +2087,7 @@
         @include flexBox(20px, column, flex-end, normal);
 
         .card_without_back_text_mobile {
-          @include MontserratRegular(12px, normal);
+          @include MontserratRegular(calc(12px + 3 * ((100vw - 320px) / 448)), normal);
           color: $color-black;
         }
 
@@ -2151,7 +2153,7 @@
               border-radius: 16px;
 
               .connect_card_text_tablet_mobile {
-                @include MontserratBolt(14px, normal);
+                @include MontserratBolt(calc(14px + 2 * ((100vw - 320px) / 448)), normal);
                 color: $color-white;
               }
             }
@@ -2172,7 +2174,7 @@
           }
 
           .button_text {
-            @include MontserratMedium(16px, normal);
+            @include MontserratMedium(calc(16px + 4 * ((100vw - 320px) / 448)), normal);
             letter-spacing: 0.32px;
             color: $color-white;
           }
