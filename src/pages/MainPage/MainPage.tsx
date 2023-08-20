@@ -1,6 +1,7 @@
 import s from './MainPage.module.scss'
 import React from 'react'
 import arrow from '../../assets/image/MainPage/Arrow 1.svg'
+import {Footer} from '../../components/Footer/Footer';
 
 export const MainPage = () => {
 
@@ -227,16 +228,7 @@ export const MainPage = () => {
                         <span className={s.button_text}>Связаться</span>
                     </button>
                 </div>
-                <div className={s.footer_container}>
-                    <div className={s.block_1}>
-                        <span className={s.block_1_text_1}>{`<AdjnaTech/>`}</span>
-                        <span className={s.block_1_text_2}>Эффективные решения для перезагрузки вашего бизнеса</span>
-                    </div>
-                    <div className={s.block_2}>
-                        <div className={s.line}/>
-                        <span className={s.block_2_text_1}>@ AdjnaTech 2023</span>
-                    </div>
-                </div>
+                <Footer/>
             </div>
         </div>
     )

@@ -1,27 +1,17 @@
 import s from './Footer.module.scss'
+import React from 'react';
 
 export const Footer = () => {
     return (
-        <div className={s.footerContainer}>
-            <div className={s.background}/>
-            <div className={s.footerContent}>
-                <div className={s.content}>
-                    <div className={s.textWrapper}>
-                        <span className={s.companyName}>{'<AdjnaTech/>'}</span>
-                        <div className={s.info}>
-                            <span className={s.text}>Эффективные решения для</span>
-                            <span className={s.text}>перезагрузки вашего бизнеса</span>
-                        </div>
-
-                    </div>
-                    <button className={s.button}>
-                        Свяжитесь с нами
-                    </button>
-                </div>
-                <div className={s.greyLine}/>
-                <div className={s.titleData}>@ AdjnaTech 2023</div>
+        <div className={s.footer_container}>
+            <div className={s.block_1}>
+                <span className={s.block_1_text_1}>{`<AdjnaTech/>`}</span>
+                <span className={s.block_1_text_2}>Эффективные решения для перезагрузки вашего бизнеса</span>
             </div>
-
+            <div className={s.block_2}>
+                <div className={s.line}/>
+                <span className={s.block_2_text_1}>@ AdjnaTech 2023</span>
+            </div>
         </div>
     )
 }

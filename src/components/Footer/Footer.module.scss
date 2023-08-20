@@ -1,71 +1,268 @@
 @import "src/assets/styles/utils";
 @import "src/assets/styles/colors";
 
-.footerContainer {
-  position: relative;
+@media screen and (min-width: 1920px) {
 
-  .background {
-    min-height: 300px;
-    width: 100%;
-    position: absolute;
-    background: linear-gradient(180deg, rgba(100, 149, 237, 0.00) 14.70%, #6495ED 100%);
-    filter: blur(75px);
+  .footer_container {
+    @include flexBox(1.7vh, column, normal, normal);
+
+    .block_1 {
+      @include flexBox(1.85vh, column, normal, normal);
+
+      .block_1_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(25px, normal);
+        color: $color-black;
+        letter-spacing: 0.5px;
+      }
+
+      .block_1_text_2 {
+        padding-left: 1vw;
+        @include MontserratRegular(20px, normal);
+        color: $color-black;
+        letter-spacing: 0.4px;
+        max-width: 18vw;
+      }
+    }
+
+    .block_2 {
+      @include flexBox(0.8vh, column, normal, normal);
+
+      .line {
+        display: inline;
+        border-bottom: 2px solid $color-black;
+        width: 100%;
+      }
+
+      .block_2_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(25px, normal);
+        color: $color-black;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+  .footer_container {
+    @include flexBox(1.7vh, column, normal, normal);
+
+    .block_1 {
+      @include flexBox(1.85vh, column, normal, normal);
+
+      .block_1_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(21px, normal);
+        color: $color-black;
+        letter-spacing: 0.42px;
+      }
+
+      .block_1_text_2 {
+        padding-left: 1vw;
+        @include MontserratRegular(16px, normal);
+        color: $color-black;
+        letter-spacing: 0.32px;
+        max-width: 18vw;
+      }
+    }
+
+    .block_2 {
+      @include flexBox(0.8vh, column, normal, normal);
+
+      .line {
+        display: inline;
+        border-bottom: 2px solid $color-black;
+        width: 100%;
+      }
+
+      .block_2_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(21px, normal);
+        color: $color-black;
+        letter-spacing: 0.42px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
+
+  .footer_container {
+    @include flexBox(1.7vh, column, normal, normal);
+
+    .block_1 {
+      @include flexBox(1.85vh, column, normal, normal);
+
+      .block_1_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(19px, normal);
+        color: $color-black;
+        letter-spacing: 0.38px;
+      }
+
+      .block_1_text_2 {
+        padding-left: 1vw;
+        @include MontserratRegular(15px, normal);
+        color: $color-black;
+        letter-spacing: 0.3px;
+        max-width: 18vw;
+      }
+    }
+
+    .block_2 {
+      @include flexBox(0.8vh, column, normal, normal);
+
+      .line {
+        display: inline;
+        border-bottom: 2px solid $color-black;
+        width: 100%;
+      }
+
+      .block_2_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(19px, normal);
+        color: $color-black;
+        letter-spacing: 0.38px;
+      }
+    }
   }
 
-  .footerContent {
-    position: relative;
-    z-index: 1;
-    @include flexBox(23px, column, normal, flex-end);
-    min-height: 300px;
-    padding: 0 100px 50px 100px;
+}
 
-    .content {
-      @include flexBox(0, row, normal, space-between);
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
 
-      .textWrapper {
-        @include flexBox(12px, column, normal, normal);
+  .footer_container {
+    @include flexBox(1.7vh, column, normal, normal);
 
-        .companyName {
-          @include RobotoRegular(25px, normal);
-          color: $color-black;
-        }
+    .block_1 {
+      @include flexBox(1.85vh, column, normal, normal);
 
-        .info {
-          @include flexBox(0, column, normal, normal);
-
-          .text {
-            @include RobotoRegular(20px, normal);
-            color: $color-black;
-          }
-        }
-      }
-
-      .button {
-        min-width: 250px;
-        width: 656px;
-        height: 82px;
-        border: none;
-
-        border-radius: 50px;
-        background: $button-color;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-
-        cursor: pointer;
-
-        @include RobotoRegular(35px, normal);
+      .block_1_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(17px, normal);
         color: $color-black;
+        letter-spacing: 0.34px;
+      }
+
+      .block_1_text_2 {
+        padding-left: 1vw;
+        @include MontserratRegular(14px, normal);
+        color: $color-black;
+        letter-spacing: 0.28px;
+        max-width: 18vw;
       }
     }
 
-    .greyLine {
-      display: inline;
-      border-bottom: 2px solid $color-black;
-      width: 100%;
+    .block_2 {
+      @include flexBox(0.8vh, column, normal, normal);
+
+      .line {
+        display: inline;
+        border-bottom: 2px solid $color-black;
+        width: 100%;
+      }
+
+      .block_2_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(17px, normal);
+        color: $color-black;
+        letter-spacing: 0.34px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+  .footer_container {
+    @include flexBox(1.7vh, column, normal, normal);
+
+    .block_1 {
+      @include flexBox(1.85vh, column, normal, normal);
+
+      .block_1_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(15px, normal);
+        color: $color-black;
+        letter-spacing: 0.3px;
+      }
+
+      .block_1_text_2 {
+        padding-left: 1vw;
+        @include MontserratRegular(12px, normal);
+        color: $color-black;
+        letter-spacing: 0.24px;
+        max-width: 20vw;
+      }
     }
 
-    .titleData {
-      @include RobotoRegular(25px, normal);
-      color: $color-black;
+    .block_2 {
+      @include flexBox(0.8vh, column, normal, normal);
+
+      .line {
+        display: inline;
+        border-bottom: 2px solid $color-black;
+        width: 100%;
+      }
+
+      .block_2_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(15px, normal);
+        color: $color-black;
+        letter-spacing: 0.3px;
+      }
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .footer_container {
+    @include flexBox(1.7vh, column, normal, normal);
+
+    .block_1 {
+      @include flexBox(1.85vh, column, normal, normal);
+
+      .block_1_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(11px, normal);
+        color: $color-black;
+        letter-spacing: 0.22px;
+      }
+
+      .block_1_text_2 {
+        padding-left: 1vw;
+        @include MontserratRegular(9px, normal);
+        color: $color-black;
+        letter-spacing: 0.18px;
+        max-width: 20vw;
+      }
+    }
+
+    .block_2 {
+      @include flexBox(0.8vh, column, normal, normal);
+
+      .line {
+        display: inline;
+        border-bottom: 2px solid $color-black;
+        width: 100%;
+      }
+
+      .block_2_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(11px, normal);
+        color: $color-black;
+        letter-spacing: 0.22px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  .footer_container {
+    display: none;
   }
 }

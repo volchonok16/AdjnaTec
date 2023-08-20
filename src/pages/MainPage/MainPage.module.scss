@@ -273,46 +273,6 @@
       .img_container_mobile {
         display: none;
       }
-
-      .footer_container {
-        @include flexBox(1.7vh, column, normal, normal);
-
-        .block_1 {
-          @include flexBox(1.85vh, column, normal, normal);
-
-          .block_1_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(25px, normal);
-            color: $color-black;
-            letter-spacing: 0.5px;
-          }
-
-          .block_1_text_2 {
-            padding-left: 1vw;
-            @include MontserratRegular(20px, normal);
-            color: $color-black;
-            letter-spacing: 0.4px;
-            max-width: 18vw;
-          }
-        }
-
-        .block_2 {
-          @include flexBox(0.8vh, column, normal, normal);
-
-          .line {
-            display: inline;
-            border-bottom: 2px solid $color-black;
-            width: 100%;
-          }
-
-          .block_2_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(25px, normal);
-            color: $color-black;
-            letter-spacing: 0.5px;
-          }
-        }
-      }
     }
   }
 }
@@ -588,46 +548,6 @@
 
       .img_container_mobile {
         display: none;
-      }
-
-      .footer_container {
-        @include flexBox(1.7vh, column, normal, normal);
-
-        .block_1 {
-          @include flexBox(1.85vh, column, normal, normal);
-
-          .block_1_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(21px, normal);
-            color: $color-black;
-            letter-spacing: 0.42px;
-          }
-
-          .block_1_text_2 {
-            padding-left: 1vw;
-            @include MontserratRegular(16px, normal);
-            color: $color-black;
-            letter-spacing: 0.32px;
-            max-width: 18vw;
-          }
-        }
-
-        .block_2 {
-          @include flexBox(0.8vh, column, normal, normal);
-
-          .line {
-            display: inline;
-            border-bottom: 2px solid $color-black;
-            width: 100%;
-          }
-
-          .block_2_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(21px, normal);
-            color: $color-black;
-            letter-spacing: 0.42px;
-          }
-        }
       }
     }
   }
@@ -905,46 +825,6 @@
       .img_container_mobile {
         display: none;
       }
-
-      .footer_container {
-        @include flexBox(1.7vh, column, normal, normal);
-
-        .block_1 {
-          @include flexBox(1.85vh, column, normal, normal);
-
-          .block_1_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(19px, normal);
-            color: $color-black;
-            letter-spacing: 0.38px;
-          }
-
-          .block_1_text_2 {
-            padding-left: 1vw;
-            @include MontserratRegular(15px, normal);
-            color: $color-black;
-            letter-spacing: 0.3px;
-            max-width: 18vw;
-          }
-        }
-
-        .block_2 {
-          @include flexBox(0.8vh, column, normal, normal);
-
-          .line {
-            display: inline;
-            border-bottom: 2px solid $color-black;
-            width: 100%;
-          }
-
-          .block_2_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(19px, normal);
-            color: $color-black;
-            letter-spacing: 0.38px;
-          }
-        }
-      }
     }
   }
 }
@@ -1221,46 +1101,6 @@
 
       .img_container_mobile {
         display: none;
-      }
-
-      .footer_container {
-        @include flexBox(1.7vh, column, normal, normal);
-
-        .block_1 {
-          @include flexBox(1.85vh, column, normal, normal);
-
-          .block_1_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(17px, normal);
-            color: $color-black;
-            letter-spacing: 0.34px;
-          }
-
-          .block_1_text_2 {
-            padding-left: 1vw;
-            @include MontserratRegular(14px, normal);
-            color: $color-black;
-            letter-spacing: 0.28px;
-            max-width: 18vw;
-          }
-        }
-
-        .block_2 {
-          @include flexBox(0.8vh, column, normal, normal);
-
-          .line {
-            display: inline;
-            border-bottom: 2px solid $color-black;
-            width: 100%;
-          }
-
-          .block_2_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(17px, normal);
-            color: $color-black;
-            letter-spacing: 0.34px;
-          }
-        }
       }
     }
   }
@@ -1543,46 +1383,6 @@
       .img_container_mobile {
         display: none;
       }
-
-      .footer_container {
-        @include flexBox(1.7vh, column, normal, normal);
-
-        .block_1 {
-          @include flexBox(1.85vh, column, normal, normal);
-
-          .block_1_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(15px, normal);
-            color: $color-black;
-            letter-spacing: 0.3px;
-          }
-
-          .block_1_text_2 {
-            padding-left: 1vw;
-            @include MontserratRegular(12px, normal);
-            color: $color-black;
-            letter-spacing: 0.24px;
-            max-width: 20vw;
-          }
-        }
-
-        .block_2 {
-          @include flexBox(0.8vh, column, normal, normal);
-
-          .line {
-            display: inline;
-            border-bottom: 2px solid $color-black;
-            width: 100%;
-          }
-
-          .block_2_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(15px, normal);
-            color: $color-black;
-            letter-spacing: 0.3px;
-          }
-        }
-      }
     }
   }
 }
@@ -1859,46 +1659,6 @@
 
       .img_container_mobile {
         display: none;
-      }
-
-      .footer_container {
-        @include flexBox(1.7vh, column, normal, normal);
-
-        .block_1 {
-          @include flexBox(1.85vh, column, normal, normal);
-
-          .block_1_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(11px, normal);
-            color: $color-black;
-            letter-spacing: 0.22px;
-          }
-
-          .block_1_text_2 {
-            padding-left: 1vw;
-            @include MontserratRegular(9px, normal);
-            color: $color-black;
-            letter-spacing: 0.18px;
-            max-width: 20vw;
-          }
-        }
-
-        .block_2 {
-          @include flexBox(0.8vh, column, normal, normal);
-
-          .line {
-            display: inline;
-            border-bottom: 2px solid $color-black;
-            width: 100%;
-          }
-
-          .block_2_text_1 {
-            padding-left: 1vw;
-            @include RobotoMedium(11px, normal);
-            color: $color-black;
-            letter-spacing: 0.22px;
-          }
-        }
       }
     }
   }
@@ -2179,10 +1939,6 @@
             color: $color-white;
           }
         }
-      }
-
-      .footer_container {
-        display: none;
       }
     }
   }
