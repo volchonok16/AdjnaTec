@@ -1,5 +1,4 @@
 import s from './Header.module.scss';
-import logo from '../../assets/image/Header/color_logo.svg'
 import burger from '../../assets/image/Header/burger.svg'
 import {NavBarLinks, NavBarLinksType} from './NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
@@ -63,10 +62,7 @@ export const Header = () => {
 
     return (
         <div className={s.headerContainer}>
-            <div className={s.logo_container}>
-                <img src={logo} alt={'logo-img'} className={s.logo}
-                     onClick={mainPageHandler}/>
-            </div>
+            <div className={s.logo_container} onClick={mainPageHandler}/>
             <div className={s.buttonsBlock}>
                 {
                     NavBarLinks.map((item) => {
