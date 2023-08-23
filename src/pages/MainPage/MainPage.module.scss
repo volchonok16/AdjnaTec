@@ -247,22 +247,6 @@
               color: $color-white;
             }
           }
-
-          .button {
-            @include flexBox(50px, row, center, flex-start);
-            width: 23vw;
-            height: 7.6vh;
-            border-radius: 20px;
-            background-color: #7CB5FF;
-            border: 5px solid #7CB5FF;
-            padding-left: 30px;
-
-            .button_text {
-              @include MontserratMedium(35px, normal);
-              letter-spacing: 0.7px;
-              color: $color-white;
-            }
-          }
         }
       }
 
@@ -523,22 +507,6 @@
               color: $color-white;
             }
           }
-
-          .button {
-            @include flexBox(38px, row, center, flex-start);
-            width: 23vw;
-            height: 7.6vh;
-            border-radius: 20px;
-            background-color: #7CB5FF;
-            border: 5px solid #7CB5FF;
-            padding-left: 25px;
-
-            .button_text {
-              @include MontserratMedium(29px, normal);
-              letter-spacing: 0.58px;
-              color: $color-white;
-            }
-          }
         }
       }
 
@@ -796,22 +764,6 @@
 
             .connect_card_text {
               @include MontserratBolt(23px, normal);
-              color: $color-white;
-            }
-          }
-
-          .button {
-            @include flexBox(42px, row, center, flex-start);
-            width: 23vw;
-            height: 7.6vh;
-            border-radius: 20px;
-            background-color: #7CB5FF;
-            border: 5px solid #7CB5FF;
-            padding-left: 25px;
-
-            .button_text {
-              @include MontserratMedium(26px, normal);
-              letter-spacing: 0.52px;
               color: $color-white;
             }
           }
@@ -1076,22 +1028,6 @@
               color: $color-white;
             }
           }
-
-          .button {
-            @include flexBox(35px, row, center, flex-start);
-            width: 23vw;
-            height: 7.6vh;
-            border-radius: 20px;
-            background-color: #7CB5FF;
-            border: 5px solid #7CB5FF;
-            padding-left: 20px;
-
-            .button_text {
-              @include MontserratMedium(23px, normal);
-              letter-spacing: 0.46px;
-              color: $color-white;
-            }
-          }
         }
       }
 
@@ -1353,26 +1289,6 @@
               color: $color-white;
             }
           }
-
-          .button {
-            @include flexBox(20px, row, center, flex-start);
-            width: 23vw;
-            height: 7.6vh;
-            border-radius: 20px;
-            background-color: #7CB5FF;
-            border: 5px solid #7CB5FF;
-            padding-left: 5px;
-
-            .img {
-              scale: 70%;
-            }
-
-            .button_text {
-              @include MontserratMedium(22px, normal);
-              letter-spacing: 0.44px;
-              color: $color-white;
-            }
-          }
         }
       }
 
@@ -1631,26 +1547,6 @@
 
             .connect_card_text_tablet {
               @include MontserratBolt(16px, normal);
-              color: $color-white;
-            }
-          }
-
-          .button {
-            @include flexBox(20px, row, center, center);
-            width: 47vw;
-            height: 52px;
-            border-radius: 20px;
-            background-color: #7CB5FF;
-            border: 5px solid #7CB5FF;
-            padding-left: 5px;
-
-            .img {
-              scale: 90%;
-            }
-
-            .button_text {
-              @include MontserratMedium(20px, normal);
-              letter-spacing: 0.4px;
               color: $color-white;
             }
           }
@@ -1917,26 +1813,6 @@
                 color: $color-white;
               }
             }
-          }
-        }
-
-        .button {
-          @include flexBox(5px, row, center, center);
-          width: 188px;
-          height: 36px;
-          border-radius: 20px;
-          background-color: #7CB5FF;
-          border: 5px solid #7CB5FF;
-          padding-left: 5px;
-
-          .img {
-            scale: 50%;
-          }
-
-          .button_text {
-            @include MontserratMedium(calc(16px + 4 * ((100vw - 320px) / 448)), normal);
-            letter-spacing: 0.32px;
-            color: $color-white;
           }
         }
       }

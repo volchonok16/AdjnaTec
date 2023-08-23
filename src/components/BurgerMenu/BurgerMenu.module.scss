@@ -18,23 +18,37 @@
     transform: translateX(0);
   }
 
-  .menu_container {
-    @include flexBox(25px, column, flex-end, flex-start);
+  .menu_wrapper {
+    box-sizing: border-box;
+    @include flexBox(0, column, normal, space-between);
     width: 64vw;
     height: 100vh;
     padding: 2.5% 5%;
     background: #FFFFFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-    .burger_open {
-      padding-right: 10px;
-      width: 15px;
-      height: 15px;
+    .menu_container {
+      @include flexBox(25px, column, flex-end, flex-start);
+
+      .burger_open {
+        padding-right: 10px;
+        width: 15px;
+        height: 15px;
+      }
+
+      .menu_list {
+        width: 100%;
+        @include flexBox(16px, column, flex-start, normal);
+      }
     }
 
-    .menu_list {
-      width: 100%;
-      @include flexBox(16px, column, flex-start, normal);
+    .connect_container {
+      @include flexBox(11px, column, center, center);
+
+      .email_text {
+        @include RobotoRegular(15px, normal);
+        color: #8365B1;
+      }
     }
   }
 }

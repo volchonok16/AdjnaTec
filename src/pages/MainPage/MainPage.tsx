@@ -1,7 +1,7 @@
 import s from './MainPage.module.scss'
 import React from 'react'
-import arrow from '../../assets/image/MainPage/Arrow 1.svg'
 import {Footer} from '../../components/Footer/Footer';
+import {ConnectButton} from '../../components/ConnectButton/ConnectButton';
 
 export const MainPage = () => {
 
@@ -133,10 +133,7 @@ export const MainPage = () => {
                         <div className={s.connect_card}>
                             <span className={s.connect_card_text}>ЕСМ системы</span>
                         </div>
-                        <button className={s.button}>
-                            <img className={s.img} src={arrow} alt={'arrow'}/>
-                            <span className={s.button_text}>Связаться</span>
-                        </button>
+                        <ConnectButton/>
                     </div>
                 </div>
                 <div className={s.img_container_tablet}>
@@ -176,10 +173,7 @@ export const MainPage = () => {
                                 <span
                                     className={s.connect_card_text_tablet}>ЕСМ системы</span>
                             </div>
-                            <button className={s.button}>
-                                <img className={s.img} src={arrow} alt={'arrow'}/>
-                                <span className={s.button_text}>Связаться</span>
-                            </button>
+                            <ConnectButton/>
                         </div>
                     </div>
                 </div>
@@ -223,10 +217,7 @@ export const MainPage = () => {
                     <span className={s.card_without_back_text_mobile}>
                         Мы занимаемся разработкой програмного обеспечения. Создаем системы управления данными и оптимизации бизнес-процессов повышающие эффективность бизнеса наших клиентов.
                     </span>
-                    <button className={s.button}>
-                        <img className={s.img} src={arrow} alt={'arrow'}/>
-                        <span className={s.button_text}>Связаться</span>
-                    </button>
+                    <ConnectButton/>
                 </div>
                 <Footer/>
             </div>
