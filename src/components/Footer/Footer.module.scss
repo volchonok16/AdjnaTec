@@ -263,6 +263,42 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
   .footer_container {
-    display: none;
+    @include flexBox(1.7vh, column, normal, normal);
+
+    .block_1 {
+      @include flexBox(1.85vh, column, normal, normal);
+
+      .block_1_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(11px, normal);
+        color: $color-black;
+        letter-spacing: 0.22px;
+      }
+
+      .block_1_text_2 {
+        padding-left: 1vw;
+        @include MontserratRegular(9px, normal);
+        color: $color-black;
+        letter-spacing: 0.18px;
+        max-width: 50vw;
+      }
+    }
+
+    .block_2 {
+      @include flexBox(0.8vh, column, normal, normal);
+
+      .line {
+        display: inline;
+        border-bottom: 2px solid $color-black;
+        width: 100%;
+      }
+
+      .block_2_text_1 {
+        padding-left: 1vw;
+        @include RobotoMedium(11px, normal);
+        color: $color-black;
+        letter-spacing: 0.22px;
+      }
+    }
   }
 }

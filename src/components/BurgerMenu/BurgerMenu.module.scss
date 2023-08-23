@@ -35,10 +35,6 @@
     .menu_list {
       width: 100%;
       @include flexBox(16px, column, flex-start, normal);
-
-      .menu_button {
-
-      }
     }
   }
 }
