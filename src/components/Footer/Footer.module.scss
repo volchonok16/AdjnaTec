@@ -5,6 +5,9 @@
 
   .footer_container {
     @include flexBox(1.7vh, column, normal, normal);
+    height: 25vh;
+    box-sizing: border-box;
+    padding: 4.6vh 2vw 4vh 2vw;
 
     .block_1 {
       @include flexBox(1.85vh, column, normal, normal);
@@ -48,6 +51,9 @@
 
   .footer_container {
     @include flexBox(1.7vh, column, normal, normal);
+    height: 25vh;
+    box-sizing: border-box;
+    padding: 4.6vh 2vw 4vh 2vw;
 
     .block_1 {
       @include flexBox(1.85vh, column, normal, normal);
@@ -91,6 +97,9 @@
 
   .footer_container {
     @include flexBox(1.7vh, column, normal, normal);
+    height: 25vh;
+    box-sizing: border-box;
+    padding: 4.6vh 2vw 4vh 2vw;
 
     .block_1 {
       @include flexBox(1.85vh, column, normal, normal);
@@ -135,6 +144,9 @@
 
   .footer_container {
     @include flexBox(1.7vh, column, normal, normal);
+    height: 25vh;
+    box-sizing: border-box;
+    padding: 4.6vh 2vw 4vh 2vw;
 
     .block_1 {
       @include flexBox(1.85vh, column, normal, normal);
@@ -178,6 +190,9 @@
 
   .footer_container {
     @include flexBox(1.7vh, column, normal, normal);
+    height: 25vh;
+    box-sizing: border-box;
+    padding: 4.6vh 2vw 4vh 2vw;
 
     .block_1 {
       @include flexBox(1.85vh, column, normal, normal);
@@ -221,6 +236,8 @@
 
   .footer_container {
     @include flexBox(1.7vh, column, normal, normal);
+    box-sizing: border-box;
+    padding: 4.6vh 2vw 4vh 2vw;
 
     .block_1 {
       @include flexBox(1.85vh, column, normal, normal);
@@ -264,6 +281,8 @@
 
   .footer_container {
     @include flexBox(1.7vh, column, normal, normal);
+    box-sizing: border-box;
+    padding: 4.6vh 2vw 4vh 2vw;
 
     .block_1 {
       @include flexBox(1.85vh, column, normal, normal);
