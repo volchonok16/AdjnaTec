@@ -1,10 +1,10 @@
 import React, {useReducer, useState} from 'react';
 import {Header} from './components/Header/Header';
 import {BrowserRouter} from 'react-router-dom';
-import {MainPage} from './pages/MainPage/MainPage';
 import {BurgerMenu} from './components/BurgerMenu/BurgerMenu';
 import {NavBarLinks, NavBarLinksType} from './components/Header/NavBarLinks';
 import {Footer} from './components/Footer/Footer';
+import {RootContainer} from './components/RootContainer/RootContainer';
 
 function createInitialState(data: NavBarLinksType[]) {
     const initialState: Record<string, boolean> = {};
@@ -69,8 +69,7 @@ function App() {
                 setIsOpen={burgerMenuHandler}
                 currentURL={currentURL}
                 activeLinkHandler={activeLinkHandler}/>
-            <MainPage/>
-            {/*<RootContainer/>*/}
+            <RootContainer/>
             <Footer/>
         </BrowserRouter>
     );

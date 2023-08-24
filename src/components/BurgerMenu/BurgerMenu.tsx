@@ -23,6 +23,11 @@ export const BurgerMenu = ({
         setIsOpen()
     }
 
+    const activeLinkBurgerMenuHandler = (path: string) => {
+        activeLinkHandler(path)
+        burgerMenuHandler()
+    }
+
     return (
         <div className={cn(s.menu, {
                 [s.menu_open]: isOpen
@@ -37,7 +42,7 @@ export const BurgerMenu = ({
                             NavBarLinks.map((item) => {
                                 return <LinkItem item={item} currentURL={currentURL}
                                                  key={item.path}
-                                                 onActivateLink={activeLinkHandler}/>
+                                                 onActivateLink={activeLinkBurgerMenuHandler}/>
                             })
                         }
                     </div>
