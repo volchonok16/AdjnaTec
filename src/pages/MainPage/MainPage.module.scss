@@ -159,8 +159,13 @@
       height: 100vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 20vh 2vw 0 2vw;
-      @include flexBox(10vh, column, normal, normal);
+      padding: 12.5vh 2vw 4vh 2vw;
+      @include flexBox(4.6vh, column, normal, normal);
+
+      .our_possibilities {
+        @include RobotoBolt(70px, normal);
+        color: #F08DA9;
+      }
 
       .img_container {
         @include flexBox(1.25vw, row, normal, normal);
@@ -419,8 +424,13 @@
       height: 100vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 20vh 2vw 0 2vw;
-      @include flexBox(10vh, column, normal, normal);
+      padding: 12.5vh 2vw 4vh 2vw;
+      @include flexBox(4.6vh, column, normal, normal);
+
+      .our_possibilities {
+        @include RobotoBolt(58px, normal);
+        color: #F08DA9;
+      }
 
       .img_container {
         @include flexBox(1.25vw, row, normal, normal);
@@ -679,8 +689,13 @@
       height: 100vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 20vh 2vw 0 2vw;
-      @include flexBox(10vh, column, normal, normal);
+      padding: 12.5vh 2vw 4vh 2vw;
+      @include flexBox(4.6vh, column, normal, normal);
+
+      .our_possibilities {
+        @include RobotoBolt(50px, normal);
+        color: #F08DA9;
+      }
 
       .img_container {
         @include flexBox(1.25vw, row, normal, normal);
@@ -940,8 +955,13 @@
       height: 100vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 20vh 2vw 0 2vw;
-      @include flexBox(10vh, column, normal, normal);
+      padding: 12.5vh 2vw 4vh 2vw;
+      @include flexBox(4.6vh, column, normal, normal);
+
+      .our_possibilities {
+        @include RobotoBolt(44px, normal);
+        color: #F08DA9;
+      }
 
       .img_container {
         @include flexBox(1.25vw, row, normal, normal);
@@ -1201,8 +1221,13 @@
       height: 100vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 20vh 2vw 0 2vw;
-      @include flexBox(10vh, column, normal, normal);
+      padding: 12.5vh 2vw 4vh 2vw;
+      @include flexBox(4.6vh, column, normal, normal);
+
+      .our_possibilities {
+        @include RobotoBolt(37px, normal);
+        color: #F08DA9;
+      }
 
       .img_container {
         @include flexBox(1.25vw, row, normal, normal);
@@ -1461,8 +1486,13 @@
       width: 100%;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 20vh 2vw 6vh 2vw;
-      @include flexBox(10vh, column, normal, normal);
+      padding: 12.5vh 2vw 4vh 2vw;
+      @include flexBox(4.6vh, column, normal, normal);
+
+      .our_possibilities {
+        @include RobotoBolt(30px, normal);
+        color: #F08DA9;
+      }
 
       .img_container {
         display: none;
@@ -1728,8 +1758,13 @@
       width: 100%;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 10vh 4vw 6vh 4vw;
-      @include flexBox(10vh, column, normal, normal);
+      padding: 12.5vh 4vw 4vh 4vw;
+      @include flexBox(4.6vh, column, normal, normal);
+
+      .our_possibilities {
+        @include RobotoBolt(22px, normal);
+        color: #F08DA9;
+      }
 
       .img_container {
         display: none;
