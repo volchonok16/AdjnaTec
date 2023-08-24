@@ -1762,7 +1762,7 @@
       @include flexBox(4.6vh, column, normal, normal);
 
       .our_possibilities {
-        @include RobotoBolt(22px, normal);
+        @include RobotoBolt(calc(22px + 8 * ((100vw - 320px) / 448)), normal);
         color: #F08DA9;
       }
 
