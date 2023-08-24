@@ -1,11 +1,8 @@
 import React from 'react';
 import {RoutPath} from '../enum';
 import {MainPage} from '../pages/MainPage/MainPage';
-import {OurProducts} from '../pages/OurProducts/OurProducts';
 import {AboutUs} from '../pages/AboutUs/AboutUs';
-import {ConnectWithUs} from '../pages/ConnectWithUs/ConnectWithUs';
-import {WhatWeDo} from '../pages/WhatWeDo/WhatWeDo';
-import {Collaboration} from '../pages/Collaboration/Collaboration';
+
 
 type AppRoute = {
     id: string;
@@ -22,7 +19,8 @@ export const routers: AppRoute[] = [
     {
         id: '2',
         path: RoutPath.OurProducts,
-        component: OurProducts
+        /*component: OurProducts*/
+        component: MainPage
     },
     {
         id: '3',
@@ -32,16 +30,19 @@ export const routers: AppRoute[] = [
     {
         id: '4',
         path: RoutPath.ConnectWithUs,
-        component: ConnectWithUs
+        /*component: ConnectWithUs*/
+        component: MainPage
     },
     {
         id: '5',
         path: RoutPath.WhatWeDo,
-        component: WhatWeDo
+        /*component: WhatWeDo*/
+        component: MainPage
     },
     {
         id: '6',
         path: RoutPath.Collaboration,
-        component: Collaboration
+        /*component: Collaboration*/
+        component: MainPage
     }
 ];
