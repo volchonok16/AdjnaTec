@@ -99,6 +99,7 @@ export const MainPage = () => {
             <div
                 /*ref={(el: HTMLDivElement) => blockRefs.current[2] = el}*/
                 className={s.about_us_block}>
+                <span className={s.our_possibilities}>Наши возможности</span>
                 <div className={s.img_container}>
                     <div className={s.cards_container}>
                         <div className={s.cards_line}>
