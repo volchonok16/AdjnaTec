@@ -6,47 +6,24 @@
 
   .descriptionBlock {
     width: 80%;
-    @include flexBox(80px, row, normal, normal);
+    @include flexBox(4.4vw, row, normal, normal);
 
     .info {
-      @include OswaldBold(20px, normal);
+      @include MontserratRegular(calc(16px + 9 * ((100vw - 1024px) / 896)), normal);
+    }
+
+    .about_us_img {
+      width: 30.7vw;
+      height: 32.5vh;
     }
   }
 
   .expertiseBlock {
-    @include flexBox(0, column, normal, normal);
+    @include flexBox(0, column, center, center);
 
     .text {
-      @include LalezarRegular(31px, normal);
-      color: $color-black;
-    }
-  }
-
-  .advantageBlock {
-    @include flexBox(75px, column, center, normal);
-
-    .advantageTitle {
-      @include LalezarRegular(31px, normal);
-      color: $color-black;
-    }
-
-    .circleContainer {
-      @include flexBox(25px, row, normal, normal);
-
-      .circle {
-        width: 200px;
-        height: 200px;
-        border: 1px solid $nav-bar_hover;
-        border-radius: 50%;
-
-        @include flexBox(0, column, center, center);
-
-        .circleText {
-          @include OswaldRegular(20px, normal);
-          color: $nav-bar_hover;
-          letter-spacing: 0.4px;
-        }
-      }
+      @include RobotoBolt(calc(24px + 14 * ((100vw - 1024px) / 896)), normal);
+      color: #F08DA9;
     }
   }
 }

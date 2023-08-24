@@ -3,25 +3,27 @@
 
 .wrapperContainer {
   @include flexBox(10px, column, flex-start, normal);
-  padding: 25px 120px 0 120px;
-  min-height: 455px;
+  box-sizing: border-box;
+  padding: 13.4vh 2vw 0 2vw;
+  min-height: 75vh;
 
   .navigateButtonWrapper {
     width: 100%;
     @include flexBox(0, row, normal, space-between);
 
     .image {
+      width: calc(50px + 20 * ((100vw - 1024px) / 896));
       cursor: pointer;
     }
   }
 
   .contentWrapper {
     width: 100%;
-    @include flexBox(20px, column, center, normal);
+    @include flexBox(4.8vh, column, center, normal);
 
 
     .title {
-      @include RobotoRegular(61px, normal);
+      @include RobotoRegular(calc(38px + 23 * ((100vw - 1024px) / 896)), normal);
       color: $color-black
     }
   }
