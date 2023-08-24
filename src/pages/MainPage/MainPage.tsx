@@ -1,6 +1,5 @@
 import s from './MainPage.module.scss'
 import React from 'react'
-import {Footer} from '../../components/Footer/Footer';
 import {ConnectButton} from '../../components/ConnectButton/ConnectButton';
 
 export const MainPage = () => {
@@ -220,7 +219,7 @@ export const MainPage = () => {
                     </span>
                     <ConnectButton/>
                 </div>
-                <Footer/>
+                {/*<Footer/>*/}
             </div>
         </div>
     )

@@ -4,6 +4,7 @@ import {BrowserRouter} from 'react-router-dom';
 import {MainPage} from './pages/MainPage/MainPage';
 import {BurgerMenu} from './components/BurgerMenu/BurgerMenu';
 import {NavBarLinks, NavBarLinksType} from './components/Header/NavBarLinks';
+import {Footer} from './components/Footer/Footer';
 
 function createInitialState(data: NavBarLinksType[]) {
     const initialState: Record<string, boolean> = {};
@@ -70,7 +71,7 @@ function App() {
                 activeLinkHandler={activeLinkHandler}/>
             <MainPage/>
             {/*<RootContainer/>*/}
-            {/*<Footer/>*/}
+            <Footer/>
         </BrowserRouter>
     );
 }

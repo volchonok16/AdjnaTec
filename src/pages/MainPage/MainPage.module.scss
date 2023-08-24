@@ -156,10 +156,10 @@
 
     .about_us_block {
       width: 100%;
-      height: 100vh;
+      height: 75vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 12.5vh 2vw 4vh 2vw;
+      padding: 12.5vh 2vw 0 2vw;
       @include flexBox(4.6vh, column, normal, normal);
 
       .our_possibilities {
@@ -421,10 +421,10 @@
 
     .about_us_block {
       width: 100%;
-      height: 100vh;
+      height: 75vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 12.5vh 2vw 4vh 2vw;
+      padding: 12.5vh 2vw 0 2vw;
       @include flexBox(4.6vh, column, normal, normal);
 
       .our_possibilities {
@@ -686,10 +686,10 @@
 
     .about_us_block {
       width: 100%;
-      height: 100vh;
+      height: 75vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 12.5vh 2vw 4vh 2vw;
+      padding: 12.5vh 2vw 0 2vw;
       @include flexBox(4.6vh, column, normal, normal);
 
       .our_possibilities {
@@ -952,10 +952,10 @@
 
     .about_us_block {
       width: 100%;
-      height: 100vh;
+      height: 75vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 12.5vh 2vw 4vh 2vw;
+      padding: 12.5vh 2vw 0 2vw;
       @include flexBox(4.6vh, column, normal, normal);
 
       .our_possibilities {
@@ -1218,10 +1218,10 @@
 
     .about_us_block {
       width: 100%;
-      height: 100vh;
+      height: 75vh;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 12.5vh 2vw 4vh 2vw;
+      padding: 12.5vh 2vw 0 2vw;
       @include flexBox(4.6vh, column, normal, normal);
 
       .our_possibilities {
@@ -1486,7 +1486,7 @@
       width: 100%;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 12.5vh 2vw 4vh 2vw;
+      padding: 12.5vh 2vw 0 2vw;
       @include flexBox(4.6vh, column, normal, normal);
 
       .our_possibilities {
@@ -1758,7 +1758,7 @@
       width: 100%;
       transition: transform 0.5s ease;
       box-sizing: border-box;
-      padding: 12.5vh 4vw 4vh 4vw;
+      padding: 12.5vh 4vw 0 4vw;
       @include flexBox(4.6vh, column, normal, normal);
 
       .our_possibilities {
