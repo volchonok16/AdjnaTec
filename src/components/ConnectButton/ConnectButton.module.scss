@@ -126,13 +126,12 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
   .button {
-    @include flexBox(5px, row, center, center);
+    @include flexBox(0, row, center, normal);
     width: 188px;
     height: 36px;
     border-radius: 20px;
     background-color: #7CB5FF;
     border: 5px solid #7CB5FF;
-    padding-left: 5px;
 
     .img {
       scale: 50%;

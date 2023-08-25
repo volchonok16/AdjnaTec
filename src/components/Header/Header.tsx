@@ -27,12 +27,6 @@ export const Header = ({setIsOpen, activeLinkHandler, currentURL}: HeaderPropsTy
     return (
         <div className={s.headerContainer}>
             <div className={s.logo_container} onClick={mainPageHandler}/>
-            {/*<div className={s.logo_container_tablet}>
-                <img className={s.logo_tablet} src={logo_tablet} alt={'logo tablet'}/>
-            </div>
-            <div className={s.logo_container_mobile}>
-                <img className={s.logo_mobile} src={logo_mobile} alt={'logo mobile'}/>
-            </div>*/}
             <div className={s.buttonsBlock}>
                 {
                     NavBarLinks.map((item) => {

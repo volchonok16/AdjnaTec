@@ -25,15 +25,6 @@
       background-repeat: no-repeat;
     }
 
-    /*.logo_container_tablet {
-      display: none;
-    }
-
-    .logo_container_mobile {
-      display: none;
-    }*/
-
-
     .buttonsBlock {
       @include flexBox(100px, row, normal, normal);
     }
@@ -66,14 +57,6 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
-
-    /*.logo_container_tablet {
-      display: none;
-    }
-
-    .logo_container_mobile {
-      display: none;
-    }*/
 
     .buttonsBlock {
       @include flexBox(92px, row, normal, normal);
@@ -108,14 +91,6 @@
       background-repeat: no-repeat;
     }
 
-   /* .logo_container_tablet {
-      display: none;
-    }
-
-    .logo_container_mobile {
-      display: none;
-    }*/
-
     .buttonsBlock {
       @include flexBox(77px, row, normal, normal);
     }
@@ -148,14 +123,6 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
-
-   /* .logo_container_tablet {
-      display: none;
-    }
-
-    .logo_container_mobile {
-      display: none;
-    }*/
 
     .buttonsBlock {
       @include flexBox(67px, row, normal, normal);
@@ -190,14 +157,6 @@
       background-repeat: no-repeat;
     }
 
-    /*.logo_container_tablet {
-      display: none;
-    }
-
-    .logo_container_mobile {
-      display: none;
-    }*/
-
     .buttonsBlock {
       @include flexBox(53px, row, normal, normal);
     }
@@ -231,21 +190,6 @@
       background-repeat: no-repeat;
     }
 
-    /*.logo_container_tablet {
-      height: 97%;
-
-      .logo_tablet {
-        cursor: pointer;
-        display: block; !* Гарантия правильного позиционирования *!
-        max-width: 100%; !* Ограничение максимальной ширины *!
-        height: auto;
-      }
-    }
-
-    .logo_container_mobile {
-      display: none;
-    }*/
-
     .buttonsBlock {
       @include flexBox(40px, row, normal, normal);
     }
@@ -278,21 +222,6 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
-
-   /* .logo_container_tablet {
-      display: none;
-    }
-
-    .logo_container_mobile {
-      height: 97%;
-
-      .logo_mobile {
-        cursor: pointer;
-        display: block; !* Гарантия правильного позиционирования *!
-        max-width: 100%; !* Ограничение максимальной ширины *!
-        height: auto;
-      }
-    }*/
 
     .buttonsBlock {
       display: none;
