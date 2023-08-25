@@ -232,6 +232,9 @@
 
       .logo_tablet {
         cursor: pointer;
+        display: block; /* Гарантия правильного позиционирования */
+        max-width: 100%; /* Ограничение максимальной ширины */
+        height: auto;
       }
     }
 
@@ -277,6 +280,9 @@
 
       .logo_mobile {
         cursor: pointer;
+        display: block; /* Гарантия правильного позиционирования */
+        max-width: 100%; /* Ограничение максимальной ширины */
+        height: auto;
       }
     }
 
