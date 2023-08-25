@@ -1,7 +1,5 @@
 import s from './Header.module.scss';
 import burger from '../../assets/image/Header/burger.svg'
-import logo_tablet from '../../assets/image/Header/logo_768.svg'
-import logo_mobile from '../../assets/image/Header/logo_320.svg'
 import {NavBarLinks} from './NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
 import {useNavigate} from 'react-router-dom';
@@ -29,12 +27,12 @@ export const Header = ({setIsOpen, activeLinkHandler, currentURL}: HeaderPropsTy
     return (
         <div className={s.headerContainer}>
             <div className={s.logo_container} onClick={mainPageHandler}/>
-            <div className={s.logo_container_tablet}>
+            {/*<div className={s.logo_container_tablet}>
                 <img className={s.logo_tablet} src={logo_tablet} alt={'logo tablet'}/>
             </div>
             <div className={s.logo_container_mobile}>
                 <img className={s.logo_mobile} src={logo_mobile} alt={'logo mobile'}/>
-            </div>
+            </div>*/}
             <div className={s.buttonsBlock}>
                 {
                     NavBarLinks.map((item) => {
