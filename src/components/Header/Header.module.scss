@@ -25,6 +25,14 @@
       background-repeat: no-repeat;
     }
 
+    .logo_container_tablet {
+      display: none;
+    }
+
+    .logo_container_mobile {
+      display: none;
+    }
+
 
     .buttonsBlock {
       @include flexBox(100px, row, normal, normal);
@@ -57,6 +65,14 @@
       background-image: url("../../assets/image/Header/logo_1600.svg");
       background-size: contain;
       background-repeat: no-repeat;
+    }
+
+    .logo_container_tablet {
+      display: none;
+    }
+
+    .logo_container_mobile {
+      display: none;
     }
 
     .buttonsBlock {
@@ -92,6 +108,14 @@
       background-repeat: no-repeat;
     }
 
+    .logo_container_tablet {
+      display: none;
+    }
+
+    .logo_container_mobile {
+      display: none;
+    }
+
     .buttonsBlock {
       @include flexBox(77px, row, normal, normal);
     }
@@ -123,6 +147,14 @@
       background-image: url("../../assets/image/Header/logo_1280.svg");
       background-size: contain;
       background-repeat: no-repeat;
+    }
+
+    .logo_container_tablet {
+      display: none;
+    }
+
+    .logo_container_mobile {
+      display: none;
     }
 
     .buttonsBlock {
@@ -158,6 +190,14 @@
       background-repeat: no-repeat;
     }
 
+    .logo_container_tablet {
+      display: none;
+    }
+
+    .logo_container_mobile {
+      display: none;
+    }
+
     .buttonsBlock {
       @include flexBox(53px, row, normal, normal);
     }
@@ -184,11 +224,19 @@
     @include flexBox(0, row, center, space-between);
 
     .logo_container {
+      display: none;
+    }
+
+    .logo_container_tablet {
       height: 97%;
-      width: 25%;
-      background-image: url("../../assets/image/Header/logo_768.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
+
+      .logo_tablet {
+        cursor: pointer;
+      }
+    }
+
+    .logo_container_mobile {
+      display: none;
     }
 
     .buttonsBlock {
@@ -217,11 +265,19 @@
     @include flexBox(0, row, center, space-between);
 
     .logo_container {
+      display: none;
+    }
+
+    .logo_container_tablet {
+      display: none;
+    }
+
+    .logo_container_mobile {
       height: 97%;
-      width: 30%;
-      background-image: url("../../assets/image/Header/logo_320.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
+
+      .logo_mobile {
+        cursor: pointer;
+      }
     }
 
     .buttonsBlock {
