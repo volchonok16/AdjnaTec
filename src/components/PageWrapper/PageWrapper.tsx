@@ -21,15 +21,17 @@ export const PageWrapper = ({
     return (
         <div className={s.wrapperContainer}>
             <div className={s.navigateButtonWrapper}>
-                <img className={s.image} src={leftArrow} alt={'left-button'}
-                     onClick={leftBtnFunc}/>
+                <div className={s.title_block}>
+                    <img className={s.image} src={leftArrow} alt={'left-button'}
+                         onClick={leftBtnFunc}/>
+                    <span className={s.title}>{title}</span>
+                </div>
                 {rightBtn && (
                     <img className={s.image} src={rightArrow} alt={'right-button'}
                          onClick={rightBtnFunc}/>
                 )}
             </div>
             <div className={s.contentWrapper}>
-                <span className={s.title}>{title}</span>
                 <div>{children}</div>
             </div>
         </div>
