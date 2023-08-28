@@ -2,7 +2,7 @@
 @import "src/assets/styles/colors";
 
 .wrapperContainer {
-  @include flexBox(10px, column, flex-start, normal);
+  @include flexBox(50px, column, flex-start, normal);
   box-sizing: border-box;
   padding: 13.4vh 2vw 0 2vw;
   min-height: 75vh;
@@ -10,6 +10,15 @@
   .navigateButtonWrapper {
     width: 100%;
     @include flexBox(0, row, normal, space-between);
+
+    .title_block {
+      @include flexBox(1.7vw, row, normal, normal);
+
+      .title {
+        @include RobotoRegular(calc(38px + 23 * ((100vw - 1024px) / 896)), normal);
+        color: $color-black
+      }
+    }
 
     .image {
       width: calc(50px + 20 * ((100vw - 1024px) / 896));
@@ -19,12 +28,6 @@
 
   .contentWrapper {
     width: 100%;
-    @include flexBox(4.8vh, column, center, normal);
-
-
-    .title {
-      @include RobotoRegular(calc(38px + 23 * ((100vw - 1024px) / 896)), normal);
-      color: $color-black
-    }
+    @include flexBox(0, column, center, normal);
   }
 }
