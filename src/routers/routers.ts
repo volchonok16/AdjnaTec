@@ -2,6 +2,7 @@ import React from 'react';
 import {RoutPath} from '../enum';
 import {MainPage} from '../pages/MainPage/MainPage';
 import {AboutUs} from '../pages/AboutUs/AboutUs';
+import {AtpOnline} from '../pages/OurProducts/Atp-online/AtpOnline';
 
 
 type AppRoute = {
@@ -20,7 +21,7 @@ export const routers: AppRoute[] = [
         id: '2',
         path: RoutPath.OurProducts,
         /*component: OurProducts*/
-        component: MainPage
+        component: AtpOnline
     },
     {
         id: '3',
