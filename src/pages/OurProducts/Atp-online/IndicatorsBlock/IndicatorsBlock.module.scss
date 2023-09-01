@@ -1,0 +1,63 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.indicators_container {
+  width: 100%;
+  margin-top: 13.8vh;
+  @include flexBox(15.6vh, column, normal, normal);
+
+  .info_block {
+    @include flexBox(0, row, normal, space-between);
+
+    .left_text_block {
+      width: 51.5vw;
+
+      .left_text {
+        @include RobotoRegular(54px, normal);
+        color: $color-black;
+
+        .blue_text {
+          @include RobotoRegular(54px, normal);
+          color: #6495ED;
+        }
+      }
+    }
+
+    .right_text_block {
+      width: 38.8vw;
+
+      .text_right {
+        @include MontserratLight(30px, normal);
+        color: $color-black;
+      }
+    }
+  }
+
+  .cards_block {
+    width: 100%;
+    @include flexBox(0, row, normal, space-between);
+
+    .card {
+      max-height: 268px;
+      width: 31%;
+      padding: 3.2vh 0;
+      background: #FFFFFF;
+      border-radius: 30px;
+      @include flexBox(2vh, column, center, space-around);
+
+      .number_value {
+        @include RobotoRegular(60px, normal);
+        color: #6495ED;
+      }
+
+      .description_container {
+        @include flexBox(0, column, center, center);
+
+        .description {
+          @include MontserratMedium(30px, normal);
+          color: $color-black;
+        }
+      }
+    }
+  }
+}
