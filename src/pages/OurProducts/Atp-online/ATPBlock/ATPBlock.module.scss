@@ -33,25 +33,4 @@
       color: $color-black;
     }
   }
-
-  .button {
-    box-sizing: border-box;
-    @include flexBox(0, column, center, center);
-    margin-top: 9.25vh;
-    width: 30vw;
-    height: 8.8vh;
-    border-radius: 30px;
-    border: none;
-    background: #7AD3C3;
-    cursor: pointer;
-
-    .button_text {
-      @include MontserratMedium(40px, normal);
-      color: $color-white;
-    }
-
-    &:hover {
-      background: #96C5EF;
-    }
-  }
 }
