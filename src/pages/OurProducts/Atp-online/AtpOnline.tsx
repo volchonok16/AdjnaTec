@@ -2,6 +2,7 @@ import s from './AtpOnline.module.scss'
 import {ATPBlock} from './ATPBlock/ATPBlock';
 import {IndicatorsBlock} from './IndicatorsBlock/IndicatorsBlock';
 import {AutomationBlock} from './AutomationBlock/AutomationBlock';
+import {AdvantagesBlock} from './AdvantagesBlock/AdvantagesBlock';
 
 export const AtpOnline = () => {
     return (
@@ -9,6 +10,7 @@ export const AtpOnline = () => {
             <ATPBlock/>
             <IndicatorsBlock/>
             <AutomationBlock/>
+            <AdvantagesBlock/>
         </div>
     )
 }

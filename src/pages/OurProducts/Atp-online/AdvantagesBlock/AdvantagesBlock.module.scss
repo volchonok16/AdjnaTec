@@ -1,0 +1,21 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.advantages_block_container {
+  width: 100%;
+  margin-top: 19.4vh;
+  @include flexBox(8.3vh, column, normal, normal);
+
+  .text {
+    @include RobotoRegular(54px, normal);
+    color: $color-black;
+
+    &_blue {
+      color: #6495ED;
+    }
+  }
+
+  .advantages_cards_block {
+    @include flexBox(2vh, column, flex-end, normal);
+  }
+}
