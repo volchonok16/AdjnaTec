@@ -1,0 +1,18 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.program_complex_card_container {
+  box-sizing: border-box;
+  width: 21.875vw;
+  height: 38.88vh;
+  max-height: 420px;
+  max-width: 420px;
+  padding: 2.77vh 1.66vw;
+  background: $color-white;
+  border-radius: 30px;
+
+  .number {
+    @include MontserratRegular(36px, normal);
+    color: #6495ED;
+  }
+}

@@ -3,6 +3,7 @@ import {ATPBlock} from './ATPBlock/ATPBlock';
 import {IndicatorsBlock} from './IndicatorsBlock/IndicatorsBlock';
 import {AutomationBlock} from './AutomationBlock/AutomationBlock';
 import {AdvantagesBlock} from './AdvantagesBlock/AdvantagesBlock';
+import {ProgramComplexBlock} from './ProgramComplexBlock/ProgramComplexBlock';
 
 export const AtpOnline = () => {
     return (
@@ -11,6 +12,7 @@ export const AtpOnline = () => {
             <IndicatorsBlock/>
             <AutomationBlock/>
             <AdvantagesBlock/>
+            <ProgramComplexBlock/>
         </div>
     )
 }
