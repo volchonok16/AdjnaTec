@@ -16,29 +16,27 @@ export const AdvantageCard = ({data}: AdvantageCardPropsType) => {
         setIsRotate(!isRotate)
     }
 
+    const elemHeight = isRotate ? data.maxHeight : '12.87vh'
+
     return (
-        <div className={cn(s.advantage_card_container, {
-            [s.advantage_card_container_open]: isRotate
-        })} onClick={rotateHandler}>
+        <div className={s.advantage_card_container} style={{height: elemHeight}}
+             onClick={rotateHandler}>
             <div className={s.small_card}>
                 <span className={s.title}>{data.title}</span>
                 <img className={cn(s.img, {
                     [s.img_rotate]: isRotate
                 })} src={cross} alt={'cross'}/>
             </div>
-            {isRotate && (
-                <ul className={s.ul_block}>
-                    {
-                        data.description.map((description) => {
-                            return (
-                                <li className={s.li_row}
-                                    key={description}>{description}</li>
-                            )
-                        })
-                    }
-                </ul>
-            )
-            }
+            <ul className={s.ul_block}>
+                {
+                    data.description.map((description) => {
+                        return (
+                            <li className={s.li_row}
+                                key={description}>{description}</li>
+                        )
+                    })
+                }
+            </ul>
         </div>
     )
 }
