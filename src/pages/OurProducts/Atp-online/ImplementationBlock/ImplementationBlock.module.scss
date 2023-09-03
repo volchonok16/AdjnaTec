@@ -1,0 +1,35 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.implementation_block_container {
+  width: 100%;
+  margin-top: 18.51vh;
+  @include flexBox(11.75vh, column, normal, normal);
+
+  .text_wrapper {
+    width: 100%;
+    @include flexBox(0, row, normal, space-between);
+
+    .text_1_wrapper {
+      width: 57.7vw;
+
+      .text_1 {
+        @include InterRegular(54px, normal);
+        color: $color-black;
+
+        &_blue {
+          color: #6495ED;
+        }
+      }
+    }
+
+    .text_2_wrapper {
+      width: 40.8vw;
+
+      .text_2 {
+        @include MontserratLight(30px, normal);
+        color: $color-black;
+      }
+    }
+  }
+}
