@@ -101,3 +101,11 @@
   font-weight: 600;
   line-height: $lh;
 }
+
+@mixin InterRegular($font, $lh) {
+  font-family: Inter, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: $lh;
+}
