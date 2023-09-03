@@ -1,0 +1,42 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.advantage_card_container {
+  box-sizing: border-box;
+  background: $color-white;
+  border-radius: 30px;
+  width: 69.7vw;
+  max-width: 1340px;
+  cursor: pointer;
+  padding: 3.3vh 2vw;
+  @include flexBox(5.5vh, column, normal, normal);
+  transition: all 1.0s ease;
+  overflow: hidden;
+
+  .small_card {
+    width: 100%;
+    @include flexBox(0, row, center, space-between);
+
+    .title {
+      @include RobotoRegular(50px, normal);
+      color: $color-black;
+    }
+
+    .img {
+      transition: transform 0.5s ease;
+
+      &_rotate {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .ul_block {
+    @include flexBox(3.5vh, column, normal, normal);
+
+    .li_row {
+      @include MontserratRegular(30px, normal);
+      color: $color-black;
+    }
+  }
+}

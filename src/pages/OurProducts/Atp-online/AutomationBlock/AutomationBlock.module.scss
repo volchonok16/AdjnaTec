@@ -1,0 +1,37 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.automation_block_container {
+  width: 100%;
+  margin-top: 14.35vh;
+  @include flexBox(0, row, normal, space-between);
+
+  .img {
+    /*понадобится для адаптивной версии*/
+  }
+
+  .right_block {
+    box-sizing: border-box;
+    padding-left: 1vw;
+    width: 50%;
+    @include flexBox(6vh, column, normal, center);
+
+    .text_block {
+      @include flexBox(3vh, column, normal, normal);
+
+      .text_1 {
+        @include MontserratRegular(48px, normal);
+        color: $color-black;
+
+        &_blue {
+          color: #6495ED;;
+        }
+      }
+
+      .text_2 {
+        @include MontserratRegular(30px, normal);
+        color: $color-black;
+      }
+    }
+  }
+}

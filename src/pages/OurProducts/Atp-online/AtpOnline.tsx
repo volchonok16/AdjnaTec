@@ -1,9 +1,20 @@
 import s from './AtpOnline.module.scss'
+import {ATPBlock} from './ATPBlock/ATPBlock';
+import {IndicatorsBlock} from './IndicatorsBlock/IndicatorsBlock';
+import {AutomationBlock} from './AutomationBlock/AutomationBlock';
+import {AdvantagesBlock} from './AdvantagesBlock/AdvantagesBlock';
+import {ProgramComplexBlock} from './ProgramComplexBlock/ProgramComplexBlock';
+import {ImplementationBlock} from './ImplementationBlock/ImplementationBlock';
 
 export const AtpOnline = () => {
     return (
         <div className={s.atp_container}>
-            ATP-online
+            <ATPBlock/>
+            <IndicatorsBlock/>
+            <AutomationBlock/>
+            <AdvantagesBlock/>
+            <ProgramComplexBlock/>
+            <ImplementationBlock/>
         </div>
     )
 }

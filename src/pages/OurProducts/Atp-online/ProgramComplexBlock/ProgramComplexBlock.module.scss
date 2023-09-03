@@ -1,0 +1,56 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.program_complex_block_container {
+  width: 100%;
+  margin-top: 24vh;
+  @include flexBox(3.7vh, column, normal, normal);
+
+  .row_container {
+    width: 100%;
+    @include flexBox(2.08vw, row, normal, normal);
+
+    .text_card {
+      width: 21.875vw;
+      height: 38.88vh;
+      max-height: 420px;
+      max-width: 420px;
+      @include flexBox(0, column, center, center);
+    }
+
+    .title_text {
+      @include RobotoRegular(50px, normal);
+      color: $color-black;
+
+      &_blue {
+        color: #6495ED;
+      }
+    }
+
+    .description_text {
+      @include MontserratLight(30px, normal);
+      color: $color-black;
+    }
+
+    .button {
+      width: 21.875vw;
+      height: 38.88vh;
+      max-height: 420px;
+      max-width: 420px;
+      border-radius: 30px;
+      border: none;
+      @include flexBox(0, column, center, center);
+      background: #7AD3C3;
+
+      &:hover {
+        cursor: pointer;
+        background: #96C5EF;
+      }
+
+      .button_text {
+        @include MontserratMedium(40px, normal);
+        color: $color-white;
+      }
+    }
+  }
+}

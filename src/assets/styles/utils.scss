@@ -70,6 +70,14 @@
   line-height: $lh;
 }
 
+@mixin MontserratLight($font, $lh) {
+  font-family: Montserrat, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 300;
+  line-height: $lh;
+}
+
 @mixin MontserratRegular($font, $lh) {
   font-family: Montserrat, sans-serif;
   font-size: $font;
@@ -91,5 +99,13 @@
   font-size: $font;
   font-style: normal;
   font-weight: 600;
+  line-height: $lh;
+}
+
+@mixin InterRegular($font, $lh) {
+  font-family: Inter, sans-serif;
+  font-size: $font;
+  font-style: normal;
+  font-weight: 400;
   line-height: $lh;
 }
