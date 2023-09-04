@@ -57,6 +57,10 @@ const cardData: Record<string, CardType> = {
 
 export const ProgramComplexBlock = () => {
 
+    const redirectHandler = () => {
+        window.open('http://adjnatech.ru:3000', '_blank')
+    }
+
     return (
         <div className={s.program_complex_block_container}>
             <div className={s.row_container}>
@@ -113,7 +117,7 @@ export const ProgramComplexBlock = () => {
                     number={cardData[9].number}
                     titles={cardData[9].title}
                     description={cardData[9].description}/>
-                <button className={s.button}>
+                <button className={s.button} onClick={redirectHandler}>
                     <span className={s.button_text}>Попробовать</span>
                 </button>
             </div>
