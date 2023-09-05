@@ -1,0 +1,34 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.step_card {
+  @include flexBox(0, row, flex-start, space-between);
+
+  .step_text_container {
+    @include flexBox(2.77vh, column, normal, normal);
+
+    .title_wrapper {
+      @include flexBox(10px, column, normal, normal);
+
+      .number_text {
+        @include RobotoRegular(140px, normal);
+        color: $color-black;
+      }
+
+      .title_text {
+        @include RobotoMedium(40px, normal);
+        color: $color-black;
+      }
+    }
+
+    .description {
+      max-width: 22.91vw;
+      @include MontserratRegular(30px, normal);
+      color: $color-black;
+    }
+  }
+
+  .img {
+    margin-top: 3vh;
+  }
+}

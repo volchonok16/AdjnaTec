@@ -4,7 +4,7 @@
 .implementation_block_container {
   width: 100%;
   margin-top: 18.51vh;
-  @include flexBox(11.75vh, column, normal, normal);
+  @include flexBox(7.4vh, column, normal, normal);
 
   .text_wrapper {
     width: 100%;
@@ -31,5 +31,14 @@
         color: $color-black;
       }
     }
+  }
+
+  .steps_wrapper {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 5.55vh 3.125vw 8.15vh 3.125vw;
+    box-sizing: border-box;
+    @include flexBox(6.25vw, row, normal, space-between);
   }
 }
