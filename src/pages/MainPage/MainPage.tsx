@@ -219,7 +219,6 @@ export const MainPage = () => {
                     </span>
                     <ConnectButton/>
                 </div>
-                {/*<Footer/>*/}
             </div>
         </div>
     )
