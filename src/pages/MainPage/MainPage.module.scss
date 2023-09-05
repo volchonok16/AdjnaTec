@@ -41,6 +41,7 @@
         .we_create_back {
           box-sizing: border-box;
           width: 76.25vw;
+          max-width: 1404px;
           height: auto;
           padding: 2% 1.84%;
           border-radius: 40px;
@@ -95,7 +96,9 @@
 
           .atp_container {
             width: 31vw;
+            max-width: 597px;
             height: 26vh;
+            max-height: 285px;
             border-radius: 15px;
             background: #FFF;
             box-shadow: 0 4px 5px 0 rgba(120, 168, 194, 0.50);
@@ -110,7 +113,9 @@
           .atp_online {
             position: absolute;
             width: 31vw;
+            max-width: 597px;
             height: 24vh;
+            max-height: 250px;
             top: 40%;
             left: 45%;
             padding-top: 10%;
@@ -168,9 +173,11 @@
       }
 
       .img_container {
+        width: 100%;
         @include flexBox(1.25vw, row, normal, normal);
 
         .cards_container {
+          width: 100%;
           @include flexBox(2vh, column, normal, normal);
 
           .cards_line {
@@ -178,7 +185,8 @@
           }
 
           .card_without_back {
-            width: 23vw;
+            width: 22.8vw;
+            max-width: 442px;
             height: 22.77vh;
             box-sizing: border-box;
             padding-left: 10px;
@@ -191,6 +199,7 @@
 
           .card_1 {
             width: 22.8vw;
+            max-width: 442px;
             height: 22.77vh;
             background-image: url("../../assets/image/MainPage/ERP.png");
             background-size: cover;
@@ -201,6 +210,7 @@
 
           .card_2 {
             width: 22.8vw;
+            max-width: 442px;
             height: 22.77vh;
             background-image: url("../../assets/image/MainPage/Vertyalization.png");
             background-size: cover;
@@ -211,6 +221,7 @@
 
           .card_3 {
             width: 22.8vw;
+            max-width: 442px;
             height: 22.77vh;
             background-image: url("../../assets/image/MainPage/CPM.png");
             background-size: cover;
@@ -221,6 +232,7 @@
 
           .card_4 {
             width: 22.8vw;
+            max-width: 442px;
             height: 22.77vh;
             background-image: url("../../assets/image/MainPage/DevelopForOrder.png");
             background-size: cover;
@@ -241,6 +253,7 @@
           .connect_card {
             @include flexBox(0, column, center, center);
             width: 23vw;
+            max-width: 442px;
             height: 37.8vh;
             background-image: url("../../assets/image/MainPage/ECM.png");
             background-size: cover;

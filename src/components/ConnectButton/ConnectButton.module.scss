@@ -6,6 +6,7 @@
   .button {
     @include flexBox(50px, row, center, flex-start);
     width: 23vw;
+    max-width: 442px;
     height: 7.6vh;
     border-radius: 20px;
     background-color: #7CB5FF;
