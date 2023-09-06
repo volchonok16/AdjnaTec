@@ -11,7 +11,7 @@ export const AtpOnline = () => {
         <div className={s.atp_container}>
             <ATPBlock/>
             <IndicatorsBlock/>
-            {/*<AutomationBlock/>*/}
+            <AutomationBlock/>
             {/*<AdvantagesBlock/>*/}
             {/*<ProgramComplexBlock/>*/}
             {/*<ImplementationBlock/>*/}
