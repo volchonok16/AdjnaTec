@@ -6,7 +6,11 @@
   width: 100%;
   height: 100vh;
   border-radius: 60px;
-  background: url("../../../../assets/image/ATP-online/tracks.png") right bottom 40% / auto no-repeat, white;
+  background-image: url("../../../../assets/image/ATP-online/tracks.png"), linear-gradient(#FFFFFF, rgb(255, 255, 255, 1));
+  background-position: right bottom 40%;
+  background-repeat: no-repeat;
+  /*calc(16px + 9 * ((100vw - 1024px) / 896))*/
+  /*background-size: 560px 288px, auto;*/
   padding: 19.4vh 3.5vw 0 3.5vw;
 
   .logo_block {
