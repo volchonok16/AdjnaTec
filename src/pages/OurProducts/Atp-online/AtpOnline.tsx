@@ -10,11 +10,11 @@ export const AtpOnline = () => {
     return (
         <div className={s.atp_container}>
             <ATPBlock/>
-            {/*<IndicatorsBlock/>
-            <AutomationBlock/>
-            <AdvantagesBlock/>
-            <ProgramComplexBlock/>
-            <ImplementationBlock/>*/}
+            <IndicatorsBlock/>
+            {/*<AutomationBlock/>*/}
+            {/*<AdvantagesBlock/>*/}
+            {/*<ProgramComplexBlock/>*/}
+            {/*<ImplementationBlock/>*/}
         </div>
     )
 }
