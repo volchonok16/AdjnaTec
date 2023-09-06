@@ -14,7 +14,7 @@ export const AtpOnline = () => {
             <AutomationBlock/>
             <AdvantagesBlock/>
             <ProgramComplexBlock/>
-            {/*<ImplementationBlock/>*/}
+            <ImplementationBlock/>
         </div>
     )
 }

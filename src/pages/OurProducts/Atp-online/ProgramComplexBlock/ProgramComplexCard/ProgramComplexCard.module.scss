@@ -3,8 +3,8 @@
 
 .program_complex_card_container {
   box-sizing: border-box;
-  height: min(420px, calc(210px + 210 * ((100vw - 1024px) / 896)));
-  width: min(420px, calc(210px + 210 * ((100vw - 1024px) / 896)));
+  height: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
+  width: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
   padding: 2.77vh 1.66vw;
   background: $color-white;
   border-radius: 30px;

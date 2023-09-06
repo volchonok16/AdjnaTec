@@ -11,8 +11,8 @@
     @include flexBox(2.08vw, row, normal, normal);
 
     .text_card {
-      height: min(420px, calc(210px + 210 * ((100vw - 1024px) / 896)));
-      width: min(420px, calc(210px + 210 * ((100vw - 1024px) / 896)));
+      height: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
+      width: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
       @include flexBox(0, column, center, center);
     }
 
@@ -31,8 +31,8 @@
     }
 
     .button {
-      height: min(420px, calc(210px + 210 * ((100vw - 1024px) / 896)));
-      width: min(420px, calc(210px + 210 * ((100vw - 1024px) / 896)));
+      height: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
+      width: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
       border-radius: 30px;
       border: none;
       @include flexBox(0, column, center, center);
