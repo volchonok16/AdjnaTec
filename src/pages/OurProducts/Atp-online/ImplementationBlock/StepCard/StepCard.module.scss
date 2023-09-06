@@ -11,24 +11,26 @@
       @include flexBox(10px, column, normal, normal);
 
       .number_text {
-        @include RobotoRegular(140px, normal);
+        @include RobotoRegular(min(140px, calc(70px + 70 * ((100vw - 1024px) / 896))), normal);
         color: $color-black;
       }
 
       .title_text {
-        @include RobotoMedium(40px, normal);
+        @include RobotoMedium(min(40px, calc(22px + 18 * ((100vw - 1024px) / 896))), normal);
         color: $color-black;
       }
     }
 
     .description {
       max-width: 22.91vw;
-      @include MontserratRegular(30px, normal);
+      @include MontserratRegular(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
       color: $color-black;
     }
   }
 
   .img {
     margin-top: 3vh;
+    width: min(74px, calc(37px + 37 * ((100vw - 1024px) / 896)));
+    height: min(74px, calc(37px + 37 * ((100vw - 1024px) / 896)));
   }
 }

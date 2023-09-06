@@ -11,15 +11,13 @@
     @include flexBox(2.08vw, row, normal, normal);
 
     .text_card {
-      width: 21.875vw;
-      height: 38.88vh;
-      max-height: 420px;
-      max-width: 420px;
+      height: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
+      width: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
       @include flexBox(0, column, center, center);
     }
 
     .title_text {
-      @include RobotoRegular(50px, normal);
+      @include RobotoRegular(min(50px, calc(25px + 25 * ((100vw - 1024px) / 896))), normal);
       color: $color-black;
 
       &_blue {
@@ -28,15 +26,13 @@
     }
 
     .description_text {
-      @include MontserratLight(30px, normal);
+      @include MontserratLight(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
       color: $color-black;
     }
 
     .button {
-      width: 21.875vw;
-      height: 38.88vh;
-      max-height: 420px;
-      max-width: 420px;
+      height: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
+      width: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
       border-radius: 30px;
       border: none;
       @include flexBox(0, column, center, center);
@@ -48,7 +44,7 @@
       }
 
       .button_text {
-        @include MontserratMedium(40px, normal);
+        @include MontserratMedium(min(40px, calc(20px + 20 * ((100vw - 1024px) / 896))), normal);
         color: $color-white;
       }
     }

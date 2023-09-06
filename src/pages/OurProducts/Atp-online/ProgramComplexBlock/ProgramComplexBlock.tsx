@@ -70,7 +70,7 @@ export const ProgramComplexBlock = () => {
 </span>
                 </div>
                 <ProgramComplexCard
-                    fontSize={'29px'}
+                    fontSize={'min(29px, calc(15px + 14 * ((100vw - 1024px) / 896)))'}
                     number={cardData[1].number}
                     titles={cardData[1].title}
                     description={cardData[1].description}/>

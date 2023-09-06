@@ -7,7 +7,8 @@
   @include flexBox(0, row, normal, space-between);
 
   .img {
-    /*понадобится для адаптивной версии*/
+    width: min(901px, calc(450px + 451 * ((100vw - 1024px) / 896)));
+    height: min(807px, calc(403px + 404 * ((100vw - 1024px) / 896)));
   }
 
   .right_block {
@@ -20,7 +21,7 @@
       @include flexBox(3vh, column, normal, normal);
 
       .text_1 {
-        @include MontserratRegular(48px, normal);
+        @include MontserratRegular(min(48px, calc(26px + 22 * ((100vw - 1024px) / 896))), normal);
         color: $color-black;
 
         &_blue {
@@ -29,7 +30,7 @@
       }
 
       .text_2 {
-        @include MontserratRegular(30px, normal);
+        @include MontserratRegular(min(30px, calc(16px + 14 * ((100vw - 1024px) / 896))), normal);
         color: $color-black;
       }
     }

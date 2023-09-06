@@ -16,7 +16,7 @@ export const AdvantageCard = ({data}: AdvantageCardPropsType) => {
         setIsRotate(!isRotate)
     }
 
-    const elemHeight = isRotate ? data.maxHeight : '12.87vh'
+    const elemHeight = isRotate ? data.maxHeight : '10.87vh'
 
     return (
         <div className={s.advantage_card_container} style={{height: elemHeight}}

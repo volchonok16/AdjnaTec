@@ -18,11 +18,13 @@
     @include flexBox(0, row, center, space-between);
 
     .title {
-      @include RobotoRegular(50px, normal);
+      @include RobotoRegular(min(50px, calc(30px + 20 * ((100vw - 1024px) / 896))), normal);
       color: $color-black;
     }
 
     .img {
+      width: min(60px, calc(30px + 30 * ((100vw - 1024px) / 896)));
+      height: min(60px, calc(30px + 30 * ((100vw - 1024px) / 896)));
       transition: transform 0.5s ease;
 
       &_rotate {
@@ -35,7 +37,7 @@
     @include flexBox(3.5vh, column, normal, normal);
 
     .li_row {
-      @include MontserratRegular(30px, normal);
+      @include MontserratRegular(min(30px, calc(18px + 12 * ((100vw - 1024px) / 896))), normal);
       color: $color-black;
     }
   }

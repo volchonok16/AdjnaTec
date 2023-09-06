@@ -14,7 +14,7 @@
   cursor: pointer;
 
   .button_text {
-    @include MontserratMedium(40px, normal);
+    @include MontserratMedium(calc(27px + 13 * ((100vw - 1024px) / 896)), normal);
     color: $color-white;
   }
 

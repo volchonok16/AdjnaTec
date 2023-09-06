@@ -14,7 +14,7 @@
       width: 57.7vw;
 
       .text_1 {
-        @include InterRegular(54px, normal);
+        @include InterRegular(min(54px, calc(28px + 26 * ((100vw - 1024px) / 896))), normal);
         color: $color-black;
 
         &_blue {
@@ -27,7 +27,7 @@
       width: 40.8vw;
 
       .text_2 {
-        @include MontserratLight(30px, normal);
+        @include MontserratLight(min(30px, calc(16px + 14 * ((100vw - 1024px) / 896))), normal);
         color: $color-black;
       }
     }
