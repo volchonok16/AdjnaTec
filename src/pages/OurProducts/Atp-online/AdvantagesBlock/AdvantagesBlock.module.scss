@@ -7,7 +7,7 @@
   @include flexBox(8.3vh, column, normal, normal);
 
   .text {
-    @include RobotoRegular(54px, normal);
+    @include RobotoRegular(min(54px, calc(29px + 25 * ((100vw - 1024px) / 896))), normal);
     color: $color-black;
 
     &_blue {
