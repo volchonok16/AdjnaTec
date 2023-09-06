@@ -7,21 +7,24 @@
   height: 100vh;
   border-radius: 60px;
   background-image: url("../../../../assets/image/ATP-online/tracks.png"), linear-gradient(#FFFFFF, rgb(255, 255, 255, 1));
-  background-position: right bottom 40%;
+  background-position: right bottom 35%;
   background-repeat: no-repeat;
-  /*calc(16px + 9 * ((100vw - 1024px) / 896))*/
-  /*background-size: 560px 288px, auto;*/
+  background-size: min(1020px, calc(560px + 510 * ((100vw - 1024px) / 896))) min(576px, calc(288px + 288 * ((100vw - 1024px) / 896))), auto;
   padding: 19.4vh 3.5vw 0 3.5vw;
 
   .logo_block {
     @include flexBox(0, row, normal, normal);
-    position: relative;
+
+    .logo {
+      width: calc(130px + 125 * ((100vw - 1024px) / 896));
+      height: calc(136px + 126 * ((100vw - 1024px) / 896));
+    }
 
     .title_block {
       @include flexBox(0, column, normal, normal);
 
       .title_text {
-        @include RobotoRegular(68px, normal);
+        @include RobotoRegular(min(68px, calc(35px + 33 * ((100vw - 1024px) / 896))), normal);
         color: $color-black;
       }
     }
@@ -33,7 +36,7 @@
     margin-top: 10vh;
 
     .text_description {
-      @include MontserratRegular(36px, normal);
+      @include MontserratRegular(min(36px, calc(20px + 16 * ((100vw - 1024px) / 896))), normal);
       color: $color-black;
     }
   }
