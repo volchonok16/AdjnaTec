@@ -5,6 +5,7 @@ import {AutomationBlock} from './AutomationBlock/AutomationBlock';
 import {AdvantagesBlock} from './AdvantagesBlock/AdvantagesBlock';
 import {ProgramComplexBlock} from './ProgramComplexBlock/ProgramComplexBlock';
 import {ImplementationBlock} from './ImplementationBlock/ImplementationBlock';
+import {DocumentsBlock} from './DocumentsBlock/DocumentsBlock';
 
 export const AtpOnline = () => {
     return (
@@ -15,6 +16,7 @@ export const AtpOnline = () => {
             <AdvantagesBlock/>
             <ProgramComplexBlock/>
             <ImplementationBlock/>
+            <DocumentsBlock/>
         </div>
     )
 }
