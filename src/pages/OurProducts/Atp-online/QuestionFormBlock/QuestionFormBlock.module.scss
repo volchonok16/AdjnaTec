@@ -1,0 +1,119 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.question_form_container {
+  width: 100%;
+  margin-top: 15vh;
+  border-radius: 60px;
+  background: linear-gradient(101deg, #6495ED 5.1%, #5983D0 84.85%);
+  box-sizing: border-box;
+  padding: 9.25vh 3.125vw;
+  @include flexBox(0, row, normal, space-between);
+
+  .left_container {
+    @include flexBox(6.48vh, column, normal, normal);
+
+    .text_wrapper {
+      @include flexBox(3.7vh, column, normal, normal);
+
+      .title {
+        @include RobotoMedium(min(96px, calc(48px + 48 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+      }
+
+      .description {
+        width: 65%;
+        @include MontserratRegular(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+      }
+    }
+
+    .icon_wrapper {
+      @include flexBox(1vw, row, normal, flex-start);
+
+      .icon {
+
+        &:hover {
+          cursor: pointer;
+          fill: $color-white;
+        }
+      }
+    }
+  }
+
+  .right_container {
+    @include flexBox(1.85vh, column, normal, normal);
+
+    .connect_wrapper {
+      @include flexBox(1.3vh, column, normal, normal);
+
+      .input {
+        box-sizing: border-box;
+        width: min(580px, calc(300px + 280 * ((100vw - 1024px) / 896)));
+        height: min(95px, calc(50px + 45 * ((100vw - 1024px) / 896)));
+        border-radius: min(30px, calc(15px + 15 * ((100vw - 1024px) / 896)));
+        border: none;
+        padding-left: min(26px, calc(13px + 13 * ((100vw - 1024px) / 896)));
+        background: rgba(120, 160, 233, 0.71);
+        @include MontserratRegular(min(32px, calc(16px + 16 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+
+
+        &::placeholder {
+          @include MontserratRegular(min(32px, calc(16px + 16 * ((100vw - 1024px) / 896))), normal);
+          color: $color-white;
+        }
+      }
+
+      .textarea {
+        box-sizing: border-box;
+        width: min(580px, calc(300px + 280 * ((100vw - 1024px) / 896)));
+        height: min(190px, calc(120px + 70 * ((100vw - 1024px) / 896)));
+        border-radius: min(30px, calc(15px + 15 * ((100vw - 1024px) / 896)));
+        border: none;
+        padding: min(28px, calc(14px + 14 * ((100vw - 1024px) / 896))) min(26px, calc(13px + 13 * ((100vw - 1024px) / 896)));
+        background: rgba(120, 160, 233, 0.71);
+        @include MontserratRegular(min(32px, calc(16px + 16 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+        resize: none;
+
+        &::placeholder {
+          @include MontserratRegular(min(32px, calc(16px + 16 * ((100vw - 1024px) / 896))), normal);
+          color: $color-white;
+        }
+      }
+    }
+
+    .button {
+      width: min(580px, calc(300px + 280 * ((100vw - 1024px) / 896)));
+      height: min(95px, calc(50px + 45 * ((100vw - 1024px) / 896)));
+      border-radius: min(30px, calc(15px + 15 * ((100vw - 1024px) / 896)));
+      border: none;
+      background: $color-white;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .button_text {
+        @include MontserratMedium(min(40px, calc(20px + 20 * ((100vw - 1024px) / 896))), normal);
+        color: #6495ED;
+      }
+    }
+
+    .politic_wrapper {
+      @include flexBox(0, column, normal, normal);
+
+      .text {
+        @include MontserratRegular(min(24px, calc(12px + 12 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+
+        &_underline {
+          @include MontserratRegular(min(24px, calc(12px + 12 * ((100vw - 1024px) / 896))), normal);
+          color: $color-white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import {ProgramComplexBlock} from './ProgramComplexBlock/ProgramComplexBlock';
 import {ImplementationBlock} from './ImplementationBlock/ImplementationBlock';
 import {DocumentsBlock} from './DocumentsBlock/DocumentsBlock';
 import {ControlBlock} from './ControlBlock/ControlBlock';
+import {QuestionFormBlock} from './QuestionFormBlock/QuestionFormBlock';
 
 export const AtpOnline = () => {
     return (
@@ -19,6 +20,7 @@ export const AtpOnline = () => {
             <ImplementationBlock/>
             <DocumentsBlock/>
             <ControlBlock/>
+            <QuestionFormBlock/>
         </div>
     )
 }
