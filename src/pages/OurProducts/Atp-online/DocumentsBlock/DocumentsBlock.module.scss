@@ -1,0 +1,52 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.documents_container {
+  width: 100%;
+  margin-top: 5vh;
+  @include flexBox(8.7vh, column, normal, normal);
+
+  .title {
+    @include RobotoRegular(min(54px, calc(29px + 25 * ((100vw - 1024px) / 896))), normal);
+    color: $color-black;
+
+    &_blue {
+      color: #6495ED;
+    }
+  }
+
+  .card_wrapper {
+    width: 100%;
+    @include flexBox(0, row, normal, space-between);
+
+    .card {
+      box-sizing: border-box;
+      height: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
+      width: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
+      padding: 2.77vh 1.66vw;
+      background: $color-white;
+      border-radius: 30px;
+      position: relative;
+
+      .number {
+        position: absolute;
+        @include MontserratRegular(min(36px, calc(18px + 18 * ((100vw - 1024px) / 896))), normal);
+        color: #6495ED;
+        pointer-events: none;
+      }
+
+      .card_title_container {
+        width: 100%;
+        height: 100%;
+        @include flexBox(0, column, center, center);
+        pointer-events: none;
+
+        .card_title {
+          @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
+          color: $color-black;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

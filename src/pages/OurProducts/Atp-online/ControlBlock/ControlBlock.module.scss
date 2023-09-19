@@ -1,0 +1,66 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.control_block_container {
+  width: 100%;
+  margin-top: 15vh;
+  @include flexBox(18vh, column, normal, normal);
+
+  .remark_wrapper {
+    width: 100%;
+    @include flexBox(0, column, flex-end, normal);
+
+    .remark_text {
+      width: 31vw;
+      @include MontserratRegular(min(30px, calc(12px + 15 * ((100vw - 1024px) / 896))), normal);
+      color: #6495ED;
+    }
+  }
+
+  .total_control_wrapper {
+    @include flexBox(0, column, center, center);
+
+    .total_control_text {
+      @include RobotoRegular(min(60px, calc(40px + 20 * ((100vw - 1024px) / 896))), normal);
+      color: $color-black;
+
+      &_blue {
+        color: #6495ED;
+      }
+    }
+  }
+
+  .lists_wrapper {
+    box-sizing: border-box;
+    padding: 0 2vw;
+    width: 100%;
+    @include flexBox(0, row, center, space-between);
+
+    .list_block {
+      @include flexBox(1vh, column, normal, normal);
+
+      .list_row {
+        @include flexBox(0.9vw, row, center, normal);
+
+        .img_mark {
+          width: min(14px, calc(9px + 5 * ((100vw - 1024px) / 896)));
+          height: min(16px, calc(10px + 6 * ((100vw - 1024px) / 896)));
+        }
+
+        .img_minus {
+          width: min(24px, calc(12px + 12 * ((100vw - 1024px) / 896)));
+        }
+
+        .text {
+          @include MontserratRegular(min(28px, calc(16px + 12 * ((100vw - 1024px) / 896))), normal);
+          color: $color-black;
+        }
+      }
+    }
+
+    .arrow_img {
+      width: min(116px, calc(58px + 58 * ((100vw - 1024px) / 896)));
+      height: min(104px, calc(52px + 52 * ((100vw - 1024px) / 896)));
+    }
+  }
+}
