@@ -71,7 +71,7 @@ function App() {
                 currentURL={currentURL}
                 activeLinkHandler={activeLinkHandler}/>
             <ScrollToTop/>
-            <RootContainer/>
+            <RootContainer activeLinkHandler={activeLinkHandler}/>
             <Footer/>
         </BrowserRouter>
     );

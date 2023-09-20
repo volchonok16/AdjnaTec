@@ -1,6 +1,6 @@
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, useLocation} from 'react-router-dom'
 import {routers} from '../../routers/routers';
-import React from 'react'
+import React, {useEffect} from 'react'
 
 type RoutePropsType = {
     component: React.ElementType;
@@ -8,7 +8,18 @@ type RoutePropsType = {
     id: string;
 }
 
-export const RootContainer = () => {
+type RootContainerPropsType = {
+    activeLinkHandler: (path: string) => void
+}
+
+export const RootContainer = ({activeLinkHandler}: RootContainerPropsType) => {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        activeLinkHandler(location.pathname)
+    }, [location.pathname])
+
     return (
         <Routes>
             {
