@@ -13,6 +13,10 @@
   transition: all 1.0s ease;
   overflow: hidden;
 
+  &_slow {
+    transition: all 2.0s ease;
+  }
+
   .small_card {
     width: 100%;
     @include flexBox(0, row, center, space-between);

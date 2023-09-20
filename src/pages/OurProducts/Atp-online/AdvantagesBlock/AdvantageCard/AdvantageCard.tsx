@@ -19,7 +19,9 @@ export const AdvantageCard = ({data}: AdvantageCardPropsType) => {
     const elemHeight = isRotate ? data.maxHeight : '10.87vh'
 
     return (
-        <div className={s.advantage_card_container} style={{height: elemHeight}}
+        <div className={cn(s.advantage_card_container, {
+            [s.advantage_card_container_slow]: data.slow_speed
+        })} style={{height: elemHeight}}
              onClick={rotateHandler}>
             <div className={s.small_card}>
                 <span className={s.title}>{data.title}</span>
