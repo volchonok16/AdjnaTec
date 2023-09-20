@@ -5,6 +5,7 @@ import {BurgerMenu} from './components/BurgerMenu/BurgerMenu';
 import {NavBarLinks, NavBarLinksType} from './components/Header/NavBarLinks';
 import {Footer} from './components/Footer/Footer';
 import {RootContainer} from './components/RootContainer/RootContainer';
+import {ScrollToTop} from './components/ScrollToTop/ScrollToTop';
 
 function createInitialState(data: NavBarLinksType[]) {
     const initialState: Record<string, boolean> = {};
@@ -69,6 +70,7 @@ function App() {
                 setIsOpen={burgerMenuHandler}
                 currentURL={currentURL}
                 activeLinkHandler={activeLinkHandler}/>
+            <ScrollToTop/>
             <RootContainer/>
             <Footer/>
         </BrowserRouter>
