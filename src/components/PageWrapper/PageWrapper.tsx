@@ -32,7 +32,7 @@ export const PageWrapper = ({
                 )}
             </div>
             <div className={s.contentWrapper}>
-                <div>{children}</div>
+                {children}
             </div>
         </div>
     )
