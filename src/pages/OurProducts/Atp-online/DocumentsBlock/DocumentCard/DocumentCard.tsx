@@ -51,12 +51,14 @@ export const DocumentCard = ({
                     [s.button_container_hover]: isHover || isOpen
                 })}>
                         <button className={s.button}>
-                            <span className={s.button_text}>посмотреть</span>
+                            посмотреть
+                            {/*<span className={s.button_text}>посмотреть</span>*/}
                         </button>
                         <button className={s.button}>
-                            <span className={s.button_text}>
+                            скачать
+                            {/*<span className={s.button_text}>
                                 скачать
-                            </span>
+                            </span>*/}
                         </button>
                     </div>
             </div>

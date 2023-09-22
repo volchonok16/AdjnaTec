@@ -47,12 +47,12 @@
   .button_container {
     width: 100%;
     @include flexBox(1.85vh, column, center, center);
-    pointer-events: none;
+    /*pointer-events: none;*/
     opacity: 0;
     transition: all 1.3s ease;
 
     &_hover {
-      pointer-events: none;
+      /*pointer-events: none;*/
       opacity: 1;
     }
 
@@ -62,19 +62,22 @@
       border-radius: 30px;
       background: #7AD3C3;
       border: none;
+      @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
+      color: $color-white;
 
       &:hover {
         background: #F8F9FE;
+        color: #6495ED;
       }
 
-      .button_text {
+      /*.button_text {
         @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
         color: $color-white;
 
         &_hover {
           color: #6495ED;
         }
-      }
+      }*/
     }
   }
 }
