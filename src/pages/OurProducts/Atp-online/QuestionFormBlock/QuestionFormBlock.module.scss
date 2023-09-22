@@ -112,6 +112,7 @@
           @include MontserratRegular(min(24px, calc(12px + 12 * ((100vw - 1024px) / 896))), normal);
           color: $color-white;
           text-decoration: underline;
+          cursor: pointer;
         }
       }
     }

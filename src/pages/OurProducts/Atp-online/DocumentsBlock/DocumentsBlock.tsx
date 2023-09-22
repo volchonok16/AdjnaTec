@@ -1,4 +1,5 @@
 import s from './DocumentsBlock.module.scss';
+import {DocumentCard} from './DocumentCard/DocumentCard';
 
 type CardDataType = {
     number: number;
@@ -35,19 +36,8 @@ export const DocumentsBlock = () => {
                 {
                     cardData.map((card) => {
                         return (
-                            <div className={s.card} key={card.number}>
-                                <span className={s.number}>/{card.number}</span>
-                                <div className={s.card_title_container}>
-                                    {
-                                        card.title.map((title) => {
-                                            return (
-                                                <span className={s.card_title}
-                                                      key={title}>{title}</span>
-                                            )
-                                        })
-                                    }
-                                </div>
-                            </div>
+                            <DocumentCard number={card.number} titles={card.title}
+                                          key={card.number}/>
                         )
                     })
                 }

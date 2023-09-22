@@ -1,0 +1,23 @@
+@import "src/assets/styles/colors";
+@import "src/assets/styles/utils";
+
+.privacy_policy_container {
+  width: 86.5%;
+  @include flexBox(3vh, column, flex-start, normal);
+
+  .title {
+    @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
+    color: #000;
+    letter-spacing: 0.3px;
+  }
+
+  .text_block {
+    @include flexBox(0, column, normal, normal);
+  }
+
+  .text {
+    color: #000;
+    @include MontserratRegular(min(25px, calc(12px + 13 * ((100vw - 1024px) / 896))), normal);
+    letter-spacing: 0.25px;
+  }
+}

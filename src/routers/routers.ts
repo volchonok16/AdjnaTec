@@ -3,6 +3,7 @@ import {RoutPath} from '../enum';
 import {MainPage} from '../pages/MainPage/MainPage';
 import {AboutUs} from '../pages/AboutUs/AboutUs';
 import {AtpOnline} from '../pages/OurProducts/Atp-online/AtpOnline';
+import {PrivacyPolicy} from '../pages/PrivacyPolicy/PrivacyPolicy';
 
 
 type AppRoute = {
@@ -45,5 +46,10 @@ export const routers: AppRoute[] = [
         path: RoutPath.Collaboration,
         /*component: Collaboration*/
         component: MainPage
+    },
+    {
+        id: '7',
+        path: RoutPath.PrivacyPolicy,
+        component: PrivacyPolicy
     }
 ];

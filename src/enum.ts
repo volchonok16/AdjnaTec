@@ -14,4 +14,5 @@ export enum RoutPath {
     ConnectWithUs = '/connect-with-us',
     Collaboration = '/collaboration',
     WhatWeDo = '/what-we-do',
+    PrivacyPolicy = '/privacy-policy'
 }

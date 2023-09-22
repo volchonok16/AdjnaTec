@@ -4,8 +4,12 @@ import whatsapp from '../../../../assets/image/ATP-online/whatsapp.svg';
 import telegram from '../../../../assets/image/ATP-online/telegram.svg';
 import vkontakte from '../../../../assets/image/ATP-online/vkontakte.svg'
 import {useEffect, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {RoutPath} from '../../../../enum';
 
 export const QuestionFormBlock = () => {
+
+    const navigate = useNavigate();
 
     const [scale, setScale] = useState(1);
 
@@ -33,6 +37,10 @@ export const QuestionFormBlock = () => {
             window.removeEventListener('resize', updateScale);
         };
     }, []);
+
+    const goToPrivacyPolicyPage = () => {
+        navigate(RoutPath.PrivacyPolicy)
+    }
 
     return (
         <div className={s.question_form_container}>
@@ -63,7 +71,7 @@ export const QuestionFormBlock = () => {
                 </div>
                 <div className={s.politic_wrapper}>
                     <span className={s.text}>Нажимая на кнопку, вы соглашаетесь</span>
-                    <span className={s.text_underline}>с политикой конфиденциальности сайта</span>
+                    <span className={s.text_underline} onClick={goToPrivacyPolicyPage}>с политикой конфиденциальности сайта</span>
                 </div>
             </div>
         </div>
