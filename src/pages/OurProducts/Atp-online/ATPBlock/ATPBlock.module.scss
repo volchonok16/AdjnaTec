@@ -41,3 +41,47 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .atp_block_container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+    background-image: url("../../../../assets/image/ATP-online/tracks.png"), linear-gradient(#FFFFFF, rgb(255, 255, 255, 1));
+    background-position: right bottom 35%;
+    background-repeat: no-repeat;
+    background-size: min(560px, calc(340px + 120 * ((100vw - 768px) / 255))) min(288px, calc(200px + 88 * ((100vw - 768px) / 255))), auto;
+    padding: 19.4vh 3.5vw 0 3.5vw;
+
+    .logo_block {
+      @include flexBox(0, row, normal, normal);
+
+      .logo {
+        width: calc(95px + 35 * ((100vw - 768px) / 255));
+        height: calc(92px + 44 * ((100vw - 768px) / 255));
+      }
+
+      .title_block {
+        @include flexBox(0, column, normal, normal);
+
+        .title_text {
+          @include RobotoRegular(min(35px, calc(24px + 11 * ((100vw - 768px) / 255))), normal);
+          color: $color-black;
+        }
+      }
+    }
+
+    .description_block {
+      box-sizing: border-box;
+      @include flexBox(0, column, normal, normal);
+      margin-top: 10vh;
+
+      .text_description {
+        @include MontserratRegular(min(20px, calc(17px + 3 * ((100vw - 768px) / 255))), normal);
+        color: $color-black;
+      }
+    }
+  }
+}
