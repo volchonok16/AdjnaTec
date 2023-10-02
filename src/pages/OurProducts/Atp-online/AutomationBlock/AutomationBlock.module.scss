@@ -6,6 +6,14 @@
   margin-top: 14.35vh;
   @include flexBox(0, row, normal, space-between);
 
+  .text_1_tablet_wrapper {
+    display: none;
+  }
+
+  .tablet_content_container {
+    display: none;
+  }
+
   .img {
     width: min(901px, calc(450px + 451 * ((100vw - 1024px) / 896)));
     height: min(807px, calc(403px + 404 * ((100vw - 1024px) / 896)));
@@ -32,6 +40,63 @@
       .text_2 {
         @include MontserratRegular(min(30px, calc(16px + 14 * ((100vw - 1024px) / 896))), normal);
         color: $color-black;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .automation_block_container {
+    width: 100%;
+    margin-top: 14.35vh;
+    @include flexBox(5vh, column, normal, normal);
+
+    .text_1_tablet_wrapper {
+      width: 100%;
+      @include flexBox(0, column, flex-end, normal);
+
+      .text_container {
+        @include flexBox(0, column, normal, normal);
+
+        .text_1 {
+          @include MontserratRegular(min(26px, calc(24px + 2 * ((100vw - 768px) / 255))), normal);
+          color: $color-black;
+
+          &_blue {
+            color: #6495ED;;
+          }
+        }
+      }
+    }
+
+    .img {
+      display: none;
+    }
+
+    .right_block {
+      display: none;
+    }
+
+    .tablet_content_container {
+      width: 100%;
+      @include flexBox(0, row, normal, space-between);
+
+      .img_tablet {
+        width: min(450px, calc(300px + 150 * ((100vw - 768px) / 255)));
+        height: min(403px, calc(260px + 143 * ((100vw - 768px) / 255)));
+      }
+
+      .right_block_tablet {
+        box-sizing: border-box;
+        padding-left: 1vw;
+        width: 50%;
+        @include flexBox(4.5vh, column, normal, center);
+
+        .text_2_tablet {
+          @include MontserratRegular(16px, normal);
+          color: $color-black;
+        }
       }
     }
   }
