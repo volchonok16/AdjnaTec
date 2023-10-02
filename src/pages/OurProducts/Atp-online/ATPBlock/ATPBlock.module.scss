@@ -34,6 +34,7 @@
     box-sizing: border-box;
     @include flexBox(0, column, normal, normal);
     margin-top: 10vh;
+    margin-bottom: 6vh;
 
     .text_description {
       @include MontserratRegular(min(36px, calc(20px + 16 * ((100vw - 1024px) / 896))), normal);
