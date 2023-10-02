@@ -118,6 +118,46 @@ export const IndicatorsBlock = () => {
                     </div>
                 </div>
             </div>
+            <div className={s.card_block_tablet} ref={parentRef}>
+                <div className={s.card_line}>
+                    <div className={s.card}>
+                        <span className={s.number_value}>{years} лет</span>
+                        <div className={s.description_container}>
+                            <span
+                                className={s.description}>объединяет все ресурсы и</span>
+                            <span
+                                className={s.description}>процессы автотранспортного</span>
+                            <span
+                                className={s.description}>предприятия в удобную систему</span>
+                        </div>
+                    </div>
+                    <div className={s.card}>
+                        <span className={s.number_value}>{workPercent}%</span>
+                        <div className={s.description_container}>
+                            <span
+                                className={s.description}>операторской, контрольной</span>
+                            <span className={s.description}>и управленческой работы</span>
+                            <span
+                                className={s.description}>выполняется автоматически</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div className={s.card_line}>
+                    <div className={s.card}>
+                        <span className={s.number_value}>{savingPercent}%</span>
+                        <div className={s.description_container}>
+                            <span className={s.description}>экономии от всех</span>
+                            <span className={s.description}>затрат предприятия</span>
+                        </div>
+                    </div>
+                    <div className={s.text_block}>
+                        <span className={s.text_right}>
+                            Все сделано так, чтобы максимально разгрузить персонал, обеспечить надежность работы комплекса даже при отсутствии связи, обезопасить данные и дать максимум достоверной информации руководству по состоянию процессов на предприятии
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

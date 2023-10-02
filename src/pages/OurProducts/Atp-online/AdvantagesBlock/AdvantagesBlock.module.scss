@@ -19,3 +19,25 @@
     @include flexBox(2vh, column, flex-end, normal);
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .advantages_block_container {
+    width: 100%;
+    margin-top: 19.4vh;
+    @include flexBox(8.3vh, column, normal, normal);
+
+    .text {
+      @include RobotoRegular(min(29px, calc(23px + 6 * ((100vw - 768px) / 255))), normal);
+      color: $color-black;
+
+      &_blue {
+        color: #6495ED;
+      }
+    }
+
+    .advantages_cards_block {
+      @include flexBox(2vh, column, flex-end, normal);
+    }
+  }
+}

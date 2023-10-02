@@ -4,7 +4,6 @@
 .button {
   box-sizing: border-box;
   @include flexBox(0, column, center, center);
-  margin-top: 9.25vh;
   width: 30vw;
   max-width: 573px;
   height: 8.8vh;
@@ -20,5 +19,29 @@
 
   &:hover {
     background: #96C5EF;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .button {
+    box-sizing: border-box;
+    @include flexBox(0, column, center, center);
+    width: 30vw;
+    max-width: 573px;
+    height: 8.8vh;
+    border-radius: 10px;
+    border: none;
+    background: #7AD3C3;
+    cursor: pointer;
+
+    .button_text {
+      @include MontserratMedium(calc(18px + 9 * ((100vw - 768px) / 255)), normal);
+      color: $color-white;
+    }
+
+    &:hover {
+      background: #96C5EF;
+    }
   }
 }
