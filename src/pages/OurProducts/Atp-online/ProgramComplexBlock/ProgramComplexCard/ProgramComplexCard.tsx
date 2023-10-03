@@ -3,7 +3,9 @@ import React, {useState} from 'react';
 import cn from 'classnames';
 
 type ProgramComplexCardPropsType = {
+    height?: string
     fontSize?: string
+    descriptionFontSize?: string
     number: number,
     titles: string[],
     description: string
@@ -13,7 +15,9 @@ export const ProgramComplexCard = ({
                                        number,
                                        titles,
                                        description,
-                                       fontSize
+                                       fontSize,
+                                       descriptionFontSize,
+                                       height
                                    }: ProgramComplexCardPropsType) => {
 
     const [isHover, setIsHover] = useState(false)
@@ -29,7 +33,7 @@ export const ProgramComplexCard = ({
 
     return (
         <div
-            className={s.program_complex_card_container}
+            className={s.program_complex_card_container} style={{height: height}}
             onMouseOver={hoverHandler}
             onMouseOut={hoverHandler}
             onClick={openHandler}>
@@ -56,7 +60,8 @@ export const ProgramComplexCard = ({
                 </div>
                 <span className={cn(s.description, {
                     [s.description_hover]: isHover || isOpen
-                })}>
+                })}
+                      style={{fontSize: descriptionFontSize}}>
                         {description}
                     </span>
             </div>

@@ -34,14 +34,13 @@ export const QuestionFormBlock = () => {
 
         const requestBody: PostFeedbackBody = {
             name: name,
-            contacts: email,
+            mail: email,
+            phone: phone,
             comment: comment
         }
 
-        console.log(requestBody)
-
         postFeedback(requestBody).then((res) => {
-            if (res.status === 200) {
+            if (res.status === 201) {
                 alert('Сообщение отправлено')
             }
         }).catch(error => console.error(error))
