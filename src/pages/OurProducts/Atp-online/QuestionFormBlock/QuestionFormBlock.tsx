@@ -40,7 +40,7 @@ export const QuestionFormBlock = () => {
         }
 
         postFeedback(requestBody).then((res) => {
-            if (res.status === 200) {
+            if (res.status === 201) {
                 alert('Сообщение отправлено')
             }
         }).catch(error => console.error(error))
