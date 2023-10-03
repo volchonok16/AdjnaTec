@@ -7,7 +7,8 @@ export const IndicatorsBlock = () => {
     const [workPercent, setWorkPercent] = useState(1)
     const [savingPercent, setSavingPercent] = useState(1)
     const [isVisible, setIsVisible] = useState(false);
-    const parentRef = useRef(null);
+    const parentWebRef = useRef(null);
+    const parentTabletRef = useRef(null)
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -16,21 +17,47 @@ export const IndicatorsBlock = () => {
                 if (entry.isIntersecting) {
                     setIsVisible(true);
                     // Можно также отключить наблюдение после того, как элемент видим
-                    if (parentRef.current) {
-                        observer.unobserve(parentRef.current);
+                    if (parentWebRef.current) {
+                        observer.unobserve(parentWebRef.current);
                     }
                 }
             },
             {threshold: 0.5} // Можно настроить порог видимости по вашему усмотрению
         );
         // Начать отслеживание элемента
-        if (parentRef.current) {
-            observer.observe(parentRef.current);
+        if (parentWebRef.current) {
+            observer.observe(parentWebRef.current);
         }
         // Очистить наблюдатель при размонтировании компонента
         return () => {
-            if (parentRef.current) {
-                observer.unobserve(parentRef.current);
+            if (parentWebRef.current) {
+                observer.unobserve(parentWebRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                // entry.isIntersecting будет true, когда элемент видим в области просмотра
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    // Можно также отключить наблюдение после того, как элемент видим
+                    if (parentTabletRef.current) {
+                        observer.unobserve(parentTabletRef.current);
+                    }
+                }
+            },
+            {threshold: 0.5} // Можно настроить порог видимости по вашему усмотрению
+        );
+        // Начать отслеживание элемента
+        if (parentTabletRef.current) {
+            observer.observe(parentTabletRef.current);
+        }
+        // Очистить наблюдатель при размонтировании компонента
+        return () => {
+            if (parentTabletRef.current) {
+                observer.unobserve(parentTabletRef.current);
             }
         };
     }, []);
@@ -92,7 +119,7 @@ export const IndicatorsBlock = () => {
                     </span>
                 </div>
             </div>
-            <div className={s.cards_block} ref={parentRef}>
+            <div className={s.cards_block} ref={parentWebRef}>
                 <div className={s.card}>
                     <span className={s.number_value}>{years} лет</span>
                     <div className={s.description_container}>
@@ -118,7 +145,7 @@ export const IndicatorsBlock = () => {
                     </div>
                 </div>
             </div>
-            <div className={s.card_block_tablet} ref={parentRef}>
+            <div className={s.card_block_tablet} ref={parentTabletRef}>
                 <div className={s.card_line}>
                     <div className={s.card}>
                         <span className={s.number_value}>{years} лет</span>
