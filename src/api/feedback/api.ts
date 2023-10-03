@@ -2,7 +2,8 @@ import {requestWithBody} from '../requestFunction';
 
 export type PostFeedbackBody = {
     name: string,
-    contacts: string,
+    mail:string,
+    phone: string,
     comment: string
 }
 

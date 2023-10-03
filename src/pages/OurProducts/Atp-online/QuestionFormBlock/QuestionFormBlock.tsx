@@ -34,11 +34,10 @@ export const QuestionFormBlock = () => {
 
         const requestBody: PostFeedbackBody = {
             name: name,
-            contacts: email,
+            mail: email,
+            phone: phone,
             comment: comment
         }
-
-        console.log(requestBody)
 
         postFeedback(requestBody).then((res) => {
             if (res.status === 200) {
