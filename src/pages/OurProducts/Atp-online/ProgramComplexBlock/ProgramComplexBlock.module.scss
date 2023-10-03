@@ -49,4 +49,88 @@
       }
     }
   }
+
+  .text_container_tablet {
+    display: none;
+  }
+
+  .card_container_tablet {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .program_complex_block_container {
+    width: 100%;
+    margin-top: 24vh;
+    @include flexBox(9.2vh, column, normal, normal);
+
+    .row_container {
+      display: none;
+    }
+
+    .text_container_tablet {
+      width: 100%;
+      @include flexBox(4.63vh, column, normal, normal);
+
+      .title_wrapper_tablet {
+        @include flexBox(0, column, normal, normal);
+
+        .title_tablet {
+          @include RobotoRegular(min(30px, calc(26px + 4 * ((100vw - 768px) / 255))), normal);
+          color: $color-black;
+
+          &_blue {
+            color: #6495ED;
+          }
+        }
+      }
+
+      .description_wrapper_tablet {
+        width: 100%;
+        @include flexBox(0, row, normal, flex-end);
+
+        .description_tablet {
+          width: 63%;
+          @include MontserratLight(min(20px, calc(16px + 4 * ((100vw - 768px) / 255))), normal);
+          color: $color-black;
+        }
+      }
+    }
+
+    .card_container_tablet {
+      width: 100%;
+      @include flexBox(4.4vh, column, normal, normal);
+
+      .card_row_tablet {
+        width: 100%;
+        @include flexBox(2.47vw, row, normal, normal);
+
+        .card_with_button {
+          box-sizing: border-box;
+          @include flexBox(4.6vh, column, normal, normal);
+
+          .button_tablet {
+            height: min(50px, calc(40px + 10 * ((100vw - 768px) / 255)));
+            width: min(302px, calc(230px + 72 * ((100vw - 768px) / 255)));
+            border-radius: 10px;
+            border: none;
+            @include flexBox(0, column, center, center);
+            background: #7AD3C3;
+
+            &:hover {
+              cursor: pointer;
+              background: #96C5EF;
+            }
+
+            .button_text_tablet {
+              @include MontserratMedium(min(20px, calc(18px + 2 * ((100vw - 768px) / 255))), normal);
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
 }
