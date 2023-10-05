@@ -42,6 +42,15 @@ export const ImplementationBlock = () => {
                     <span className={s.text_2}>Около 50% результативности работы зависит именно от внедрения. Самый лучший, золотой и трижды космический инструмент не будет работать, если им не пользоваться. То, как его будут использовать в ежедневной работе — это полностью вопрос внедрения!</span>
                 </div>
             </div>
+            <div className={s.text_wrapper_tablet}>
+                <div className={s.text_1_wrapper_tablet}>
+                    <span className={s.text_1_tablet}><span className={s.text_1_tablet_blue}>ВНЕДРЕНИЕ</span> КОМПЛЕКСА В ЖИЗНЬ ПРЕДПРИЯТИЯ</span>
+                    <span className={s.text_1_tablet}>ИМЕЕТ <span className={s.text_1_tablet_blue}>КРИТИЧЕСКИ ВАЖНОЕ ЗНАЧЕНИЕ</span></span>
+                </div>
+                <div className={s.text_2_wrapper_tablet}>
+                    <span className={s.text_2_tablet}>Около 50% результативности работы зависит именно от внедрения. Самый лучший, золотой и трижды космический инструмент не будет работать, если им не пользоваться. То, как его будут использовать в ежедневной работе — это полностью вопрос внедрения!</span>
+                </div>
+            </div>
             <div className={s.steps_wrapper}>
                 {
                     stepData.map((step) => {
@@ -49,6 +58,11 @@ export const ImplementationBlock = () => {
                             <StepCard key={step.number} data={step}/>
                         )
                     })
+                }
+            </div>
+            <div className={s.steps_wrapper_tablet}>
+                {
+
                 }
             </div>
         </div>
