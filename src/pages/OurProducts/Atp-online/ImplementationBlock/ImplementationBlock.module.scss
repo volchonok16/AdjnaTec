@@ -33,6 +33,10 @@
     }
   }
 
+  .text_wrapper_tablet {
+    display: none;
+  }
+
   .steps_wrapper {
     width: 100%;
     background: #FFFFFF;
@@ -40,5 +44,64 @@
     padding: 5.55vh 3.125vw 8.15vh 3.125vw;
     box-sizing: border-box;
     @include flexBox(6.25vw, row, normal, space-between);
+  }
+
+  .steps_wrapper_tablet {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .implementation_block_container {
+    width: 100%;
+    margin-top: 18.51vh;
+    @include flexBox(9.25vh, column, normal, normal);
+
+    .text_wrapper {
+      display: none;
+    }
+
+    .text_wrapper_tablet {
+      @include flexBox(4.62vh, column, normal, normal);
+      width: 100%;
+
+      .text_1_wrapper_tablet {
+        @include flexBox(0, column, normal, normal);
+
+        .text_1_tablet {
+          @include RobotoRegular(min(28px, calc(26px + 2 * ((100vw - 768px) / 255))), normal);
+          color: $color-black;
+
+          &_blue {
+            color: #6495ED;
+          }
+        }
+      }
+
+      .text_2_wrapper_tablet {
+        width: 100%;
+        @include flexBox(0, row, normal, flex-end);
+
+        .text_2_tablet {
+          width: 64vw;
+          @include MontserratLight(16px, normal);
+          color: $color-black;
+        }
+      }
+    }
+
+    .steps_wrapper {
+      display: none;
+    }
+
+    .steps_wrapper_tablet {
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 9.25vh 3.9vw;
+      box-sizing: border-box;
+      @include flexBox(5.5vw, column, normal, normal);
+    }
   }
 }
