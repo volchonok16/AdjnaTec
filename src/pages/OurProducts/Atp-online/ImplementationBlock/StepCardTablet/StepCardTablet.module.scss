@@ -1,0 +1,32 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.step_card_tablet_container {
+  width: 100%;
+  @include flexBox(0, column, normal, normal);
+
+  .card_tablet_wrapper {
+    width: 65vw;
+    @include flexBox(2vh, column, normal, normal);
+
+    .title_wrapper_tablet {
+      @include flexBox(1vw, row, flex-end, normal);
+
+      .number_tablet {
+        @include RobotoRegular(50px, normal);
+        color: #7AD3C3;
+      }
+
+      .title_tablet {
+        @include RobotoMedium(24px, normal);
+        color: $color-black;
+        padding-bottom: 1.38vh;
+      }
+    }
+
+    .description_tablet {
+      @include MontserratRegular(16px, normal);
+      color: $color-black;
+    }
+  }
+}

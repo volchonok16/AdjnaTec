@@ -101,7 +101,7 @@
       border-radius: 20px;
       padding: 9.25vh 3.9vw;
       box-sizing: border-box;
-      @include flexBox(9.5vw, column, normal, normal);
+      @include flexBox(5.5vw, column, normal, normal);
     }
   }
 }

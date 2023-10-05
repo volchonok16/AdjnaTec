@@ -1,11 +1,13 @@
 import s from './ImplementationBlock.module.scss';
 import {StepCard} from './StepCard/StepCard';
+import {StepCardTablet} from './StepCardTablet/StepCardTablet';
 
 export type StepCardData = {
     number: string;
     title: string;
     description: string,
-    isArrow: boolean
+    isArrow: boolean,
+    flexStart: boolean
 }
 
 const stepData: StepCardData[] = [
@@ -13,19 +15,22 @@ const stepData: StepCardData[] = [
         number: '01',
         title: 'Техническое внедрение',
         description: 'Отработанная пошаговая модель технического внедрения комплекса. Выполняется в групповом режиме и индивидуально. Подключение комплекса ко всем необходимым службам предприятия, настройка рабочих мест, загрузка ваших справочников и остатков по складу.',
-        isArrow: true
+        isArrow: true,
+        flexStart: true
     },
     {
         number: '02',
         title: 'Обучение',
         description: 'У нас крайне простой интерфейс, все сложности «под капотом», научиться работать с комплексом можно за пару часов. Мы проводим вебинары, обучаем, показываем, помогаем решить все вопросы об использовании комплекса, в процесс его установки, настройки, внедрения и эксплуатации.',
-        isArrow: true
+        isArrow: true,
+        flexStart: false
     },
     {
         number: '03',
         title: 'Сопровождение',
         description: 'Мы обеспечиваем постоянную техническую поддержку и улучшения комплекса. Вам не нужно дорабатывать что-либо за свой счет — обычно это не нужно совсем, но если у Вас есть хорошие предложения, то полезные функции для системы в целом мы делаем в рамках обычной поддержки.',
-        isArrow: false
+        isArrow: false,
+        flexStart: true
     },
 ]
 
@@ -44,8 +49,10 @@ export const ImplementationBlock = () => {
             </div>
             <div className={s.text_wrapper_tablet}>
                 <div className={s.text_1_wrapper_tablet}>
-                    <span className={s.text_1_tablet}><span className={s.text_1_tablet_blue}>ВНЕДРЕНИЕ</span> КОМПЛЕКСА В ЖИЗНЬ ПРЕДПРИЯТИЯ</span>
-                    <span className={s.text_1_tablet}>ИМЕЕТ <span className={s.text_1_tablet_blue}>КРИТИЧЕСКИ ВАЖНОЕ ЗНАЧЕНИЕ</span></span>
+                    <span className={s.text_1_tablet}><span
+                        className={s.text_1_tablet_blue}>ВНЕДРЕНИЕ</span> КОМПЛЕКСА В ЖИЗНЬ ПРЕДПРИЯТИЯ</span>
+                    <span className={s.text_1_tablet}>ИМЕЕТ <span
+                        className={s.text_1_tablet_blue}>КРИТИЧЕСКИ ВАЖНОЕ ЗНАЧЕНИЕ</span></span>
                 </div>
                 <div className={s.text_2_wrapper_tablet}>
                     <span className={s.text_2_tablet}>Около 50% результативности работы зависит именно от внедрения. Самый лучший, золотой и трижды космический инструмент не будет работать, если им не пользоваться. То, как его будут использовать в ежедневной работе — это полностью вопрос внедрения!</span>
@@ -62,7 +69,11 @@ export const ImplementationBlock = () => {
             </div>
             <div className={s.steps_wrapper_tablet}>
                 {
-
+                    stepData.map((step) => {
+                        return (
+                            <StepCardTablet key={step.number} data={step}/>
+                        )
+                    })
                 }
             </div>
         </div>
