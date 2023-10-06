@@ -1,9 +1,11 @@
 import cn from 'classnames';
 import s from './BurgerMenu.module.scss';
 import cross from '../../assets/image/Header/cross.svg';
-import {NavBarLinks} from '../Header/NavBarLinks';
+import {NavBarLinks, NavBarLinksATP} from '../Header/NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
 import {ConnectButton} from '../ConnectButton/ConnectButton';
+import {useLocation} from 'react-router-dom';
+import {LinkItemProduct} from '../LinkItemProduct/LinkItemProduct';
 
 type BurgerMenuPropsType = {
     isOpen: boolean,
@@ -18,6 +20,11 @@ export const BurgerMenu = ({
                                activeLinkHandler,
                                currentURL
                            }: BurgerMenuPropsType) => {
+
+    const location = useLocation();
+
+    const pathArr = ['/our-products', '/advantages', '/documents', '/contacts']
+    const isOurProductPage = pathArr.includes(location.pathname)
 
     const burgerMenuHandler = () => {
         setIsOpen()
@@ -39,11 +46,19 @@ export const BurgerMenu = ({
                          onClick={burgerMenuHandler}/>
                     <div className={s.menu_list}>
                         {
-                            NavBarLinks.map((item) => {
-                                return <LinkItem item={item} currentURL={currentURL}
-                                                 key={item.path}
-                                                 onActivateLink={activeLinkBurgerMenuHandler}/>
-                            })
+                            isOurProductPage ? (
+                                NavBarLinksATP.map((item) => {
+                                    return <LinkItemProduct item={item}
+                                                            currentURL={currentURL}
+                                                            key={item.path}
+                                                            onActivateLink={activeLinkHandler}/>
+                                })
+                            ) : (
+                                NavBarLinks.map((item) => {
+                                    return <LinkItem item={item} currentURL={currentURL}
+                                                     key={item.path}
+                                                     onActivateLink={activeLinkBurgerMenuHandler}/>
+                                }))
                         }
                     </div>
                 </div>

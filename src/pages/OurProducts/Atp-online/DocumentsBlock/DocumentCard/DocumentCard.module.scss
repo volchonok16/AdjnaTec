@@ -47,12 +47,10 @@
   .button_container {
     width: 100%;
     @include flexBox(1.85vh, column, center, center);
-    /*pointer-events: none;*/
     opacity: 0;
     transition: all 1.3s ease;
 
     &_hover {
-      /*pointer-events: none;*/
       opacity: 1;
     }
 
@@ -69,15 +67,79 @@
         background: #F8F9FE;
         color: #6495ED;
       }
+    }
+  }
+}
 
-      /*.button_text {
-        @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .document_card_container {
+    box-sizing: border-box;
+    height: min(170px, calc(140px + 30 * ((100vw - 768px) / 255)));
+    width: 100%;
+    padding: 2.77vh 1.66vw;
+    background: $color-white;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    .number {
+      position: absolute;
+      @include MontserratRegular(min(26px, calc(24px + 2 * ((100vw - 768px) / 255))), normal);
+      color: #6495ED;
+      pointer-events: none;
+    }
+
+    .text_container {
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      @include flexBox(5vh, column, normal, normal);
+      padding-top: 14%;
+      transition: all 1.3s ease;
+      position: relative;
+
+      &_hover {
+        padding-top: 9%;
+      }
+    }
+
+    .title_wrapper {
+      @include flexBox(5px, row, center, center);
+      pointer-events: none;
+    }
+
+    .title {
+      @include MontserratMedium(min(22px, calc(17px + 5 * ((100vw - 768px) / 255))), normal);
+      color: $color-black;
+      pointer-events: none;
+    }
+
+    .button_container {
+      width: 100%;
+      @include flexBox(1.85vh, row, center, center);
+      opacity: 0;
+      transition: all 1.3s ease;
+
+      &_hover {
+        opacity: 1;
+      }
+
+      .button {
+        width: min(183px, calc(153px + 30 * ((100vw - 768px) / 255)));
+        height: min(45px, calc(40px + 5 * ((100vw - 768px) / 255)));
+        border-radius: 10px;
+        background: #7AD3C3;
+        border: none;
+        @include MontserratMedium(min(20px, calc(16px + 4 * ((100vw - 768px) / 255))), normal);
         color: $color-white;
 
-        &_hover {
+        &:hover {
+          background: #F8F9FE;
           color: #6495ED;
         }
-      }*/
+      }
     }
   }
 }

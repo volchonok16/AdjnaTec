@@ -124,6 +124,49 @@ export const QuestionFormBlock = () => {
                     <span className={s.text_underline} onClick={goToPrivacyPolicyPage}>с политикой конфиденциальности сайта</span>
                 </div>
             </div>
+            <div className={s.tablet_content_wrapper}>
+                <span className={s.title_tablet}>Остались вопросы?</span>
+                <div className={s.tablet_blocks_wrapper}>
+                    <div className={s.left_container}>
+                        <div className={s.text_wrapper}>
+                            <span className={s.description}>Вы можете задать любой интересующий вас вопрос нашим специалистам. Менеджеры компании с радостью ответят на ваши вопросы, произведут расчет стоимости услуг и подготовят коммерческое предложение.</span>
+                        </div>
+                        <div className={s.icon_wrapper}>
+                            <img className={s.icon} style={{transform: `scale(${scale})`}}
+                                 src={youtube} onClick={goToYouTube} alt={'youtube'}/>
+                            <img className={s.icon} style={{transform: `scale(${scale})`}}
+                                 src={whatsapp} alt={'whatsapp'}/>
+                            <img className={s.icon} style={{transform: `scale(${scale})`}}
+                                 src={telegram} onClick={goToTelegram} alt={'telegram'}/>
+                            <img className={s.icon} style={{transform: `scale(${scale})`}}
+                                 src={vkontakte} onClick={goToVkontakte}
+                                 alt={'vkontakte'}/>
+                        </div>
+                    </div>
+                    <div className={s.right_container}>
+                        <div className={s.connect_wrapper}>
+                            <input className={s.input} placeholder={'Имя'} value={name}
+                                   onChange={nameHandler}/>
+                            <input className={s.input} placeholder={'Телефон'}
+                                   value={phone}
+                                   onChange={phoneHandler}/>
+                            <input className={s.input} placeholder={'Почта'} value={email}
+                                   onChange={emailHandler}/>
+                            <textarea className={s.textarea} placeholder={'Комментарий'}
+                                      value={comment} onChange={commentHandler}/>
+                            <button className={s.button} onClick={sendFeedbackHandler}>
+                                <span className={s.button_text}>Связаться</span>
+                            </button>
+                        </div>
+                        <div className={s.politic_wrapper}>
+                            <span
+                                className={s.text}>Нажимая на кнопку, вы соглашаетесь</span>
+                            <span className={s.text_underline}
+                                  onClick={goToPrivacyPolicyPage}>с политикой конфиденциальности сайта</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

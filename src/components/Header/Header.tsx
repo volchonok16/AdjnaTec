@@ -1,9 +1,11 @@
 import s from './Header.module.scss';
 import burger from '../../assets/image/Header/burger.svg'
-import {NavBarLinks} from './NavBarLinks';
+import back_arrow from '../../assets/image/Header/back_arrow.svg'
+import {NavBarLinks, NavBarLinksATP} from './NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
-import {useNavigate} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../enum';
+import {LinkItemProduct} from '../LinkItemProduct/LinkItemProduct';
 
 type HeaderPropsType = {
     setIsOpen: VoidFunction
@@ -14,6 +16,10 @@ type HeaderPropsType = {
 export const Header = ({setIsOpen, activeLinkHandler, currentURL}: HeaderPropsType) => {
 
     const navigate = useNavigate()
+    const location = useLocation();
+
+    const pathArr = ['/our-products', '/advantages', '/documents', '/contacts']
+    const isOurProductPage = pathArr.includes(location.pathname)
 
     const mainPageHandler = () => {
         activeLinkHandler(RoutPath.MainPage)
@@ -26,14 +32,28 @@ export const Header = ({setIsOpen, activeLinkHandler, currentURL}: HeaderPropsTy
 
     return (
         <div className={s.headerContainer}>
-            <div className={s.logo_container} onClick={mainPageHandler}/>
+            {
+                isOurProductPage ? (
+                    <img className={s.back_arrow} src={back_arrow} alt={'back-arrow'}
+                         onClick={mainPageHandler}/>
+                ) : (
+                    <div className={s.logo_container} onClick={mainPageHandler}/>
+                )
+            }
             <div className={s.buttonsBlock}>
                 {
-                    NavBarLinks.map((item) => {
-                        return <LinkItem item={item} currentURL={currentURL}
-                                         key={item.path}
-                                         onActivateLink={activeLinkHandler}/>
-                    })
+                    isOurProductPage ? (
+                            NavBarLinksATP.map((item) => {
+                                return <LinkItemProduct item={item} currentURL={currentURL}
+                                                 key={item.path}
+                                                 onActivateLink={activeLinkHandler}/>
+                            }))
+                        : (
+                            NavBarLinks.map((item) => {
+                                return <LinkItem item={item} currentURL={currentURL}
+                                                 key={item.path}
+                                                 onActivateLink={activeLinkHandler}/>
+                            }))
                 }
             </div>
             <img className={s.burger_menu} src={burger} alt={'burger menu'}

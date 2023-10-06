@@ -4,13 +4,13 @@ import cn from 'classnames';
 
 type DocumentCardPropsType = {
     number: number,
-    titles: string[],
+    titles: string[]
 }
 
 export const DocumentCard = ({
-                                       number,
-                                       titles
-                                   }: DocumentCardPropsType) => {
+                                 number,
+                                 titles,
+                             }: DocumentCardPropsType) => {
 
     const [isHover, setIsHover] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
@@ -50,17 +50,13 @@ export const DocumentCard = ({
                 <div className={cn(s.button_container, {
                     [s.button_container_hover]: isHover || isOpen
                 })}>
-                        <button className={s.button}>
-                            посмотреть
-                            {/*<span className={s.button_text}>посмотреть</span>*/}
-                        </button>
-                        <button className={s.button}>
-                            скачать
-                            {/*<span className={s.button_text}>
-                                скачать
-                            </span>*/}
-                        </button>
-                    </div>
+                    <button className={s.button}>
+                        посмотреть
+                    </button>
+                    <button className={s.button}>
+                        скачать
+                    </button>
+                </div>
             </div>
         </div>
     )

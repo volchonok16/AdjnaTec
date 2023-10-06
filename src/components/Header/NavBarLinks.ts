@@ -19,11 +19,30 @@ export const NavBarLinks: NavBarLinksType[] = [
         title: NavBarTitle.ConnectWithUs
     },
     {
-        path: RoutPath.WhatWeDo,
-        title: NavBarTitle.WhatWeDo
-    },
-    {
         path: RoutPath.Collaboration,
         title: NavBarTitle.Collaboration
+    }
+]
+
+export const NavBarLinksATP:NavBarLinksType[] = [
+    {
+        path: RoutPath.MainPage,
+        title: NavBarTitle.MainPage
+    },
+    {
+        path: RoutPath.AboutUs,
+        title: NavBarTitle.AboutUs
+    },
+    {
+        path:RoutPath.Advantages,
+        title:NavBarTitle.Advantages
+    },
+    {
+        path:RoutPath.Documents,
+        title:NavBarTitle.Documents
+    },
+    {
+        path:RoutPath.Contacts,
+        title:NavBarTitle.Contacts
     }
 ]
