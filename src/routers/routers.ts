@@ -51,5 +51,20 @@ export const routers: AppRoute[] = [
         id: '7',
         path: RoutPath.PrivacyPolicy,
         component: PrivacyPolicy
-    }
+    },
+    {
+        id: '8',
+        path: RoutPath.Advantages,
+        component: AtpOnline
+    },
+    {
+        id: '9',
+        path: RoutPath.Documents,
+        component: AtpOnline
+    },
+    {
+        id: '10',
+        path: RoutPath.Contacts,
+        component: AtpOnline
+    },
 ];

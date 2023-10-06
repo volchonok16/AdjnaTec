@@ -26,6 +26,11 @@
       cursor: pointer;
     }
 
+    .back_arrow {
+      cursor: pointer;
+      width: 6%;
+    }
+
     .buttonsBlock {
       @include flexBox(100px, row, normal, normal);
     }
@@ -57,6 +62,10 @@
       background-image: url("../../assets/image/Header/logo_1600.svg");
       background-size: contain;
       background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .back_arrow {
       cursor: pointer;
     }
 
@@ -94,6 +103,10 @@
       cursor: pointer;
     }
 
+    .back_arrow {
+      cursor: pointer;
+    }
+
     .buttonsBlock {
       @include flexBox(77px, row, normal, normal);
     }
@@ -125,6 +138,10 @@
       background-image: url("../../assets/image/Header/logo_1280.svg");
       background-size: contain;
       background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .back_arrow {
       cursor: pointer;
     }
 
@@ -162,6 +179,11 @@
       cursor: pointer;
     }
 
+    .back_arrow {
+      cursor: pointer;
+      width: 7%;
+    }
+
     .buttonsBlock {
       @include flexBox(53px, row, normal, normal);
     }
@@ -196,6 +218,11 @@
       cursor: pointer;
     }
 
+    .back_arrow {
+      cursor: pointer;
+      width: 7%;
+    }
+
     .buttonsBlock {
       @include flexBox(40px, row, normal, normal);
     }
@@ -228,6 +255,11 @@
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer;
+    }
+
+    .back_arrow {
+      cursor: pointer;
+      width: 10%;
     }
 
     .buttonsBlock {
