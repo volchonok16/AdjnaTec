@@ -13,7 +13,7 @@
       @include flexBox(1vw, row, flex-end, normal);
 
       .number_tablet {
-        @include RobotoRegular(50px, normal);
+        @include RobotoRegular(min(70px, calc(50px + 20 * ((100vw - 768px) / 255))), normal);
         color: #7AD3C3;
       }
 
