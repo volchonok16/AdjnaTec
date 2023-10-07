@@ -1,0 +1,54 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.footer_atp_container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18.5vh 3.1vw 9vh 3.1vw;
+  background: #F8F9FE;
+  @include flexBox(min(6vw, 135px), row, normal, normal);
+
+  .logo_container {
+    @include flexBox(0, column, center, normal);
+
+    .logo {
+      width: calc(130px + 125 * ((100vw - 1024px) / 896));
+      height: calc(136px + 126 * ((100vw - 1024px) / 896));
+    }
+
+    .logo_text {
+      @include RobotoRegular(min(34px, calc(18px + 16 * ((100vw - 1024px) / 896))), normal);
+      letter-spacing: 0.68px;
+      color: #CBC9C9;
+    }
+  }
+
+  .link_container {
+    @include flexBox(min(3.1vw, 98px), row, normal, normal);
+
+    .link_column {
+      @include flexBox(2.77vh, column, normal, normal);
+
+      .title {
+        @include RobotoMedium(min(40px, calc(20px + 20 * ((100vw - 1024px) / 896))), normal);
+        color: #6495ED;
+        letter-spacing: 0.4px;
+      }
+
+      .link_navbar {
+        @include flexBox(2vh, column, normal, normal);
+
+        .link {
+          text-decoration: none;
+        }
+
+        .link_text {
+          cursor: pointer;
+          @include MontserratMedium(min(34px, calc(18px + 16 * ((100vw - 1024px) / 896))), normal);
+          color: #CBC9C9;
+          letter-spacing: 0.34px;
+        }
+      }
+    }
+  }
+}
