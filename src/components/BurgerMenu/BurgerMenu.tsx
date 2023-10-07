@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import s from './BurgerMenu.module.scss';
 import cross from '../../assets/image/Header/cross.svg';
-import {NavBarLinks, NavBarLinksATP} from '../Header/NavBarLinks';
+import {NavBarLinks, NavBarLinksATP, pathArr} from '../Header/NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
 import {ConnectButton} from '../ConnectButton/ConnectButton';
 import {useLocation} from 'react-router-dom';
@@ -23,7 +23,6 @@ export const BurgerMenu = ({
 
     const location = useLocation();
 
-    const pathArr = ['/our-products', '/advantages', '/documents', '/contacts']
     const isOurProductPage = pathArr.includes(location.pathname)
 
     const burgerMenuHandler = () => {

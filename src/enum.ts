@@ -7,7 +7,8 @@ export enum NavBarTitle {
     MainPage = 'Главная',
     Advantages = 'Преимущества',
     Documents = 'Документы',
-    Contacts = 'Контакты'
+    Contacts = 'Контакты',
+    Cooperation = 'Сотрудничество'
 }
 
 export enum RoutPath {
@@ -20,5 +21,6 @@ export enum RoutPath {
     PrivacyPolicy = '/privacy-policy',
     Advantages = '/advantages',
     Documents = '/documents',
-    Contacts = '/contacts'
+    Contacts = '/contacts',
+    Cooperation = '/cooperation'
 }
