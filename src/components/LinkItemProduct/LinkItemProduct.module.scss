@@ -6,14 +6,20 @@
 
   .linkText {
     @include RobotoRegular(min(18px, calc(12px + 6 * ((100vw - 768px) / 1152))), normal);
-    color: $color-black;
+    background-image: linear-gradient(to right, #000, #000 50%, #7AD3C3 50%);
+    background-size: 200% 100%;
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
-      color: #7AD3C3;
+      background-position: -100%;
     }
 
     &_active {
       color: #7AD3C3;
+      background-position: -100%;
     }
   }
 }
@@ -25,14 +31,20 @@
 
     .linkText {
       @include RobotoRegular(14px, normal);
-      color: $color-black;
+      background-image: linear-gradient(to right, #000, #000 50%, #7AD3C3 50%);
+      background-size: 200% 100%;
+      background-position: 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: #7AD3C3;
+        background-position: -100%;
       }
 
       &_active {
         color: #7AD3C3;
+        background-position: -100%;
       }
     }
   }

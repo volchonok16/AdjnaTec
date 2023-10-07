@@ -1,7 +1,7 @@
 import s from './Header.module.scss';
 import burger from '../../assets/image/Header/burger.svg'
 import back_arrow from '../../assets/image/Header/back_arrow.svg'
-import {NavBarLinks, NavBarLinksATP} from './NavBarLinks';
+import {NavBarLinks, NavBarLinksATP, pathArr} from './NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
 import {useLocation, useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../enum';
@@ -18,7 +18,6 @@ export const Header = ({setIsOpen, activeLinkHandler, currentURL}: HeaderPropsTy
     const navigate = useNavigate()
     const location = useLocation();
 
-    const pathArr = ['/our-products', '/advantages', '/documents', '/contacts']
     const isOurProductPage = pathArr.includes(location.pathname)
 
     const mainPageHandler = () => {

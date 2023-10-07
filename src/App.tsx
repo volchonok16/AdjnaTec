@@ -2,10 +2,11 @@ import React, {useReducer, useState} from 'react';
 import {Header} from './components/Header/Header';
 import {BrowserRouter} from 'react-router-dom';
 import {BurgerMenu} from './components/BurgerMenu/BurgerMenu';
-import {NavBarLinks, NavBarLinksType} from './components/Header/NavBarLinks';
+import {NavBarLinks, NavBarLinksType, pathArr} from './components/Header/NavBarLinks';
 import {Footer} from './components/Footer/Footer';
 import {RootContainer} from './components/RootContainer/RootContainer';
 import {ScrollToTop} from './components/ScrollToTop/ScrollToTop';
+import {FooterATPOnline} from './components/FooterATPOnline/FooterATPOnline';
 
 function createInitialState(data: NavBarLinksType[]) {
     const initialState: Record<string, boolean> = {};
@@ -55,6 +56,8 @@ function App() {
 
     const currentURL = window.location.pathname
 
+    const isOurProductPage = pathArr.includes(currentURL)
+
     const burgerMenuHandler = () => {
         setIsOpen(!isOpen)
     }
@@ -72,7 +75,9 @@ function App() {
                 activeLinkHandler={activeLinkHandler}/>
             <ScrollToTop/>
             <RootContainer activeLinkHandler={activeLinkHandler}/>
-            <Footer/>
+            {
+                isOurProductPage ? <FooterATPOnline/> : <Footer/>
+            }
         </BrowserRouter>
     );
 }

@@ -5,6 +5,8 @@ export type NavBarLinksType = {
     title: string
 }
 
+export const pathArr = ['/our-products', '/advantages', '/documents', '/contacts', '/cooperation']
+
 export const NavBarLinks: NavBarLinksType[] = [
     {
         path: RoutPath.OurProducts,
@@ -44,5 +46,9 @@ export const NavBarLinksATP:NavBarLinksType[] = [
     {
         path:RoutPath.Contacts,
         title:NavBarTitle.Contacts
+    },
+    {
+        path:RoutPath.Cooperation,
+        title:NavBarTitle.Cooperation
     }
 ]

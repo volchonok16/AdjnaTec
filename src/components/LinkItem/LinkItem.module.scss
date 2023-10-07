@@ -6,20 +6,6 @@
   .link {
     text-decoration: none;
 
-    .linkProduct {
-      @include RobotoRegular(18px, normal);
-      color: $color-black;
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        color: #7AD3C3;
-      }
-
-      &_active {
-        color: #7AD3C3;
-      }
-    }
-
     .linkText {
       @include RobotoRegular(18px, normal);
       position: relative;

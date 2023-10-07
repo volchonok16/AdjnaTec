@@ -67,4 +67,9 @@ export const routers: AppRoute[] = [
         path: RoutPath.Contacts,
         component: AtpOnline
     },
+    {
+        id: '11',
+        path: RoutPath.Cooperation,
+        component: AtpOnline
+    },
 ];
