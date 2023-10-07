@@ -52,3 +52,58 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .footer_atp_container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18.5vh 3.1vw 9vh 3.1vw;
+    background: #F8F9FE;
+    @include flexBox(min(6vw, 135px), row, normal, normal);
+
+    .logo_container {
+      @include flexBox(0, column, center, normal);
+
+      .logo {
+        width: calc(95px + 35 * ((100vw - 768px) / 255));
+        height: calc(92px + 44 * ((100vw - 768px) / 255));
+      }
+
+      .logo_text {
+        @include RobotoRegular(min(18px, calc(10px + 8 * ((100vw - 768px) / 255))), normal);
+        letter-spacing: 0.68px;
+        color: #CBC9C9;
+      }
+    }
+
+    .link_container {
+      @include flexBox(min(3.1vw, 98px), row, normal, normal);
+
+      .link_column {
+        @include flexBox(2.77vh, column, normal, normal);
+
+        .title {
+          @include RobotoMedium(min(22px, calc(20px + 2 * ((100vw - 768px) / 255))), normal);
+          color: #6495ED;
+          letter-spacing: 0.4px;
+        }
+
+        .link_navbar {
+          @include flexBox(2vh, column, normal, normal);
+
+          .link {
+            text-decoration: none;
+          }
+
+          .link_text {
+            cursor: pointer;
+            @include MontserratMedium(min(18px, calc(15px + 3 * ((100vw - 768px) / 255))), normal);
+            color: #CBC9C9;
+            letter-spacing: 0.34px;
+          }
+        }
+      }
+    }
+  }
+}
