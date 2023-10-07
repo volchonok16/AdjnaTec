@@ -1,8 +1,16 @@
 import s from './MainPage.module.scss'
 import React from 'react'
 import {ConnectButton} from '../../components/ConnectButton/ConnectButton';
+import {useNavigate} from 'react-router-dom';
+import {RoutPath} from '../../enum';
 
 export const MainPage = () => {
+
+    const navigate = useNavigate();
+
+    const ATPOnlineHandler = () => {
+        navigate(RoutPath.OurProducts)
+    }
 
     //Логика бля блочного скролинга контента
     /*    const blockRefs = useRef<HTMLDivElement[]>([]);
@@ -59,7 +67,7 @@ export const MainPage = () => {
                         <div className={s.atp_container}>
                             <span className={s.avtoplan_text}>Автоплан</span>
                         </div>
-                        <div className={s.atp_online}>
+                        <div className={s.atp_online} onClick={ATPOnlineHandler}>
                             <span className={s.atp_text_1}>АТП-онлайн</span>
                             <span className={s.atp_text_2}>Учет и управление автотранспортным предприятием</span>
                         </div>
@@ -84,7 +92,7 @@ export const MainPage = () => {
                         <div className={s.atp_container_mobile}>
                             <span className={s.avtoplan_text_mobile}>Автоплан</span>
                         </div>
-                        <div className={s.atp_online_mobile}>
+                        <div className={s.atp_online_mobile} onClick={ATPOnlineHandler}>
                             <span className={s.atp_text_1_mobile}>АТП-онлайн</span>
                             <span className={s.atp_text_2_mobile}>Учет и управление автотранспортным предприятием</span>
                         </div>
