@@ -8,7 +8,7 @@ export const FooterATPOnline = () => {
         <div className={s.footer_atp_container}>
             <div className={s.logo_container}>
                 <img className={s.logo} src={logo} alt={'logo'}/>
-                <span className={s.logo_text}>@ AdjnaTech 2023</span>
+                <span className={s.logo_text}>@ AdjnaTec 2023</span>
             </div>
             <div className={s.link_container}>
                 <div className={s.link_column}>

@@ -20,7 +20,7 @@
     .logo_container {
       height: 97%;
       width: 7%;
-      background-image: url("../../assets/image/Header/logo_1920.svg");
+      background-image: url("../../assets/image/Header/logo.png");
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -59,7 +59,7 @@
     .logo_container {
       height: 97%;
       width: 7%;
-      background-image: url("../../assets/image/Header/logo_1600.svg");
+      background-image: url("../../assets/image/Header/logo.png");
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -97,7 +97,7 @@
     .logo_container {
       height: 97%;
       width: 7%;
-      background-image: url("../../assets/image/Header/logo_1440.svg");
+      background-image: url("../../assets/image/Header/logo.png");
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -135,7 +135,7 @@
     .logo_container {
       height: 97%;
       width: 7%;
-      background-image: url("../../assets/image/Header/logo_1280.svg");
+      background-image: url("../../assets/image/Header/logo.png");
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -171,9 +171,9 @@
     @include flexBox(0, row, center, space-between);
 
     .logo_container {
-      height: 97%;
+      height: 90%;
       width: 8%;
-      background-image: url("../../assets/image/Header/logo_1024.svg");
+      background-image: url("../../assets/image/Header/logo.png");
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -212,7 +212,7 @@
     .logo_container {
       height: 97%;
       width: 7%;
-      background-image: url("../../assets/image/Header/logo_1920.png");
+      background-image: url("../../assets/image/Header/logo.png");
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -251,7 +251,7 @@
     .logo_container {
       height: 75%;
       width: 16%;
-      background-image: url("../../assets/image/Header/logo_1920.png");
+      background-image: url("../../assets/image/Header/logo.png");
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer;
