@@ -45,7 +45,7 @@ export const MainPage = () => {
                 /*ref={(el: HTMLDivElement) => blockRefs.current[0] = el}*/
                 className={s.advert_block}>
                 <div className={s.adjna_block}>
-                    <span className={s.companyName}>{'<AdjnaTech/>'}</span>
+                    <span className={s.companyName}>{'<AdjnaTec/>'}</span>
                     <span
                         className={s.text_2}>уникальные IT-продукты для наших клиентов</span>
                 </div>
