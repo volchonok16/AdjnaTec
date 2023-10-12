@@ -1,4 +1,4 @@
-import {ChangeEvent, SyntheticEvent, useState} from 'react';
+import {SyntheticEvent, useState} from 'react';
 
 type TValidation = (arg0: string) => boolean | string;
 
@@ -17,11 +17,12 @@ export function useInput(validate: TValidation) {
         setErrorMessage('');
     };
 
-    const onChangePhone = (event: ChangeEvent<HTMLInputElement>) => {
-        setValue(event.target.value.replace(/\s+/gi, ''));
+    const onChangeTextArea = (event: SyntheticEvent<HTMLTextAreaElement>) => {
+        const target = event.target as HTMLTextAreaElement;
+        setValue(target.value);
         setError(false);
-        setErrorMessage('');
         setIsValid(false);
+        setErrorMessage('');
     };
 
     const onFocus = () => setIsFocused(true);
@@ -49,7 +50,7 @@ export function useInput(validate: TValidation) {
         error,
         errorMessage,
         onChangeText,
-        onChangePhone,
+        onChangeTextArea,
         onFocus,
         onBlur,
         setError,

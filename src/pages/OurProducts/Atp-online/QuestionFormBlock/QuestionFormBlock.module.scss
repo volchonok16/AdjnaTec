@@ -68,6 +68,11 @@
           color: $color-white;
         }
       }
+
+      .errorMessage {
+        @include MontserratRegular(calc(10px + 5 * ((100vw - 1024px) / 896)), normal);
+        color: $color-error;
+      }
     }
 
     .button {
@@ -80,6 +85,11 @@
       &:hover {
         cursor: pointer;
         background: #D3E0F8;
+      }
+
+      &:disabled {
+        background-color: #D3E0F8;
+        cursor: not-allowed;
       }
 
       .button_text {
@@ -184,6 +194,11 @@
                 color: $color-white;
               }
             }
+
+            .errorMessage {
+              @include MontserratRegular(calc(10px + 5 * ((100vw - 1024px) / 896)), normal);
+              color: $color-error;
+            }
           }
 
           .button {
@@ -196,6 +211,11 @@
             &:hover {
               cursor: pointer;
               background: #D3E0F8;
+            }
+
+            &:disabled {
+              background-color: #D3E0F8;
+              cursor: not-allowed;
             }
 
             .button_text {

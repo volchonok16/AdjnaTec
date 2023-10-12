@@ -3,42 +3,72 @@ import youtube from '../../../../assets/image/ATP-online/youtube.svg';
 import whatsapp from '../../../../assets/image/ATP-online/whatsapp.svg';
 import telegram from '../../../../assets/image/ATP-online/telegram.svg';
 import vkontakte from '../../../../assets/image/ATP-online/vkontakte.svg'
-import {ChangeEvent, SyntheticEvent, useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../../../enum';
 import {postFeedback, PostFeedbackBody} from '../../../../api/feedback/api';
 import {TextInput} from '../../../../components/TextInput/TextInput';
+import {getValidation} from '../../../../helpers/getValidation';
+import {useInput} from '../../../../hooks/useInput';
 
 export const QuestionFormBlock = () => {
 
     const navigate = useNavigate();
 
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [phone, setPhone] = useState('')
-    const [comment, setComment] = useState('')
+    const nameValidationFunction = getValidation().personalDataName.validate
+    const emailValidationFunction = getValidation().emailValidation.validate
+    const phoneValidationFunction = getValidation().phoneValidation.validate
+    const commentValidationFunction = getValidation().commentValidation.validate
 
-    const nameHandler = (e: SyntheticEvent<HTMLInputElement>) => {
-        const target = e.target as HTMLInputElement;
-        setName(target.value);
-    }
-    const emailHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setEmail(e.target.value)
-    }
-    const phoneHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setPhone(e.target.value)
-    }
-    const commentHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        setComment(e.target.value)
-    }
+    const {
+        value: nameValue,
+        onChangeText: nameOnChange,
+        error: nameError,
+        errorMessage: nameErrorMessage,
+        onBlur: nameOnBlur,
+        onFocus: nameOnFocus,
+        isFocused: nameIsFocused
+    } = useInput(nameValidationFunction)
+
+    const {
+        value: emailValue,
+        onChangeText: emailOnChange,
+        error: emailError,
+        errorMessage: emailErrorMessage,
+        onBlur: emailOnBlur,
+        onFocus: emailOnFocus,
+        isFocused: emailIsFocused
+    } = useInput(emailValidationFunction)
+
+    const {
+        value: phoneValue,
+        onChangeText: phoneOnChange,
+        error: phoneError,
+        errorMessage: phoneErrorMessage,
+        onBlur: phoneOnBlur,
+        onFocus: phoneOnFocus,
+        isFocused: phoneIsFocused
+    } = useInput(phoneValidationFunction)
+
+    const {
+        value: commentValue,
+        onChangeTextArea: commentOnChange,
+        onBlur: commentOnBlur,
+        onFocus: commentOnFocus,
+        isFocused: commentIsFocused,
+        error: commentError,
+        errorMessage: commentErrorMessage
+    } = useInput(commentValidationFunction)
+
+    const isButtonDisabled = emailError || phoneError || nameError || commentError || !commentValue || !nameValue || (!phoneValue && !emailValue)
 
     const sendFeedbackHandler = () => {
 
         const requestBody: PostFeedbackBody = {
-            name: name,
-            mail: email,
-            phone: phone,
-            comment: comment
+            name: nameValue,
+            mail: emailValue,
+            phone: phoneValue,
+            comment: commentValue
         }
 
         postFeedback(requestBody).then((res) => {
@@ -109,14 +139,43 @@ export const QuestionFormBlock = () => {
             </div>
             <div className={s.right_container}>
                 <div className={s.connect_wrapper}>
-                    <TextInput value={name} onChange={nameHandler} placeholder={'Имя'}/>
-                    <input className={s.input} placeholder={'Телефон'} value={phone}
-                           onChange={phoneHandler}/>
-                    <input className={s.input} placeholder={'Почта'} value={email}
-                           onChange={emailHandler}/>
-                    <textarea className={s.textarea} placeholder={'Комментарий'}
-                              value={comment} onChange={commentHandler}/>
-                    <button className={s.button} onClick={sendFeedbackHandler}>
+                    <TextInput value={nameValue}
+                               onChange={nameOnChange}
+                               onBlur={nameOnBlur}
+                               error={nameError}
+                               errorMessage={nameErrorMessage}
+                               onFocus={nameOnFocus}
+                               isFocused={nameIsFocused}
+                               placeholder={'Имя'}/>
+                    <TextInput value={phoneValue}
+                               onChange={phoneOnChange}
+                               placeholder={'Телефон'}
+                               error={phoneError}
+                               errorMessage={phoneErrorMessage}
+                               onBlur={phoneOnBlur}
+                               onFocus={phoneOnFocus}
+                               isFocused={phoneIsFocused}/>
+                    <TextInput value={emailValue}
+                               onChange={emailOnChange}
+                               placeholder={'Почта'}
+                               error={emailError}
+                               errorMessage={emailErrorMessage}
+                               onBlur={emailOnBlur}
+                               onFocus={emailOnFocus}
+                               isFocused={emailIsFocused}/>
+                    <textarea className={s.textarea}
+                              placeholder={commentIsFocused ? '' : 'Комментарий'}
+                              value={commentValue}
+                              onChange={commentOnChange}
+                              onBlur={commentOnBlur}
+                              onFocus={commentOnFocus}/>
+                    {
+                        commentError && (
+                            <span className={s.errorMessage}>{commentErrorMessage}</span>
+                        )
+                    }
+                    <button className={s.button} onClick={sendFeedbackHandler}
+                            disabled={isButtonDisabled}>
                         <span className={s.button_text}>Связаться</span>
                     </button>
                 </div>
@@ -146,15 +205,44 @@ export const QuestionFormBlock = () => {
                     </div>
                     <div className={s.right_container}>
                         <div className={s.connect_wrapper}>
-                            <TextInput value={name} onChange={nameHandler} placeholder={'Имя'}/>
-                            <input className={s.input} placeholder={'Телефон'}
-                                   value={phone}
-                                   onChange={phoneHandler}/>
-                            <input className={s.input} placeholder={'Почта'} value={email}
-                                   onChange={emailHandler}/>
-                            <textarea className={s.textarea} placeholder={'Комментарий'}
-                                      value={comment} onChange={commentHandler}/>
-                            <button className={s.button} onClick={sendFeedbackHandler}>
+                            <TextInput value={nameValue}
+                                       onChange={nameOnChange}
+                                       onBlur={nameOnBlur}
+                                       error={nameError}
+                                       errorMessage={nameErrorMessage}
+                                       onFocus={nameOnFocus}
+                                       isFocused={nameIsFocused}
+                                       placeholder={'Имя'}/>
+                            <TextInput value={phoneValue}
+                                       onChange={phoneOnChange}
+                                       placeholder={'Телефон'}
+                                       error={phoneError}
+                                       errorMessage={phoneErrorMessage}
+                                       onBlur={phoneOnBlur}
+                                       onFocus={phoneOnFocus}
+                                       isFocused={phoneIsFocused}/>
+                            <TextInput value={emailValue}
+                                       onChange={emailOnChange}
+                                       placeholder={'Почта'}
+                                       error={emailError}
+                                       errorMessage={emailErrorMessage}
+                                       onBlur={emailOnBlur}
+                                       onFocus={emailOnFocus}
+                                       isFocused={emailIsFocused}/>
+                            <textarea className={s.textarea}
+                                      placeholder={commentIsFocused ? '' : 'Комментарий'}
+                                      value={commentValue}
+                                      onChange={commentOnChange}
+                                      onBlur={commentOnBlur}
+                                      onFocus={commentOnFocus}/>
+                            {
+                                commentError && (
+                                    <span
+                                        className={s.errorMessage}>{commentErrorMessage}</span>
+                                )
+                            }
+                            <button className={s.button} onClick={sendFeedbackHandler}
+                                    disabled={isButtonDisabled}>
                                 <span className={s.button_text}>Связаться</span>
                             </button>
                         </div>

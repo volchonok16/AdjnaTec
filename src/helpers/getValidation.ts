@@ -47,9 +47,9 @@ export const getValidation = () => ({
         required: true,
         validate: (value: string) => {
 
-                const currectPhone = /^(?:\+7|8)(?:\d{10}|\d{3}-\d{3}-\d{2}-\d{2}|\d{3}-\d{7})$/.test(value)
+            const currectPhone = /^(?:\+7|8)(?:\d{10}|\d{3}-\d{3}-\d{2}-\d{2}|\d{3}-\d{7})$/.test(value)
 
-                return currectPhone ? true : `Пожалуйста, введите корректный номер телефона. Пример: +79005553535`
+            return currectPhone ? true : `Пожалуйста, введите корректный номер телефона. Пример: +79005553535`
         }
     },
 
@@ -68,5 +68,18 @@ export const getValidation = () => ({
                 return 'Имя должно состоять только из букв.'
             } else return true;
         },
+    },
+    commentValidation: {
+        required: true,
+        validate: (value: string) => {
+
+            value = value.trim();
+
+            const badMinLengthValue = value.length < 2;
+
+            if (badMinLengthValue) {
+                return 'Пожалуйста, оставьте комментарий';
+            } else return true
+        }
     }
 });
