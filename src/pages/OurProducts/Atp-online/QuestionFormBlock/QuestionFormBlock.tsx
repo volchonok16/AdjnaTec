@@ -3,10 +3,11 @@ import youtube from '../../../../assets/image/ATP-online/youtube.svg';
 import whatsapp from '../../../../assets/image/ATP-online/whatsapp.svg';
 import telegram from '../../../../assets/image/ATP-online/telegram.svg';
 import vkontakte from '../../../../assets/image/ATP-online/vkontakte.svg'
-import {ChangeEvent, useEffect, useState} from 'react';
+import {ChangeEvent, SyntheticEvent, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../../../enum';
 import {postFeedback, PostFeedbackBody} from '../../../../api/feedback/api';
+import {TextInput} from '../../../../components/TextInput/TextInput';
 
 export const QuestionFormBlock = () => {
 
@@ -17,8 +18,9 @@ export const QuestionFormBlock = () => {
     const [phone, setPhone] = useState('')
     const [comment, setComment] = useState('')
 
-    const nameHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setName(e.target.value)
+    const nameHandler = (e: SyntheticEvent<HTMLInputElement>) => {
+        const target = e.target as HTMLInputElement;
+        setName(target.value);
     }
     const emailHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value)
@@ -107,8 +109,7 @@ export const QuestionFormBlock = () => {
             </div>
             <div className={s.right_container}>
                 <div className={s.connect_wrapper}>
-                    <input className={s.input} placeholder={'Имя'} value={name}
-                           onChange={nameHandler}/>
+                    <TextInput value={name} onChange={nameHandler} placeholder={'Имя'}/>
                     <input className={s.input} placeholder={'Телефон'} value={phone}
                            onChange={phoneHandler}/>
                     <input className={s.input} placeholder={'Почта'} value={email}
@@ -145,8 +146,7 @@ export const QuestionFormBlock = () => {
                     </div>
                     <div className={s.right_container}>
                         <div className={s.connect_wrapper}>
-                            <input className={s.input} placeholder={'Имя'} value={name}
-                                   onChange={nameHandler}/>
+                            <TextInput value={name} onChange={nameHandler} placeholder={'Имя'}/>
                             <input className={s.input} placeholder={'Телефон'}
                                    value={phone}
                                    onChange={phoneHandler}/>
