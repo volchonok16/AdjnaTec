@@ -1,48 +1,40 @@
 @import 'src/assets/styles/utils';
 @import 'src/assets/styles/colors';
 
-.advantage_card_container {
-  box-sizing: border-box;
+.collapse {
   background: $color-white;
+  padding: 1.3vh 2vw;
   border-radius: 30px;
   width: 69.7vw;
-  max-width: 1340px;
-  cursor: pointer;
-  padding: 3.3vh 2vw;
-  @include flexBox(5.5vh, column, normal, normal);
-  transition: all 1.0s ease;
-  overflow: hidden;
+  box-sizing: border-box;
 
-  &_slow {
-    transition: all 2.0s ease;
-  }
+  .panel {
+    @include RobotoRegular(min(50px, calc(30px + 20 * ((100vw - 1024px) / 896))), normal);
+    color: $color-black;
 
-  .small_card {
-    width: 100%;
-    @include flexBox(0, row, center, space-between);
+    .panel_header {
+      @include flexBox(0, row, center, space-between);
 
-    .title {
-      @include RobotoRegular(min(50px, calc(30px + 20 * ((100vw - 1024px) / 896))), normal);
-      color: $color-black;
+      .img {
+        width: min(60px, calc(30px + 30 * ((100vw - 1024px) / 896)));
+        height: min(60px, calc(30px + 30 * ((100vw - 1024px) / 896)));
+        transition: transform 0.5s ease;
+
+        &_rotate {
+          transform: rotate(45deg);
+        }
+      }
     }
 
-    .img {
-      width: min(60px, calc(30px + 30 * ((100vw - 1024px) / 896)));
-      height: min(60px, calc(30px + 30 * ((100vw - 1024px) / 896)));
-      transition: transform 0.5s ease;
+    .ul_block {
+      @include flexBox(3.5vh, column, normal, normal);
 
-      &_rotate {
-        transform: rotate(45deg);
+      .li_row {
+        @include MontserratRegular(min(30px, calc(18px + 12 * ((100vw - 1024px) / 896))), normal);
+        color: $color-black;
       }
     }
   }
 
-  .ul_block {
-    @include flexBox(3.5vh, column, normal, normal);
 
-    .li_row {
-      @include MontserratRegular(min(30px, calc(18px + 12 * ((100vw - 1024px) / 896))), normal);
-      color: $color-black;
-    }
-  }
 }
