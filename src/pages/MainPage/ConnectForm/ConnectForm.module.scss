@@ -1,0 +1,233 @@
+@import "src/assets/styles/colors";
+@import "src/assets/styles/utils";
+
+.connect_form_container {
+  @include flexBox(2vh, column, center, normal);
+
+  .header_form {
+    @include flexBox(1.4, column, center, normal);
+
+    .title {
+      @include RobotoMedium(min(60px, calc(34px + 26 * ((100vw - 1024px) / 896))), normal);
+      color: #70A3E5;
+      margin-bottom: 10px;
+    }
+
+    .text {
+      @include MontserratRegular(min(24px, calc(14px + 10 * ((100vw - 1024px) / 896))), normal);
+      color: $color-black;
+    }
+  }
+
+  .field_form {
+    @include flexBox(1.4vh, column, center, normal);
+
+    .textarea {
+      box-sizing: border-box;
+      width: min(600px, calc(320px + 280 * ((100vw - 1024px) / 896)));
+      height: min(160px, calc(120px + 40 * ((100vw - 1024px) / 896)));
+      border-radius: min(20px, calc(10px + 10 * ((100vw - 1024px) / 896)));
+      border: none;
+      padding: min(28px, calc(14px + 14 * ((100vw - 1024px) / 896))) min(26px, calc(13px + 13 * ((100vw - 1024px) / 896)));
+      background: #F8F9FE;
+      @include MontserratRegular(min(28px, calc(14px + 14 * ((100vw - 1024px) / 896))), normal);
+      color: #919294;
+      resize: none;
+
+      &::placeholder {
+        @include MontserratRegular(min(28px, calc(14px + 14 * ((100vw - 1024px) / 896))), normal);
+        color: #919294;
+      }
+
+      &_error {
+        border: 2px solid $color-error;
+      }
+    }
+
+    .error_wrapper {
+      width: min(600px, calc(320px + 280 * ((100vw - 1024px) / 896)));
+      @include flexBox(0, column, flex-start, normal);
+
+      .errorMessage {
+        @include MontserratRegular(calc(10px + 5 * ((100vw - 1024px) / 896)), normal);
+        color: $color-error;
+      }
+    }
+  }
+
+  .button_form {
+    @include flexBox(1vh, column, center, center);
+
+    .privacy_text_wrapper {
+      @include flexBox(0, column, center, center);
+
+      .text_privacy {
+        @include MontserratRegular(min(22px, calc(12px + 10 * ((100vw - 1024px) / 896))), normal);
+        color: $color-black;
+
+        &_blue {
+          @include MontserratRegular(min(22px, calc(12px + 10 * ((100vw - 1024px) / 896))), normal);
+          cursor: pointer;
+          color: #7CB5FF;
+          text-decoration-line: underline;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .connect_form_container {
+    @include flexBox(2vh, column, center, normal);
+
+    .header_form {
+      @include flexBox(1.4, column, center, normal);
+
+      .title {
+        @include RobotoMedium(min(34px, calc(28px + 6 * ((100vw - 768px) / 255))), normal);
+        color: #70A3E5;
+        margin-bottom: 10px;
+      }
+
+      .text {
+        @include MontserratRegular(min(16px, calc(12px + 4 * ((100vw - 768px) / 255))), normal);
+        color: $color-black;
+      }
+    }
+
+    .field_form {
+      @include flexBox(1.4vh, column, center, normal);
+
+      .textarea {
+        box-sizing: border-box;
+        width: min(400px, calc(300px + 100 * ((100vw - 768px) / 255)));
+        height: min(140px, calc(80px + 60 * ((100vw - 768px) / 255)));
+        border-radius: min(20px, calc(10px + 10 * ((100vw - 768px) / 255)));
+        border: none;
+        padding: min(28px, calc(14px + 14 * ((100vw - 768px) / 255))) min(26px, calc(13px + 13 * ((100vw - 768px) / 255)));
+        background: #F8F9FE;
+        @include MontserratRegular(min(20px, calc(14px + 6 * ((100vw - 768px) / 255))), normal);
+        color: #919294;
+        resize: none;
+
+        &::placeholder {
+          @include MontserratRegular(min(20px, calc(14px + 6 * ((100vw - 768px) / 255))), normal);
+          color: #919294;
+        }
+
+        &_error {
+          border: 2px solid $color-error;
+        }
+      }
+
+      .error_wrapper {
+        width: min(400px, calc(300px + 100 * ((100vw - 768px) / 255)));
+        @include flexBox(0, column, flex-start, normal);
+
+        .errorMessage {
+          @include MontserratRegular(calc(10px + 5 * ((100vw - 768px) / 255)), normal);
+          color: $color-error;
+        }
+      }
+    }
+
+    .button_form {
+      @include flexBox(1vh, column, center, center);
+
+      .privacy_text_wrapper {
+        @include flexBox(0, column, center, center);
+
+        .text_privacy {
+          @include MontserratRegular(min(14px, calc(10px + 4 * ((100vw - 768px) / 255))), normal);
+          color: $color-black;
+
+          &_blue {
+            @include MontserratRegular(min(14px, calc(10px + 4 * ((100vw - 768px) / 255))), normal);
+            cursor: pointer;
+            color: #7CB5FF;
+            text-decoration-line: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .connect_form_container {
+    @include flexBox(2vh, column, center, normal);
+
+    .header_form {
+      @include flexBox(1.4, column, center, normal);
+
+      .title {
+        @include RobotoMedium(min(34px, calc(20px + 14 * ((100vw - 360px) / 407))), normal);
+        color: #70A3E5;
+        margin-bottom: 10px;
+      }
+
+      .text {
+        @include MontserratRegular(min(16px, calc(8px + 8 * ((100vw - 360px) / 407))), normal);
+        color: $color-black;
+      }
+    }
+
+    .field_form {
+      @include flexBox(1.4vh, column, center, normal);
+
+      .textarea {
+        box-sizing: border-box;
+        width: min(400px, calc(250px + 150 * ((100vw - 360px) / 407)));
+        height: min(140px, calc(80px + 60 * ((100vw - 360px) / 407)));
+        border-radius: min(20px, calc(10px + 10 * ((100vw - 360px) / 407)));
+        border: none;
+        padding: min(20px, calc(10px + 10 * ((100vw - 360px) / 407))) min(26px, calc(13px + 13 * ((100vw - 360px) / 407)));
+        background: #F8F9FE;
+        @include MontserratRegular(min(20px, calc(12px + 8 * ((100vw - 360px) / 407))), normal);
+        color: #919294;
+        resize: none;
+
+        &::placeholder {
+          @include MontserratRegular(min(20px, calc(12px + 8 * ((100vw - 360px) / 407))), normal);
+          color: #919294;
+        }
+
+        &_error {
+          border: 2px solid $color-error;
+        }
+      }
+
+      .error_wrapper {
+        width: min(400px, calc(250px + 150 * ((100vw - 360px) / 407)));
+        @include flexBox(0, column, flex-start, normal);
+
+        .errorMessage {
+          @include MontserratRegular(8px, normal);
+          color: $color-error;
+        }
+      }
+    }
+
+    .button_form {
+      @include flexBox(1vh, column, center, center);
+
+      .privacy_text_wrapper {
+        @include flexBox(0, column, center, center);
+
+        .text_privacy {
+          @include MontserratRegular(min(14px, calc(8px + 6 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+
+          &_blue {
+            @include MontserratRegular(min(14px, calc(8px + 6 * ((100vw - 360px) / 407))), normal);
+            cursor: pointer;
+            color: #7CB5FF;
+            text-decoration-line: underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import 'src/assets/styles/colors';
+
+.overlap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 103;
+  background-color: rgba(191, 198, 213, 0.70);
+  backdrop-filter: blur(2px);
+  animation: blackout 0.2s ease;
+}
+
+.modal_container {
+  position: fixed;
+  z-index: 104;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-white;
+  border-radius: 20px;
+}
+
+
+@keyframes blackout {
+  0% {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px){
+
+  .modal_container {
+    position: fixed;
+    z-index: 104;
+    width: 65vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-white;
+    border-radius: 20px;
+  }
+}

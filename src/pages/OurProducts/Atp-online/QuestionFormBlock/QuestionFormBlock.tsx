@@ -10,6 +10,7 @@ import {postFeedback, PostFeedbackBody} from '../../../../api/feedback/api';
 import {TextInput} from '../../../../components/TextInput/TextInput';
 import {getValidation} from '../../../../helpers/getValidation';
 import {useInput} from '../../../../hooks/useInput';
+import cn from 'classnames';
 
 export const QuestionFormBlock = () => {
 
@@ -163,7 +164,9 @@ export const QuestionFormBlock = () => {
                                onBlur={emailOnBlur}
                                onFocus={emailOnFocus}
                                isFocused={emailIsFocused}/>
-                    <textarea className={s.textarea}
+                    <textarea className={cn(s.textarea, {
+                        [s.textarea_error]: commentError
+                    })}
                               placeholder={commentIsFocused ? '' : 'Комментарий'}
                               value={commentValue}
                               onChange={commentOnChange}
@@ -171,7 +174,10 @@ export const QuestionFormBlock = () => {
                               onFocus={commentOnFocus}/>
                     {
                         commentError && (
-                            <span className={s.errorMessage}>{commentErrorMessage}</span>
+                            <div className={s.error_wrapper}>
+                                <span
+                                    className={s.errorMessage}>{commentErrorMessage}</span>
+                            </div>
                         )
                     }
                     <button className={s.button} onClick={sendFeedbackHandler}
@@ -229,7 +235,9 @@ export const QuestionFormBlock = () => {
                                        onBlur={emailOnBlur}
                                        onFocus={emailOnFocus}
                                        isFocused={emailIsFocused}/>
-                            <textarea className={s.textarea}
+                            <textarea className={cn(s.textarea, {
+                                [s.textarea_error]: commentError
+                            })}
                                       placeholder={commentIsFocused ? '' : 'Комментарий'}
                                       value={commentValue}
                                       onChange={commentOnChange}
@@ -237,8 +245,10 @@ export const QuestionFormBlock = () => {
                                       onFocus={commentOnFocus}/>
                             {
                                 commentError && (
-                                    <span
-                                        className={s.errorMessage}>{commentErrorMessage}</span>
+                                    <div className={s.error_wrapper}>
+                                        <span
+                                            className={s.errorMessage}>{commentErrorMessage}</span>
+                                    </div>
                                 )
                             }
                             <button className={s.button} onClick={sendFeedbackHandler}
