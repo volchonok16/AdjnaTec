@@ -1,135 +1,41 @@
 @import "src/assets/styles/colors";
 @import "src/assets/styles/utils";
 
-@media screen and (min-width: 1920px) {
+.button {
+  @include flexBox(2.6vw, row, center, center);
+  width: min(442px, 23vw);
+  height: 7.6vh;
+  border-radius: 20px;
+  background-color: #7CB5FF;
+  border: none;
+  padding-left: 1.5vw;
 
-  .button {
-    @include flexBox(50px, row, center, flex-start);
-    width: 23vw;
-    max-width: 442px;
-    height: 7.6vh;
-    border-radius: 20px;
-    background-color: #7CB5FF;
-    border: none;
-    padding-left: 30px;
-
-    &:hover {
-      cursor: pointer;
-      background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 50%, rgba(43, 1, 134, 0.50) 100%);
-    }
-
-    .button_text {
-      @include MontserratMedium(35px, normal);
-      letter-spacing: 0.7px;
-      color: $color-white;
-    }
+  &_main_page_form {
+    width: min(600px, calc(320px + 280 * ((100vw - 1024px) / 896)));
+    height: min(80px, calc(50px + 30 * ((100vw - 1024px) / 896)));
+    border-radius: min(20px, calc(10px + 10 * ((100vw - 1024px) / 896)));
   }
-}
 
-@media screen and (min-width: 1600px) and (max-width: 1919px) {
-
-  .button {
-    @include flexBox(38px, row, center, flex-start);
-    width: 23vw;
-    height: 7.6vh;
-    border-radius: 20px;
-    background-color: #7CB5FF;
-    border: none;
-    padding-left: 25px;
-
-    &:hover {
-      cursor: pointer;
-      background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 50%, rgba(43, 1, 134, 0.50) 100%);
-    }
-
-    .button_text {
-      @include MontserratMedium(29px, normal);
-      letter-spacing: 0.58px;
-      color: $color-white;
-    }
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 50%, rgba(43, 1, 134, 0.50) 100%);
   }
-}
 
-@media screen and (min-width: 1440px) and (max-width: 1599px) {
-
-  .button {
-    @include flexBox(42px, row, center, flex-start);
-    width: 23vw;
-    height: 7.6vh;
-    border-radius: 20px;
-    background-color: #7CB5FF;
-    border: none;
-    padding-left: 25px;
-
-    &:hover {
-      cursor: pointer;
-      background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 50%, rgba(43, 1, 134, 0.50) 100%);
-    }
-
-    .button_text {
-      @include MontserratMedium(26px, normal);
-      letter-spacing: 0.52px;
-      color: $color-white;
-    }
+  &:disabled {
+    background-color: #D3E0F8;
+    cursor: not-allowed;
   }
-}
 
-@media screen and (min-width: 1280px) and (max-width: 1439px) {
-
-  .button {
-    @include flexBox(35px, row, center, flex-start);
-    width: 23vw;
-    height: 7.6vh;
-    border-radius: 20px;
-    background-color: #7CB5FF;
-    border: none;
-    padding-left: 20px;
-
-    &:hover {
-      cursor: pointer;
-      background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 50%, rgba(43, 1, 134, 0.50) 100%);
-    }
-
-    .button_text {
-      @include MontserratMedium(23px, normal);
-      letter-spacing: 0.46px;
-      color: $color-white;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-
-  .button {
-    @include flexBox(20px, row, center, flex-start);
-    width: 23vw;
-    height: 7.6vh;
-    border-radius: 20px;
-    background-color: #7CB5FF;
-    border: none;
-    padding-left: 5px;
-
-    &:hover {
-      cursor: pointer;
-      background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 50%, rgba(43, 1, 134, 0.50) 100%);
-    }
-
-    .img {
-      scale: 70%;
-    }
-
-    .button_text {
-      @include MontserratMedium(22px, normal);
-      letter-spacing: 0.44px;
-      color: $color-white;
-    }
+  .button_text {
+    @include MontserratMedium(min(35px, calc(22px + 13 * ((100vw - 1024px) / 896))), normal);
+    color: $color-white;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
   .button {
-    @include flexBox(20px, row, center, center);
+    @include flexBox(2.6vw, row, center, center);
     width: 47vw;
     height: 52px;
     border-radius: 20px;
@@ -137,9 +43,20 @@
     border: none;
     padding-left: 5px;
 
+    &_main_page_form {
+      width: min(400px, calc(300px + 100 * ((100vw - 768px) / 255)));
+      height: min(50px, calc(40px + 10 * ((100vw - 768px) / 255)));
+      border-radius: min(20px, calc(10px + 10 * ((100vw - 768px) / 255)));
+    }
+
     &:hover {
       cursor: pointer;
       background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 50%, rgba(43, 1, 134, 0.50) 100%);
+    }
+
+    &:disabled {
+      background-color: #D3E0F8;
+      cursor: not-allowed;
     }
 
     .img {
@@ -157,20 +74,31 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
   .button {
-    @include flexBox(0, row, center, normal);
+    @include flexBox(0, row, center, center);
     width: 188px;
     height: 36px;
     border-radius: 20px;
     background-color: #7CB5FF;
     border: none;
 
+    &_main_page_form {
+      width: min(400px, calc(250px + 150 * ((100vw - 360px) / 407)));
+      height: min(50px, calc(40px + 10 * ((100vw - 360px) / 407)));
+      border-radius: min(20px, calc(10px + 10 * ((100vw - 360px) / 407)));
+    }
+
     &:hover {
       cursor: pointer;
       background: linear-gradient(90deg, rgba(255, 0, 61, 0.40) 0%, rgba(5, 0, 227, 0.40) 50%, rgba(43, 1, 134, 0.50) 100%);
     }
 
+    &:disabled {
+      background-color: #D3E0F8;
+      cursor: not-allowed;
+    }
+
     .img {
-      scale: 50%;
+      scale: 60%;
     }
 
     .button_text {

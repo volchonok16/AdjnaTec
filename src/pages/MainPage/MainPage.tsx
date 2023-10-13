@@ -1,12 +1,20 @@
 import s from './MainPage.module.scss'
-import React from 'react'
+import React, {useState} from 'react'
 import {ConnectButton} from '../../components/ConnectButton/ConnectButton';
 import {useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../enum';
+import {Modal} from '../../components/Modal/Modal';
+import {ConnectForm} from './ConnectForm/ConnectForm';
 
 export const MainPage = () => {
 
     const navigate = useNavigate();
+
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const modalHandler = () => {
+        setIsModalOpen(!isModalOpen)
+    }
 
     const ATPOnlineHandler = () => {
         navigate(RoutPath.OurProducts)
@@ -141,7 +149,7 @@ export const MainPage = () => {
                         <div className={s.connect_card}>
                             <span className={s.connect_card_text}>ЕСМ системы</span>
                         </div>
-                        <ConnectButton/>
+                        <ConnectButton onClick={modalHandler}/>
                     </div>
                 </div>
                 <div className={s.img_container_tablet}>
@@ -181,7 +189,7 @@ export const MainPage = () => {
                                 <span
                                     className={s.connect_card_text_tablet}>ЕСМ системы</span>
                             </div>
-                            <ConnectButton/>
+                            <ConnectButton onClick={modalHandler}/>
                         </div>
                     </div>
                 </div>
@@ -225,9 +233,16 @@ export const MainPage = () => {
                     <span className={s.card_without_back_text_mobile}>
                         Мы занимаемся разработкой програмного обеспечения. Создаем системы управления данными и оптимизации бизнес-процессов повышающие эффективность бизнеса наших клиентов.
                     </span>
-                    <ConnectButton/>
+                    <ConnectButton onClick={modalHandler}/>
                 </div>
             </div>
+            {
+                isModalOpen && (
+                    <Modal onCloseModal={modalHandler}>
+                        <ConnectForm/>
+                    </Modal>
+                )
+            }
         </div>
     )
 }

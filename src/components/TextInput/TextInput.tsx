@@ -3,6 +3,7 @@ import cn from 'classnames';
 import s from './TextInput.module.scss'
 
 type TextInputPropsType = {
+    isMainPageForm?: boolean
     value: string,
     onChange: (event: SyntheticEvent<HTMLInputElement>) => void
     placeholder: string,
@@ -21,13 +22,16 @@ export const TextInput = ({
                               errorMessage,
                               onBlur,
                               onFocus,
-                              isFocused
+                              isFocused,
+                              isMainPageForm = false
                           }: TextInputPropsType) => {
     return (
         <div className={s.container}>
             <input
                 className={cn(s.input, {
                     [s.input_error]: error,
+                    [s.input_main_page]: isMainPageForm,
+                    [s.input_main_page_error]: error
                 })}
                 value={value}
                 placeholder={isFocused ? '' : placeholder}

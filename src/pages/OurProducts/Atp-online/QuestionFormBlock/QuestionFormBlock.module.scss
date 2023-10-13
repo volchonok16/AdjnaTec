@@ -67,6 +67,10 @@
           @include MontserratRegular(min(32px, calc(16px + 16 * ((100vw - 1024px) / 896))), normal);
           color: $color-white;
         }
+
+        &_error {
+          border: 2px solid $color-error;
+        }
       }
 
       .errorMessage {
@@ -192,6 +196,10 @@
               &::placeholder {
                 @include MontserratRegular(min(18px, calc(16px + 2 * ((100vw - 768px) / 255))), normal);
                 color: $color-white;
+              }
+
+              &_error {
+                border: 2px solid $color-error;
               }
             }
 
