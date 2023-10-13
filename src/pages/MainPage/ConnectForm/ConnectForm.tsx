@@ -5,12 +5,20 @@ import {useInput} from '../../../hooks/useInput';
 import cn from 'classnames';
 import {ConnectButton} from '../../../components/ConnectButton/ConnectButton';
 import {postFeedback, PostFeedbackBody} from '../../../api/feedback/api';
+import {useNavigate} from 'react-router-dom';
+import {RoutPath} from '../../../enum';
 
 type ConnectFormPropsType = {
     closeModal: VoidFunction
 }
 
 export const ConnectForm = ({closeModal}: ConnectFormPropsType) => {
+
+    const navigate = useNavigate();
+
+    const goToPrivacyPolicyPage = () => {
+        navigate(RoutPath.PrivacyPolicy)
+    }
 
     const nameValidationFunction = getValidation().personalDataName.validate
     const emailValidationFunction = getValidation().emailValidation.validate
@@ -132,9 +140,11 @@ export const ConnectForm = ({closeModal}: ConnectFormPropsType) => {
                     <div className={s.privacy_text_wrapper}>
                         <span
                             className={s.text_privacy}>Нажимая на кнопку, я соглашаюсь <span
-                            className={s.text_privacy_blue}>с политикой</span></span>
+                            className={s.text_privacy_blue}
+                            onClick={goToPrivacyPolicyPage}>с политикой</span></span>
                         <span
-                            className={s.text_privacy_blue}>конфиденциальномти сайта</span>
+                            className={s.text_privacy_blue}
+                            onClick={goToPrivacyPolicyPage}>конфиденциальномти сайта</span>
                     </div>
                 </div>
             </div>
