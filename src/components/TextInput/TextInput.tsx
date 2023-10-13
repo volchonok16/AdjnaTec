@@ -26,12 +26,12 @@ export const TextInput = ({
                               isMainPageForm = false
                           }: TextInputPropsType) => {
     return (
-        <div className={s.container}>
+        <div className={cn(s.container, {
+            [s.container_main_page_form]: isMainPageForm
+        })}>
             <input
                 className={cn(s.input, {
                     [s.input_error]: error,
-                    [s.input_main_page]: isMainPageForm,
-                    [s.input_main_page_error]: error
                 })}
                 value={value}
                 placeholder={isFocused ? '' : placeholder}

@@ -165,7 +165,7 @@ export const QuestionFormBlock = () => {
                                onFocus={emailOnFocus}
                                isFocused={emailIsFocused}/>
                     <textarea className={cn(s.textarea, {
-                        [s.textarea_error]:commentError
+                        [s.textarea_error]: commentError
                     })}
                               placeholder={commentIsFocused ? '' : 'Комментарий'}
                               value={commentValue}
@@ -174,7 +174,10 @@ export const QuestionFormBlock = () => {
                               onFocus={commentOnFocus}/>
                     {
                         commentError && (
-                            <span className={s.errorMessage}>{commentErrorMessage}</span>
+                            <div className={s.error_wrapper}>
+                                <span
+                                    className={s.errorMessage}>{commentErrorMessage}</span>
+                            </div>
                         )
                     }
                     <button className={s.button} onClick={sendFeedbackHandler}
@@ -233,7 +236,7 @@ export const QuestionFormBlock = () => {
                                        onFocus={emailOnFocus}
                                        isFocused={emailIsFocused}/>
                             <textarea className={cn(s.textarea, {
-                                [s.textarea_error]:commentError
+                                [s.textarea_error]: commentError
                             })}
                                       placeholder={commentIsFocused ? '' : 'Комментарий'}
                                       value={commentValue}
@@ -242,8 +245,10 @@ export const QuestionFormBlock = () => {
                                       onFocus={commentOnFocus}/>
                             {
                                 commentError && (
-                                    <span
-                                        className={s.errorMessage}>{commentErrorMessage}</span>
+                                    <div className={s.error_wrapper}>
+                                        <span
+                                            className={s.errorMessage}>{commentErrorMessage}</span>
+                                    </div>
                                 )
                             }
                             <button className={s.button} onClick={sendFeedbackHandler}

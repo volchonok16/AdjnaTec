@@ -25,7 +25,17 @@
     }
   }
 
-  .input_main_page {
+  .errorMessage {
+    width: min(580px, calc(300px + 280 * ((100vw - 1024px) / 896)));
+    @include MontserratRegular(calc(10px + 5 * ((100vw - 1024px) / 896)), normal);
+    color: $color-error;
+  }
+}
+
+.container_main_page_form {
+  @include flexBox(10px, column, normal, normal);
+
+  .input {
     box-sizing: border-box;
     width: min(600px, calc(320px + 280 * ((100vw - 1024px) / 896)));
     height: min(80px, calc(50px + 30 * ((100vw - 1024px) / 896)));
@@ -47,6 +57,7 @@
   }
 
   .errorMessage {
+    width: min(600px, calc(320px + 280 * ((100vw - 1024px) / 896)));
     @include MontserratRegular(calc(10px + 5 * ((100vw - 1024px) / 896)), normal);
     color: $color-error;
   }
@@ -79,7 +90,17 @@
       }
     }
 
-    .input_main_page {
+    .errorMessage {
+      width: min(437px, calc(337px + 100 * ((100vw - 768px) / 255)));
+      @include MontserratRegular(calc(8px + 4 * ((100vw - 768px) / 255)), normal);
+      color: $color-error;
+    }
+  }
+
+  .container_main_page_form {
+    @include flexBox(10px, column, normal, normal);
+
+    .input {
       box-sizing: border-box;
       width: min(400px, calc(300px + 100 * ((100vw - 768px) / 255)));
       height: min(50px, calc(40px + 10 * ((100vw - 768px) / 255)));
@@ -101,6 +122,7 @@
     }
 
     .errorMessage {
+      width: min(400px, calc(300px + 100 * ((100vw - 768px) / 255)));
       @include MontserratRegular(calc(8px + 4 * ((100vw - 768px) / 255)), normal);
       color: $color-error;
     }
@@ -112,7 +134,7 @@
   .container {
     @include flexBox(10px, column, normal, normal);
 
-    /*.input {
+    .input {
       box-sizing: border-box;
       width: min(437px, calc(337px + 100 * ((100vw - 360px) / 407)));
       height: min(45px, calc(40px + 45 * ((100vw - 360px) / 407)));
@@ -132,9 +154,19 @@
       &_error {
         border: 2px solid $color-error;
       }
-    }*/
+    }
 
-    .input_main_page {
+    .errorMessage {
+      width: min(437px, calc(337px + 100 * ((100vw - 360px) / 407)));
+      @include MontserratRegular(8px, normal);
+      color: $color-error;
+    }
+  }
+
+  .container_main_page_form {
+    @include flexBox(10px, column, normal, normal);
+
+    .input {
       box-sizing: border-box;
       width: min(400px, calc(250px + 150 * ((100vw - 360px) / 407)));
       height: min(50px, calc(40px + 10 * ((100vw - 360px) / 407)));
@@ -156,6 +188,7 @@
     }
 
     .errorMessage {
+      width: min(400px, calc(250px + 150 * ((100vw - 360px) / 407)));
       @include MontserratRegular(8px, normal);
       color: $color-error;
     }
