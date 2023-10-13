@@ -6,6 +6,9 @@ import {LinkItem} from '../LinkItem/LinkItem';
 import {ConnectButton} from '../ConnectButton/ConnectButton';
 import {useLocation} from 'react-router-dom';
 import {LinkItemProduct} from '../LinkItemProduct/LinkItemProduct';
+import React, {useState} from 'react';
+import {Modal} from '../Modal/Modal';
+import {ConnectForm} from '../../pages/MainPage/ConnectForm/ConnectForm';
 
 type BurgerMenuPropsType = {
     isOpen: boolean,
@@ -22,6 +25,12 @@ export const BurgerMenu = ({
                            }: BurgerMenuPropsType) => {
 
     const location = useLocation();
+
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const modalHandler = () => {
+        setIsModalOpen(!isModalOpen)
+    }
 
     const isOurProductPage = pathArr.includes(location.pathname)
 
@@ -63,9 +72,16 @@ export const BurgerMenu = ({
                 </div>
                 <div className={s.connect_container}>
                     <span className={s.email_text}>Info@2lmfa.ru</span>
-                    <ConnectButton/>
+                    <ConnectButton onClick={modalHandler}/>
                 </div>
             </div>
+            {
+                isModalOpen && (
+                    <Modal onCloseModal={modalHandler}>
+                        <ConnectForm closeModal={modalHandler}/>
+                    </Modal>
+                )
+            }
         </div>
     )
 }
