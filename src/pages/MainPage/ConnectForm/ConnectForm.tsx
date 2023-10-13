@@ -4,8 +4,13 @@ import {getValidation} from '../../../helpers/getValidation';
 import {useInput} from '../../../hooks/useInput';
 import cn from 'classnames';
 import {ConnectButton} from '../../../components/ConnectButton/ConnectButton';
+import {postFeedback, PostFeedbackBody} from '../../../api/feedback/api';
 
-export const ConnectForm = () => {
+type ConnectFormPropsType = {
+    closeModal: VoidFunction
+}
+
+export const ConnectForm = ({closeModal}: ConnectFormPropsType) => {
 
     const nameValidationFunction = getValidation().personalDataName.validate
     const emailValidationFunction = getValidation().emailValidation.validate
@@ -53,6 +58,23 @@ export const ConnectForm = () => {
     } = useInput(commentValidationFunction)
 
     const isButtonDisabled = emailError || phoneError || nameError || commentError || !commentValue || !nameValue || (!phoneValue && !emailValue)
+
+    const sendFeedbackHandler = () => {
+
+        const requestBody: PostFeedbackBody = {
+            name: nameValue,
+            mail: emailValue,
+            phone: phoneValue,
+            comment: commentValue
+        }
+
+        postFeedback(requestBody).then((res) => {
+            if (res.status === 201) {
+                closeModal()
+                alert('Сообщение отправлено')
+            }
+        }).catch(error => console.error(error))
+    }
 
     return (
         <div className={s.connect_form_container}>
@@ -105,7 +127,8 @@ export const ConnectForm = () => {
                     )
                 }
                 <div className={s.button_form}>
-                    <ConnectButton isMainPageForm={true} isDisabled={isButtonDisabled}/>
+                    <ConnectButton isMainPageForm={true} isDisabled={isButtonDisabled}
+                                   onClick={sendFeedbackHandler}/>
                     <div className={s.privacy_text_wrapper}>
                         <span
                             className={s.text_privacy}>Нажимая на кнопку, я соглашаюсь <span

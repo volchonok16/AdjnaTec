@@ -239,7 +239,7 @@ export const MainPage = () => {
             {
                 isModalOpen && (
                     <Modal onCloseModal={modalHandler}>
-                        <ConnectForm/>
+                        <ConnectForm closeModal={modalHandler}/>
                     </Modal>
                 )
             }
