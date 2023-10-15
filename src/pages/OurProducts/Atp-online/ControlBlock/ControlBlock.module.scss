@@ -137,3 +137,92 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .control_block_container {
+    width: 100%;
+    margin-top: 15vh;
+    @include flexBox(7vh, column, normal, normal);
+
+    .text_wrapper_mobile {
+      @include flexBox(7vh, column, normal, normal);
+
+      .remark_position_wrapper {
+        @include flexBox(0, column, flex-end, normal);
+
+        .remark_wrapper_mobile {
+          @include flexBox(0, column, normal, normal);
+
+          .remark_text {
+            @include MontserratRegular(min(16px, calc(10px + 6 * ((100vw - 360px) / 407))), normal);
+            color: #6495ED;
+          }
+        }
+      }
+
+
+      .total_control_wrapper_mobile {
+        @include flexBox(0, column, normal, normal);
+
+        .total_control_text {
+          @include RobotoRegular(min(30px, calc(18px + 12 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+
+          &_blue {
+            @include RobotoRegular(min(30px, calc(18px + 12 * ((100vw - 360px) / 407))), normal);
+            color: #6495ED;
+          }
+        }
+      }
+    }
+
+    .remark_wrapper {
+      display: none;
+    }
+
+    .total_control_wrapper {
+      display: none;
+    }
+
+    .lists_wrapper {
+      box-sizing: border-box;
+      padding: 0 2vw;
+      width: 100%;
+      @include flexBox(2.3vh, column, center, normal);
+
+      .list_block {
+        box-sizing: border-box;
+        width: 100%;
+        @include flexBox(3.6vh, column, normal, normal);
+        padding: 7.87vh 7.9vw;
+        background: $color-white;
+        border-radius: 14px;
+
+        .list_row {
+          @include flexBox(0.9vw, row, center, normal);
+
+          .img_mark {
+            width: min(14px, calc(9px + 5 * ((100vw - 360px) / 407)));
+            height: min(16px, calc(10px + 6 * ((100vw - 360px) / 407)));
+          }
+
+          .img_minus {
+            width: min(24px, calc(12px + 12 * ((100vw - 360px) / 407)));
+          }
+
+          .text {
+            @include MontserratRegular(min(16px, calc(12px + 4 * ((100vw - 360px) / 407))), normal);
+            color: $color-black;
+          }
+        }
+      }
+
+      .arrow_img {
+        transform: rotate(90deg);
+        width: min(116px, calc(58px + 58 * ((100vw - 360px) / 407)));
+        height: min(104px, calc(52px + 52 * ((100vw - 360px) / 407)));
+      }
+    }
+  }
+}

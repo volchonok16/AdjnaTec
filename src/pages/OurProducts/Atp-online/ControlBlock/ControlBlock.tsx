@@ -16,6 +16,25 @@ const controlBlockData: ControlBlockDataType = {
 export const ControlBlock = () => {
     return (
         <div className={s.control_block_container}>
+            <div className={s.text_wrapper_mobile}>
+                <div className={s.total_control_wrapper_mobile}>
+                    <span className={s.total_control_text}>АТП ОНЛАЙН -</span>
+                    <span
+                        className={s.total_control_text_blue}>ТОТАЛЬНЫЙ КОНТРОЛЬ</span>
+                    <span
+                        className={s.total_control_text}>ЗА ТРАНСПОРТОМ</span>
+                    <span
+                        className={s.total_control_text}>НА ПРЕДПРИЯТИИ*</span>
+                </div>
+                <div className={s.remark_position_wrapper}>
+                    <div className={s.remark_wrapper_mobile}>
+                        <span
+                            className={s.remark_text}>*система построена с глубоким.</span>
+                        <span className={s.remark_text}> пониманием как работает</span>
+                        <span className={s.remark_text}>автотранспортное хозяйство.</span>
+                    </div>
+                </div>
+            </div>
             <div className={s.remark_wrapper}>
                 <span className={s.remark_text}>*система построена с глубоким пониманием как работает автотранспортное хозяйство.</span>
             </div>
