@@ -36,7 +36,6 @@ export const AutomationBlock = () => {
                     <TryButton/>
                 </div>
             </div>
-
         </div>
     )
 }
