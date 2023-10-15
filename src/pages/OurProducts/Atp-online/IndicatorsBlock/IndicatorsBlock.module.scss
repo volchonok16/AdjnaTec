@@ -144,3 +144,72 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .indicators_container {
+    width: 100%;
+    margin-top: 10vh;
+    @include flexBox(6.6vh, column, normal, normal);
+
+    .info_block {
+      @include flexBox(3vh, column, normal, normal);
+
+      .left_text_block {
+        width: 100%;
+
+        .left_text {
+          @include RobotoRegular(min(26px, calc(16px + 10 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+
+          .blue_text {
+            @include RobotoRegular(min(26px, calc(16px + 10 * ((100vw - 360px) / 407))), normal);
+            color: #6495ED;
+          }
+        }
+      }
+
+      .right_text_block {
+        width: 100%;
+
+        .text_right {
+          @include MontserratLight(min(16px, calc(12px + 4 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+        }
+      }
+    }
+
+    .cards_block {
+      width: 100%;
+      @include flexBox(2vh, column, center, normal);
+
+      .card {
+        height: min(187px, calc(107px + 87 * ((100vw - 360px) / 407)));
+        width: min(460px, 100%);
+        padding: 3.2vh 0;
+        margin: 0 1vh;
+        background: #FFFFFF;
+        border-radius: 10px;
+        @include flexBox(2vh, column, center, center);
+
+        .number_value {
+          @include RobotoRegular(min(40px, calc(26px + 14 * ((100vw - 360px) / 407))), normal);
+          color: #6495ED;
+        }
+
+        .description_container {
+          @include flexBox(0, column, center, center);
+
+          .description {
+            @include MontserratMedium(min(16px, calc(12px + 4 * ((100vw - 360px) / 407))), normal);
+            color: $color-black;
+          }
+        }
+      }
+    }
+
+    .card_block_tablet {
+      display: none;
+    }
+  }
+}
