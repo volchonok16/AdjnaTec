@@ -1,30 +1,36 @@
 import s from './DocumentsBlock.module.scss';
 import {DocumentCard} from './DocumentCard/DocumentCard';
+import React from 'react';
+import {DocumentCardMobile} from './DocumentCardMobile/DocumentCardMobile';
 
-type CardDataType = {
+export type CardDataType = {
     number: number;
     title: string[];
+    mobile_title: string
 }
 
 const cardData: CardDataType[] = [
     {
         number: 1,
-        title: ['Функционал ПК', 'АТП-онлайн']
+        title: ['Функционал ПК', 'АТП-онлайн'],
+        mobile_title: 'Функционал ПК АТП-онлайн'
     },
     {
         number: 2,
-        title: ['Карта функционала', 'персонала']
+        title: ['Карта функционала', 'персонала'],
+        mobile_title: 'Карта функционала персонала'
     },
     {
         number: 3,
-        title: ['Выгода от', 'внедрения']
+        title: ['Выгода от', 'внедрения'],
+        mobile_title: 'Выгода от внедрения'
     },
     {
         number: 4,
-        title: ['Инструкция', 'пользователя']
+        title: ['Инструкция', 'пользователя'],
+        mobile_title: 'Инструкция пользователя'
     }
 ]
-
 
 export const DocumentsBlock = () => {
     return (
@@ -59,6 +65,16 @@ export const DocumentsBlock = () => {
                                   titles={cardData[3].title}
                     />
                 </div>
+            </div>
+            <div className={s.card_wrapper_mobile}>
+
+                {
+                    cardData.map((card) => {
+                        return (
+                            <DocumentCardMobile data={card} key={card.number}/>
+                        )
+                    })
+                }
             </div>
         </div>
     )
