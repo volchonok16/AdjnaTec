@@ -23,6 +23,10 @@
   .card_wrapper_tablet {
     display: none;
   }
+
+  .card_wrapper_mobile {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -52,6 +56,40 @@
         width: 100%;
         @include flexBox(2.6vw, row, normal, normal);
       }
+    }
+
+    .card_wrapper_mobile {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .documents_container {
+    width: 100%;
+    margin-top: 9vh;
+    @include flexBox(4.7vh, column, normal, normal);
+
+    .title {
+      @include RobotoRegular(min(24px, calc(16px + 8 * ((100vw - 360px) / 407))), normal);
+      color: $color-black;
+
+      &_blue {
+        color: #6495ED;
+      }
+    }
+
+    .card_wrapper {
+      display: none;
+    }
+
+    .card_wrapper_tablet {
+      display: none;
+    }
+
+    .card_wrapper_mobile {
+      @include flexBox(1vh, column, flex-end, normal);
     }
   }
 }

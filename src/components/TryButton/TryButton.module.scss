@@ -45,3 +45,26 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .button {
+    box-sizing: border-box;
+    @include flexBox(0, column, center, center);
+    width: min(350px, calc(240px + 110 * ((100vw - 360px) / 407)));
+    height: min(50px, calc(40px + 10 * ((100vw - 360px) / 407)));
+    border-radius: 10px;
+    border: none;
+    background: #7AD3C3;
+    cursor: pointer;
+
+    .button_text {
+      @include MontserratMedium(calc(18px + 9 * ((100vw - 360px) / 407)), normal);
+      color: $color-white;
+    }
+
+    &:hover {
+      background: #96C5EF;
+    }
+  }
+}

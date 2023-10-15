@@ -1,9 +1,11 @@
 import s from './ProgramComplexBlock.module.scss'
 import {ProgramComplexCard} from './ProgramComplexCard/ProgramComplexCard';
+import {ProgramComplexCardMobile} from './ProgramComplexCardMobile/ProgramComplexCardMobile';
 
-type CardType = {
+export type CardType = {
     number: number
     title: string[],
+    mobile_title: string,
     description: string
 }
 
@@ -11,46 +13,55 @@ const cardData: Record<string, CardType> = {
     1: {
         number: 1,
         title: ['Журнал механика по', 'выпуску транспорта'],
+        mobile_title: 'Журнал механика по выпуску транспорта',
         description: 'Позволяет фиксировать выезд и заезд транспорта, замечания к его техническому состоянию'
     },
     2: {
         number: 2,
         title: ['Журнал ремонта', 'транспорта'],
+        mobile_title: 'Журнал ремонта транспорта',
         description: 'Организация и оперативный контроль ремонта транспорта, регламентных ТО, учет шин и аккумуляторов, позволяет вовремя заказывать необходимые запчасти'
     },
     3: {
         number: 3,
         title: ['Обработка', 'путевых листов'],
+        mobile_title: 'Обработка путевых листов',
         description: 'Контроль эксплуатации транспорта, расходов на него, контрольные и управленческие отчеты, печать актов выполненных работ и многое другое.'
     },
     4: {
         number: 4,
         title: ['Табель'],
+        mobile_title: 'Табель',
         description: 'Контрольные и управленческие отчеты по персоналу во всех возможных разрезах. Применяются в том числе для начисления заработной платы водителям'
     },
     5: {
         number: 5,
         title: ['Склад'],
+        mobile_title: 'Склад',
         description: 'Приход-расход ТМЦ, распределение со склада, контролирование расхода запчастей. Позволяет выполнять бухгалтерские проводки на основе данных склада'
     },
     6: {
         number: 6,
         title: ['Разнарядка'],
+        mobile_title: 'Разнарядка',
         description: 'Позволяет простейшим образом создавать план выпуска техники и печатать путевые листы.'
     },
     7: {
         number: 7,
         title: ['Заявочный', 'модуль'],
+        mobile_title: 'Заявочный модуль',
         description: 'Устанавливается на стороне ваших постоянных клиентов, позволяет автоматизировать создание заявок, которые тут же будут отражаться в модуле Разнарядка.'
     },
     8: {
         number: 8,
         title: ['Управленческий', 'модуль'],
+        mobile_title: 'Управленческий модуль',
         description: 'Позволяет собрать в одном месте всю информацию, упростить формирование отчетов, отслеживать всю оперативную обстановку на предприятии из любого места,где есть интернет'
     },
     9: {
         number: 9,
         title: ['Модуль', 'водителя'],
+        mobile_title: 'Модуль водителя',
         description: 'Позволяет водителю отмечать статус на рейсе (погрузка, опоздание, ожидание клиента и т. д.), отправлять фотографии и сообщения в чат диспетчера и обратно.'
     }
 }
@@ -182,6 +193,20 @@ export const ProgramComplexBlock = () => {
                         </button>
                     </div>
                 </div>
+            </div>
+            <div className={s.card_container_mobile}>
+                <ProgramComplexCardMobile data={cardData[1]}/>
+                <ProgramComplexCardMobile data={cardData[2]}/>
+                <ProgramComplexCardMobile data={cardData[3]}/>
+                <ProgramComplexCardMobile data={cardData[4]}/>
+                <ProgramComplexCardMobile data={cardData[5]}/>
+                <ProgramComplexCardMobile data={cardData[6]}/>
+                <ProgramComplexCardMobile data={cardData[7]}/>
+                <ProgramComplexCardMobile data={cardData[8]}/>
+                <ProgramComplexCardMobile data={cardData[9]}/>
+                <button className={s.button_mobile} onClick={redirectHandler}>
+                    <span className={s.button_text_mobile}>Попробовать</span>
+                </button>
             </div>
         </div>
     )

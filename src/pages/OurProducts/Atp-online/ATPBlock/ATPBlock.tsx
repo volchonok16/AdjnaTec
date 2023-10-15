@@ -1,6 +1,7 @@
 import s from './ATPBlock.module.scss'
 import logo from '../../../../assets/image/ATP-online/atp_logo.png'
 import {TryButton} from '../../../../components/TryButton/TryButton';
+import track from '../../../../assets/image/ATP-online/tracks.png'
 
 export const ATPBlock = () => {
     return (
@@ -21,6 +22,7 @@ export const ATPBlock = () => {
                 <span
                     className={s.text_description}>и документооборота на предприятии</span>
             </div>
+            <img className={s.img} src={track} alt={'track-img'}/>
             <TryButton/>
         </div>
     )

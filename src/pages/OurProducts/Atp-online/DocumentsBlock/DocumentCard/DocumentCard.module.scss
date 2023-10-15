@@ -1,7 +1,7 @@
 @import 'src/assets/styles/utils';
 @import 'src/assets/styles/colors';
 
-.document_card_container {
+.card_container {
   box-sizing: border-box;
   height: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
   width: min(420px, calc(222px + 198 * ((100vw - 1024px) / 896)));
@@ -9,135 +9,135 @@
   background: $color-white;
   border-radius: 30px;
   position: relative;
+  transition: all 1.8s;
   cursor: pointer;
-  overflow: hidden;
 
   .number {
     position: absolute;
     @include MontserratRegular(min(36px, calc(18px + 18 * ((100vw - 1024px) / 896))), normal);
     color: #6495ED;
-    pointer-events: none;
   }
 
-  .text_container {
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    @include flexBox(5vh, column, normal, normal);
+  .content_container {
+    @include flexBox(2vh, column, center, center);
     padding-top: 40%;
-    transition: all 1.3s ease;
+    transition: all 1.8s ease;
     position: relative;
 
     &_hover {
-      padding-top: 20%;
-    }
-  }
-
-  .title_wrapper {
-    @include flexBox(0, column, center, center);
-    pointer-events: none;
-  }
-
-  .title {
-    @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
-    color: $color-black;
-    pointer-events: none;
-  }
-
-  .button_container {
-    width: 100%;
-    @include flexBox(1.85vh, column, center, center);
-    opacity: 0;
-    transition: all 1.3s ease;
-
-    &_hover {
-      opacity: 1;
+      padding-top: 12%;
     }
 
-    .button {
-      width: min(330px, calc(150px + 180 * ((100vw - 1024px) / 896)));
-      height: min(60px, calc(30px + 30 * ((100vw - 1024px) / 896)));
-      border-radius: 30px;
-      background: #7AD3C3;
-      border: none;
-      @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
-      color: $color-white;
+    .title_container {
+      @include flexBox(0, column, center, center);
 
-      &:hover {
+      .title {
+        @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
+        color: $color-black;
+      }
+    }
+
+    .buttons_container {
+      @include flexBox(2vh, column, center, center);
+      opacity: 0;
+      transition: opacity 1.3s;
+
+      &_visible {
+        opacity: 1;
+      }
+
+      .button_look {
+        width: min(330px, calc(150px + 180 * ((100vw - 1024px) / 896)));
+        height: min(60px, calc(30px + 30 * ((100vw - 1024px) / 896)));
+        border-radius: 30px;
         background: #F8F9FE;
+        border: none;
+        @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
         color: #6495ED;
+        cursor: pointer;
+      }
+
+      .button_download {
+        width: min(330px, calc(150px + 180 * ((100vw - 1024px) / 896)));
+        height: min(60px, calc(30px + 30 * ((100vw - 1024px) / 896)));
+        border-radius: 30px;
+        background: #7AD3C3;
+        border: none;
+        @include MontserratMedium(min(30px, calc(15px + 15 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+        cursor: pointer;
       }
     }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px){
 
-  .document_card_container {
+  .card_container {
     box-sizing: border-box;
-    height: min(170px, calc(140px + 30 * ((100vw - 768px) / 255)));
-    width: 100%;
+    width: 50%;
+    height: min(200px, calc(140px + 60 * ((100vw - 768px) / 255)));
     padding: 2.77vh 1.66vw;
     background: $color-white;
     border-radius: 10px;
     position: relative;
+    transition: all 0.5s;
     cursor: pointer;
-    overflow: hidden;
 
     .number {
       position: absolute;
-      @include MontserratRegular(min(26px, calc(24px + 2 * ((100vw - 768px) / 255))), normal);
+      @include MontserratRegular(min(30px, calc(24px + 6 * ((100vw - 768px) / 255))), normal);
       color: #6495ED;
-      pointer-events: none;
     }
 
-    .text_container {
-      pointer-events: none;
-      width: 100%;
-      height: 100%;
-      @include flexBox(5vh, column, normal, normal);
-      padding-top: 14%;
-      transition: all 1.3s ease;
+    .content_container {
+      @include flexBox(2vh, column, center, center);
+      padding-top: 12%;
+      transition: all 0.5s ease;
       position: relative;
 
       &_hover {
-        padding-top: 9%;
-      }
-    }
-
-    .title_wrapper {
-      @include flexBox(5px, row, center, center);
-      pointer-events: none;
-    }
-
-    .title {
-      @include MontserratMedium(min(22px, calc(17px + 5 * ((100vw - 768px) / 255))), normal);
-      color: $color-black;
-      pointer-events: none;
-    }
-
-    .button_container {
-      width: 100%;
-      @include flexBox(1.85vh, row, center, center);
-      opacity: 0;
-      transition: all 1.3s ease;
-
-      &_hover {
-        opacity: 1;
+        padding-top: 8%;
       }
 
-      .button {
-        width: min(183px, calc(153px + 30 * ((100vw - 768px) / 255)));
-        height: min(45px, calc(40px + 5 * ((100vw - 768px) / 255)));
-        border-radius: 10px;
-        background: #7AD3C3;
-        border: none;
-        @include MontserratMedium(min(20px, calc(16px + 4 * ((100vw - 768px) / 255))), normal);
-        color: $color-white;
+      .title_container {
+        @include flexBox(0, column, center, center);
 
-        &:hover {
+        .title {
+          @include MontserratMedium(min(28px, calc(17px + 11 * ((100vw - 768px) / 255))), normal);
+          color: $color-black;
+        }
+      }
+
+      .buttons_container {
+        @include flexBox(2vh, row, center, center);
+        opacity: 0;
+        transition: opacity 0.5s;
+
+        &_visible {
+          opacity: 1;
+        }
+
+        .button_look {
+          width: min(183px, calc(153px + 33 * ((100vw - 768px) / 255)));
+          height: min(45px, calc(40px + 5 * ((100vw - 768px) / 255)));
+          border-radius: 10px;
           background: #F8F9FE;
+          border: none;
+          @include MontserratMedium(min(18px, calc(16px + 2 * ((100vw - 768px) / 255))), normal);
           color: #6495ED;
+          cursor: pointer;
+        }
+
+        .button_download {
+          width: min(183px, calc(153px + 33 * ((100vw - 768px) / 255)));
+          height: min(45px, calc(40px + 5 * ((100vw - 768px) / 255)));
+          border-radius: 10px;
+          background: #7AD3C3;
+          border: none;
+          @include MontserratMedium(min(18px, calc(16px + 2 * ((100vw - 768px) / 255))), normal);
+          color: $color-white;
+          cursor: pointer;
         }
       }
     }

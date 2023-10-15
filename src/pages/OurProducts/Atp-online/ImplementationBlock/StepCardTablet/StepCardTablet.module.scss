@@ -30,3 +30,36 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .step_card_tablet_container {
+    width: 100%;
+    @include flexBox(0, column, normal, normal);
+
+    .card_tablet_wrapper {
+      width: 100%;
+      @include flexBox(2vh, column, normal, normal);
+
+      .title_wrapper_tablet {
+        @include flexBox(3vw, row, flex-end, normal);
+
+        .number_tablet {
+          @include RobotoRegular(min(50px, calc(36px + 20 * ((100vw - 360px) / 407))), normal);
+          color: #7AD3C3;
+        }
+
+        .title_tablet {
+          @include RobotoMedium(min(24px, calc(18px + 6 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+          padding-bottom: 1.2vh;
+        }
+      }
+
+      .description_tablet {
+        @include MontserratRegular(min(16px, calc(12px + 4 * ((100vw - 360px) / 407))), normal);
+        color: $color-black;
+      }
+    }
+  }
+}

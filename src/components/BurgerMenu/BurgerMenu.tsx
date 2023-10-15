@@ -39,8 +39,9 @@ export const BurgerMenu = ({
     }
 
     const activeLinkBurgerMenuHandler = (path: string) => {
+        setIsOpen()
         activeLinkHandler(path)
-        burgerMenuHandler()
+
     }
 
     return (
@@ -59,7 +60,7 @@ export const BurgerMenu = ({
                                     return <LinkItemProduct item={item}
                                                             currentURL={currentURL}
                                                             key={item.path}
-                                                            onActivateLink={activeLinkHandler}/>
+                                                            onActivateLink={activeLinkBurgerMenuHandler}/>
                                 })
                             ) : (
                                 NavBarLinks.map((item) => {

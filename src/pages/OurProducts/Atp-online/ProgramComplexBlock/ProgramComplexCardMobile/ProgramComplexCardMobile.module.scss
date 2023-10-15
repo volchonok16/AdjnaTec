@@ -1,0 +1,29 @@
+@import "src/assets/styles/utils";
+@import "src/assets/styles/colors";
+
+.collapse {
+  background: $color-white;
+  padding: 1vh 0.8vw;
+  border-radius: 10px;
+  width: 78vw;
+  box-sizing: border-box;
+
+  .panel_header {
+    @include flexBox(2.5vw, row, center, normal);
+
+    .number {
+      @include MontserratRegular(min(28px, calc(22px + 6 * ((100vw - 360px) / 407))), normal);
+      color: #6495ED;
+    }
+
+    .title_panel {
+      @include MontserratMedium(min(22px, calc(14px + 8 * ((100vw - 360px) / 407))), normal);
+      color: $color-black;
+    }
+  }
+
+  .description {
+    @include InterRegular(min(16px, calc(12px + 4 * ((100vw - 360px) / 407))), normal);
+    color: #AAA;
+  }
+}

@@ -41,3 +41,25 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .advantages_block_container {
+    width: 100%;
+    margin-top: 10vh;
+    @include flexBox(5.3vh, column, normal, normal);
+
+    .text {
+      @include RobotoRegular(min(23px, calc(16px + 7 * ((100vw - 360px) / 407))), normal);
+      color: $color-black;
+
+      &_blue {
+        color: #6495ED;
+      }
+    }
+
+    .advantages_cards_block {
+      @include flexBox(2vh, column, flex-end, normal);
+    }
+  }
+}

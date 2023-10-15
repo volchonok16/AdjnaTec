@@ -101,3 +101,58 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .automation_block_container {
+    width: 100%;
+    margin-top: 10vh;
+    @include flexBox(5vh, column, normal, normal);
+
+    .text_1_tablet_wrapper {
+      width: 100%;
+      @include flexBox(0, column, flex-end, normal);
+
+      .text_container {
+        @include flexBox(0, column, normal, normal);
+
+        .text_1 {
+          @include MontserratRegular(min(24px, calc(16px + 2 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+
+          &_blue {
+            color: #6495ED;;
+          }
+        }
+      }
+    }
+
+    .img {
+      display: none;
+    }
+
+    .right_block {
+      display: none;
+    }
+
+    .tablet_content_container {
+      width: 100%;
+      @include flexBox(2vh, column, center, normal);
+
+      .img_tablet {
+        width: min(450px, calc(300px + 150 * ((100vw - 360px) / 407)));
+        height: min(403px, calc(260px + 143 * ((100vw - 360px) / 407)));
+      }
+
+      .right_block_tablet {
+        box-sizing: border-box;
+        @include flexBox(4.5vh, column, center, normal);
+
+        .text_2_tablet {
+          @include MontserratRegular(min(16px, (12px + 4 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+        }
+      }
+    }
+  }
+}
