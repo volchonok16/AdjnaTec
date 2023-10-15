@@ -1,4 +1,5 @@
 import {requestWithBody} from '../requestFunction';
+import {SEND_FEEDBACK} from '../constantAPI';
 
 export type PostFeedbackBody = {
     name: string,
@@ -7,6 +8,6 @@ export type PostFeedbackBody = {
     comment: string
 }
 
-export const postFeedback = (body: PostFeedbackBody) => {
-    return requestWithBody('http://adjnatech.ru:2000/feedback', 'POST', body)
+export const sendFeedback = (body: PostFeedbackBody) => {
+    return requestWithBody(SEND_FEEDBACK, 'POST', body)
 }

@@ -4,7 +4,7 @@ import {getValidation} from '../../../helpers/getValidation';
 import {useInput} from '../../../hooks/useInput';
 import cn from 'classnames';
 import {ConnectButton} from '../../../components/ConnectButton/ConnectButton';
-import {postFeedback, PostFeedbackBody} from '../../../api/feedback/api';
+import {sendFeedback, PostFeedbackBody} from '../../../api/feedback/api';
 import {useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../../enum';
 
@@ -76,7 +76,7 @@ export const ConnectForm = ({closeModal}: ConnectFormPropsType) => {
             comment: commentValue
         }
 
-        postFeedback(requestBody).then((res) => {
+        sendFeedback(requestBody).then((res) => {
             if (res.status === 201) {
                 closeModal()
                 alert('Сообщение отправлено')

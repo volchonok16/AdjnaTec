@@ -4,7 +4,7 @@ export function requestWithBody(
     body: string | number | object | undefined
 ) {
 
-    return fetch(url, {
+    return fetch(process.env.REACT_APP_API_URL + url, {
         method,
         body: JSON.stringify(body),
         credentials: 'same-origin',

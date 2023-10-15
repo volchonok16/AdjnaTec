@@ -2,12 +2,15 @@ import React, {useState} from 'react';
 import s from './DocumentCard.module.scss';
 import {CardDataType} from '../DocumentsBlock';
 import cn from 'classnames';
+import {ParamsType} from '../../../../../api/documentAPI/api';
 
 interface CardProps {
     data: CardDataType
+    lookFunction: (params: ParamsType) => void,
+    downloadFunction: (params: ParamsType) => void
 }
 
-export const DocumentCard = ({data}: CardProps) => {
+export const DocumentCard = ({data, lookFunction, downloadFunction}: CardProps) => {
 
     const {title, number} = data
 
@@ -24,12 +27,12 @@ export const DocumentCard = ({data}: CardProps) => {
 
     const handleDownload = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        console.log('Скачать');
+        downloadFunction(data.params)
     };
 
     const handleWatch = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        console.log('Смотреть');
+        lookFunction(data.params)
     };
 
     return (
