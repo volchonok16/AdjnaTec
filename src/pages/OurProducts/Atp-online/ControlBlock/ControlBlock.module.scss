@@ -150,7 +150,7 @@
 
   .control_block_container {
     width: 100%;
-    margin-top: 15vh;
+    margin-top: 10vh;
     @include flexBox(7vh, column, normal, normal);
 
     .text_wrapper_mobile {
