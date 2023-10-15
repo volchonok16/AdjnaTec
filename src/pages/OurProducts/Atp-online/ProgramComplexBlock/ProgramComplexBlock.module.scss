@@ -57,6 +57,10 @@
   .card_container_tablet {
     display: none;
   }
+
+  .card_container_mobile {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -129,6 +133,74 @@
               color: $color-white;
             }
           }
+        }
+      }
+    }
+
+    .card_container_mobile {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .program_complex_block_container {
+    width: 100%;
+    margin-top: 24vh;
+    @include flexBox(9.2vh, column, normal, normal);
+
+    .row_container {
+      display: none;
+    }
+
+    .text_container_tablet {
+      width: 100%;
+      @include flexBox(4.63vh, column, normal, normal);
+
+      .title_wrapper_tablet {
+        @include flexBox(0, column, normal, normal);
+
+        .title_tablet {
+          @include RobotoRegular(min(26px, calc(16px + 10 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+
+          &_blue {
+            color: #6495ED;
+          }
+        }
+      }
+
+      .description_wrapper_tablet {
+        width: 100%;
+        @include flexBox(0, row, normal, normal);
+
+        .description_tablet {
+          @include MontserratLight(min(16px, calc(12px + 4 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+        }
+      }
+    }
+
+    .card_container_mobile {
+      @include flexBox(1.5vh, column, flex-end, normal);
+
+      .button_mobile {
+        height: min(50px, calc(40px + 10 * ((100vw - 360px) / 407)));
+        width: 80vw;
+        border-radius: 10px;
+        border: none;
+        @include flexBox(0, column, center, center);
+        background: #7AD3C3;
+
+        &:hover {
+          cursor: pointer;
+          background: #96C5EF;
+        }
+
+        .button_text_mobile {
+          @include MontserratMedium(min(20px, calc(18px + 2 * ((100vw - 360px) / 407))), normal);
+          color: $color-white;
         }
       }
     }
