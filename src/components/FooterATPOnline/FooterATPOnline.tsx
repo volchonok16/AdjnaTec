@@ -10,6 +10,13 @@ export const FooterATPOnline = () => {
                 <img className={s.logo} src={logo} alt={'logo'}/>
                 <span className={s.logo_text}>@ AdjnaTec 2023</span>
             </div>
+            <div className={s.link_column_mobile}>
+                <span className={s.title}>КОНТАКТЫ</span>
+                <div className={s.link_navbar}>
+                    <span className={s.link_text}>+7(909) 517 55 57</span>
+                    <span className={s.link_text}>info@2lmfa.ru</span>
+                </div>
+            </div>
             <div className={s.link_container}>
                 <div className={s.link_column}>
                     <span className={s.title}>МЕНЮ</span>

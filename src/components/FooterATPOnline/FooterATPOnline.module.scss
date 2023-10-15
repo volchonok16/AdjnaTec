@@ -107,3 +107,58 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .footer_atp_container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12.5vh 3.1vw 9vh 3.1vw;
+    background: #F8F9FE;
+    @include flexBox(min(15vw, 135px), row, normal, normal);
+
+    .logo_container {
+      @include flexBox(0, column, center, normal);
+
+      .logo {
+        width: calc(115px + 35 * ((100vw - 360px) / 407));
+        height: calc(112px + 44 * ((100vw - 360px) / 407));
+      }
+
+      .logo_text {
+        @include RobotoRegular(min(18px, calc(14px + 4 * ((100vw - 360px) / 407))), normal);
+        letter-spacing: 0.28px;
+        color: #CBC9C9;
+      }
+    }
+
+    .link_container {
+      display: none;
+    }
+
+    .link_column_mobile {
+      @include flexBox(2.77vh, column, normal, normal);
+
+      .title {
+        @include RobotoMedium(min(22px, calc(18px + 4 * ((100vw - 360px) / 407))), normal);
+        color: #6495ED;
+        letter-spacing: 0.18px;
+      }
+
+      .link_navbar {
+        @include flexBox(2vh, column, normal, normal);
+
+        .link {
+          text-decoration: none;
+        }
+
+        .link_text {
+          cursor: pointer;
+          @include MontserratMedium(min(18px, calc(14px + 4 * ((100vw - 360px) / 407))), normal);
+          color: #CBC9C9;
+          letter-spacing: 0.14px;
+        }
+      }
+    }
+  }
+}
