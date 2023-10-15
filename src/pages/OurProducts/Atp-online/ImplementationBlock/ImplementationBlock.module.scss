@@ -105,3 +105,57 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .implementation_block_container {
+    width: 100%;
+    margin-top: 18.51vh;
+    @include flexBox(9.25vh, column, normal, normal);
+
+    .text_wrapper {
+      display: none;
+    }
+
+    .text_wrapper_tablet {
+      @include flexBox(4.62vh, column, normal, normal);
+      width: 100%;
+
+      .text_1_wrapper_tablet {
+        @include flexBox(0, column, normal, normal);
+
+        .text_1_tablet {
+          @include RobotoRegular(min(26px, calc(16px + 10 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+
+          &_blue {
+            color: #6495ED;
+          }
+        }
+      }
+
+      .text_2_wrapper_tablet {
+        width: 100%;
+        @include flexBox(0, row, normal, flex-end);
+
+        .text_2_tablet {
+          @include MontserratLight(min(16px, calc(12px + 4 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+        }
+      }
+    }
+
+    .steps_wrapper {
+      display: none;
+    }
+
+    .steps_wrapper_tablet {
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 5.25vh 3.9vw;
+      box-sizing: border-box;
+      @include flexBox(5.5vw, column, normal, normal);
+    }
+  }
+}
