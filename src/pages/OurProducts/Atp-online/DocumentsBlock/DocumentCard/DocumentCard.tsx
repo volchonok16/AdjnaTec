@@ -39,9 +39,7 @@ export const DocumentCard = ({
                     {
                         titles.map((title) => {
                             return (
-                                <span className={cn(s.title, {
-                                    [s.title_hover]: isHover || isOpen
-                                })}
+                                <span className={s.title}
                                       key={title}>{title}</span>
                             )
                         })
