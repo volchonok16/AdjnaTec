@@ -3,6 +3,7 @@ import {DocumentCard} from './DocumentCard/DocumentCard';
 import React from 'react';
 import {DocumentCardMobile} from './DocumentCardMobile/DocumentCardMobile';
 
+
 export type CardDataType = {
     number: number;
     title: string[];
@@ -42,13 +43,12 @@ export const DocumentsBlock = () => {
                 {
                     cardData.map((card) => {
                         return (
-                            <DocumentCard number={card.number} titles={card.title}
-                                          key={card.number}/>
+                            <DocumentCard key={card.number} data={card}/>
                         )
                     })
                 }
             </div>
-            <div className={s.card_wrapper_tablet}>
+            {/*<div className={s.card_wrapper_tablet}>
                 <div className={s.card_row_tablet}>
                     <DocumentCard number={cardData[0].number}
                                   titles={cardData[0].title}
@@ -65,7 +65,7 @@ export const DocumentsBlock = () => {
                                   titles={cardData[3].title}
                     />
                 </div>
-            </div>
+            </div>*/}
             <div className={s.card_wrapper_mobile}>
 
                 {

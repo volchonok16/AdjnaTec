@@ -1,16 +1,15 @@
-import s from './DocumentCard.module.scss';
 import React, {useState} from 'react';
+import s from './DocumentCard.module.scss';
+import {CardDataType} from '../DocumentsBlock';
 import cn from 'classnames';
 
-type DocumentCardPropsType = {
-    number: number,
-    titles: string[]
+interface CardProps {
+    data: CardDataType
 }
 
-export const DocumentCard = ({
-                                 number,
-                                 titles,
-                             }: DocumentCardPropsType) => {
+export const DocumentCard = ({data}: CardProps) => {
+
+    const {title, number} = data
 
     const [isHover, setIsHover] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
@@ -23,39 +22,49 @@ export const DocumentCard = ({
         setIsOpen(!isOpen)
     }
 
+    const handleDownload = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+        console.log('Скачать');
+    };
+
+    const handleWatch = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+        console.log('Смотреть');
+    };
+
     return (
         <div
-            className={s.document_card_container}
-            onMouseOver={hoverHandler}
-            onMouseOut={hoverHandler}
-            onClick={openHandler}>
-            <span className={s.number}>
-                /{number}
-            </span>
-            <div className={cn(s.text_container, {
-                [s.text_container_hover]: isHover || isOpen
+            className={s.card_container}
+            onMouseEnter={hoverHandler}
+            onMouseLeave={hoverHandler}
+            onClick={openHandler}
+        >
+            <span className={s.number}>/{number}</span>
+            <div className={cn(s.content_container, {
+                [s.content_container_hover]: isHover || isOpen
             })}>
-                <div className={s.title_wrapper}>
+                <div className={s.title_container}>
                     {
-                        titles.map((title) => {
+                        title.map((titlePart) => {
                             return (
                                 <span className={s.title}
-                                      key={title}>{title}</span>
+                                      key={titlePart}>{titlePart}</span>
                             )
                         })
                     }
                 </div>
-                <div className={cn(s.button_container, {
-                    [s.button_container_hover]: isHover || isOpen
+                <div className={cn(s.buttons_container, {
+                    [s.buttons_container_visible]: isHover || isOpen
                 })}>
-                    <button className={s.button}>
-                        посмотреть
+                    <button className={s.button_look} onClick={handleWatch}>
+                        Смотреть
                     </button>
-                    <button className={s.button}>
-                        скачать
+                    <button className={s.button_download} onClick={handleDownload}>
+                        Скачать
                     </button>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
