@@ -48,24 +48,16 @@ export const DocumentsBlock = () => {
                     })
                 }
             </div>
-            {/*<div className={s.card_wrapper_tablet}>
+            <div className={s.card_wrapper_tablet}>
                 <div className={s.card_row_tablet}>
-                    <DocumentCard number={cardData[0].number}
-                                  titles={cardData[0].title}
-                    />
-                    <DocumentCard number={cardData[1].number}
-                                  titles={cardData[1].title}
-                    />
+                    <DocumentCard data={cardData[0]}/>
+                    <DocumentCard data={cardData[1]}/>
                 </div>
                 <div className={s.card_row_tablet}>
-                    <DocumentCard number={cardData[2].number}
-                                  titles={cardData[2].title}
-                    />
-                    <DocumentCard number={cardData[3].number}
-                                  titles={cardData[3].title}
-                    />
+                    <DocumentCard data={cardData[2]}/>
+                    <DocumentCard data={cardData[3]}/>
                 </div>
-            </div>*/}
+            </div>
             <div className={s.card_wrapper_mobile}>
 
                 {

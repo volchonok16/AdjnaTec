@@ -70,3 +70,76 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+  .card_container {
+    box-sizing: border-box;
+    width: 50%;
+    height: min(200px, calc(140px + 60 * ((100vw - 768px) / 255)));
+    padding: 2.77vh 1.66vw;
+    background: $color-white;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    .number {
+      position: absolute;
+      @include MontserratRegular(min(30px, calc(24px + 6 * ((100vw - 768px) / 255))), normal);
+      color: #6495ED;
+    }
+
+    .content_container {
+      @include flexBox(2vh, column, center, center);
+      padding-top: 12%;
+      transition: all 0.5s ease;
+      position: relative;
+
+      &_hover {
+        padding-top: 8%;
+      }
+
+      .title_container {
+        @include flexBox(0, column, center, center);
+
+        .title {
+          @include MontserratMedium(min(28px, calc(17px + 11 * ((100vw - 768px) / 255))), normal);
+          color: $color-black;
+        }
+      }
+
+      .buttons_container {
+        @include flexBox(2vh, row, center, center);
+        opacity: 0;
+        transition: opacity 0.5s;
+
+        &_visible {
+          opacity: 1;
+        }
+
+        .button_look {
+          width: min(183px, calc(153px + 33 * ((100vw - 768px) / 255)));
+          height: min(45px, calc(40px + 5 * ((100vw - 768px) / 255)));
+          border-radius: 10px;
+          background: #F8F9FE;
+          border: none;
+          @include MontserratMedium(min(18px, calc(16px + 2 * ((100vw - 768px) / 255))), normal);
+          color: #6495ED;
+          cursor: pointer;
+        }
+
+        .button_download {
+          width: min(183px, calc(153px + 33 * ((100vw - 768px) / 255)));
+          height: min(45px, calc(40px + 5 * ((100vw - 768px) / 255)));
+          border-radius: 10px;
+          background: #7AD3C3;
+          border: none;
+          @include MontserratMedium(min(18px, calc(16px + 2 * ((100vw - 768px) / 255))), normal);
+          color: $color-white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
