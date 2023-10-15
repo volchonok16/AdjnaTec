@@ -6,7 +6,7 @@ import vkontakte from '../../../../assets/image/ATP-online/vkontakte.svg'
 import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../../../enum';
-import {postFeedback, PostFeedbackBody} from '../../../../api/feedback/api';
+import {sendFeedback, PostFeedbackBody} from '../../../../api/feedback/api';
 import {TextInput} from '../../../../components/TextInput/TextInput';
 import {getValidation} from '../../../../helpers/getValidation';
 import {useInput} from '../../../../hooks/useInput';
@@ -72,7 +72,7 @@ export const QuestionFormBlock = () => {
             comment: commentValue
         }
 
-        postFeedback(requestBody).then((res) => {
+        sendFeedback(requestBody).then((res) => {
             if (res.status === 201) {
                 alert('Сообщение отправлено')
             }
