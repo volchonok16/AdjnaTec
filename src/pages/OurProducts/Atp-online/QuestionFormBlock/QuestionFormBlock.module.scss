@@ -262,3 +262,133 @@
     }
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .question_form_container {
+    width: 100%;
+    margin-top: 15vh;
+    border-radius: 20px;
+    background: linear-gradient(101deg, #6495ED 5.1%, #5983D0 84.85%);
+    box-sizing: border-box;
+    padding: 9.25vh 3.125vw;
+
+    .left_container {
+      display: none;
+    }
+
+    .right_container {
+      display: none;
+    }
+
+    .tablet_content_wrapper {
+      @include flexBox(3vh, column, normal, normal);
+
+      .title_tablet {
+        @include RobotoMedium(min(40px, calc(28px + 12 * ((100vw - 360px) / 407))), normal);
+        color: $color-white;
+      }
+
+      .tablet_blocks_wrapper {
+        @include flexBox(2vh, column, normal, space-between);
+
+        .left_container {
+          @include flexBox(6.48vh, column, normal, normal);
+
+          .text_wrapper {
+            @include flexBox(3.7vh, column, normal, normal);
+
+            .description {
+              width: 100%;
+              @include MontserratRegular(min(16px, calc(12px + 4 * ((100vw - 360px) / 407))), normal);
+              color: $color-white;
+            }
+          }
+
+          .icon_wrapper {
+            display: none;
+          }
+        }
+
+        .right_container {
+          @include flexBox(1.85vh, column, normal, normal);
+
+          .connect_wrapper {
+            @include flexBox(1.3vh, column, normal, normal);
+
+            .textarea {
+              box-sizing: border-box;
+              width: 100%;
+              height: min(90px, calc(80px + 10 * ((100vw - 360px) / 407)));
+              border-radius: 10px;
+              border: none;
+              padding: min(24px, calc(12px + 12 * ((100vw - 360px) / 407))) min(26px, calc(13px + 13 * ((100vw - 360px) / 407)));
+              background: rgba(120, 160, 233, 0.71);
+              @include MontserratRegular(min(16px, calc(14px + 2 * ((100vw - 360px) / 407))), normal);
+              color: $color-white;
+              resize: none;
+
+              &::placeholder {
+                @include MontserratRegular(min(16px, calc(14px + 2 * ((100vw - 360px) / 407))), normal);
+                color: $color-white;
+              }
+
+              &_error {
+                border: 2px solid $color-error;
+              }
+            }
+
+            .error_wrapper {
+              width: 100%;
+              @include flexBox(0, column, flex-start, normal);
+
+              .errorMessage {
+                @include MontserratRegular(calc(8px + 4 * ((100vw - 360px) / 407)), normal);
+                color: $color-error;
+              }
+            }
+          }
+
+          .button {
+            width: 100%;
+            height: min(45px, calc(40px + 45 * ((100vw - 360px) / 407)));
+            border-radius: 10px;
+            border: none;
+            background: $color-white;
+
+            &:hover {
+              cursor: pointer;
+              background: #D3E0F8;
+            }
+
+            &:disabled {
+              background-color: #D3E0F8;
+              cursor: not-allowed;
+            }
+
+            .button_text {
+              @include MontserratMedium(min(20px, calc(18px + 2 * ((100vw - 360px) / 407))), normal);
+              color: #6495ED;
+            }
+          }
+
+          .politic_wrapper {
+            @include flexBox(0, column, normal, normal);
+
+            .text {
+              @include MontserratRegular(min(14px, calc(10px + 4 * ((100vw - 360px) / 407))), normal);
+              color: $color-white;
+
+              &_underline {
+                @include MontserratRegular(min(14px, calc(10px + 4 * ((100vw - 360px) / 407))), normal);
+                color: $color-white;
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
