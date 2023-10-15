@@ -1,44 +1,51 @@
 @import 'src/assets/styles/utils';
 @import 'src/assets/styles/colors';
 
-.atp_block_container {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100vh;
-  border-radius: 60px;
-  background-image: url("../../../../assets/image/ATP-online/tracks.png"), linear-gradient(#FFFFFF, rgb(255, 255, 255, 1));
-  background-position: right bottom 35%;
-  background-repeat: no-repeat;
-  background-size: min(1020px, calc(560px + 510 * ((100vw - 1024px) / 896))) min(576px, calc(288px + 288 * ((100vw - 1024px) / 896))), auto;
-  padding: 19.4vh 3.5vw 0 3.5vw;
+@media screen and (min-width: 1024px) {
 
-  .logo_block {
-    @include flexBox(0, row, normal, normal);
+  .atp_block_container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    border-radius: 60px;
+    background-image: url("../../../../assets/image/ATP-online/tracks.png"), linear-gradient(#FFFFFF, rgb(255, 255, 255, 1));
+    background-position: right bottom 35%;
+    background-repeat: no-repeat;
+    background-size: min(1020px, calc(560px + 510 * ((100vw - 1024px) / 896))) min(576px, calc(288px + 288 * ((100vw - 1024px) / 896))), auto;
+    padding: 19.4vh 3.5vw 0 3.5vw;
 
-    .logo {
-      width: calc(130px + 125 * ((100vw - 1024px) / 896));
-      height: calc(136px + 126 * ((100vw - 1024px) / 896));
+    .logo_block {
+      @include flexBox(0, row, normal, normal);
+
+      .logo {
+        width: calc(130px + 125 * ((100vw - 1024px) / 896));
+        height: calc(136px + 126 * ((100vw - 1024px) / 896));
+      }
+
+      .title_block {
+        @include flexBox(0, column, normal, normal);
+
+        .title_text {
+          @include RobotoRegular(min(68px, calc(35px + 33 * ((100vw - 1024px) / 896))), normal);
+          color: $color-black;
+        }
+      }
     }
 
-    .title_block {
+    .description_block {
+      box-sizing: border-box;
       @include flexBox(0, column, normal, normal);
+      margin-top: 10vh;
+      margin-bottom: 6vh;
 
-      .title_text {
-        @include RobotoRegular(min(68px, calc(35px + 33 * ((100vw - 1024px) / 896))), normal);
+      .text_description {
+        @include MontserratRegular(min(36px, calc(20px + 16 * ((100vw - 1024px) / 896))), normal);
         color: $color-black;
       }
     }
-  }
 
-  .description_block {
-    box-sizing: border-box;
-    @include flexBox(0, column, normal, normal);
-    margin-top: 10vh;
-    margin-bottom: 6vh;
-
-    .text_description {
-      @include MontserratRegular(min(36px, calc(20px + 16 * ((100vw - 1024px) / 896))), normal);
-      color: $color-black;
+    .img {
+      display: none;
     }
   }
 }
@@ -83,6 +90,57 @@
         @include MontserratRegular(min(20px, calc(17px + 3 * ((100vw - 768px) / 255))), normal);
         color: $color-black;
       }
+    }
+
+    .img {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .atp_block_container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+    background: $color-white;
+    @include flexBox(2vh, column, center, normal);
+    padding: 15.4vh 3.5vw 0 3.5vw;
+
+    .logo_block {
+      @include flexBox(0, row, normal, normal);
+
+      .logo {
+        width: calc(79px + 0 * ((100vw - 360px) / 407));
+        height: calc(76px + 0 * ((100vw - 360px) / 407));
+      }
+
+      .title_block {
+        @include flexBox(0, column, normal, normal);
+
+        .title_text {
+          @include RobotoRegular(min(20px, calc(16px + 4 * ((100vw - 360px) / 407))), normal);
+          color: $color-black;
+        }
+      }
+    }
+
+    .description_block {
+      box-sizing: border-box;
+      @include flexBox(0, column, normal, normal);
+      margin: 0;
+
+      .text_description {
+        @include MontserratRegular(min(17px, calc(12px + 3 * ((100vw - 360px) / 407))), normal);
+        color: $color-black;
+      }
+    }
+
+    .img {
+      width: 269px;
+      height: 146px;
     }
   }
 }
