@@ -30,3 +30,10 @@ export enum Anchor {
     DOCUMENTS = 'documents',
     ADVANTAGES = 'advantages'
 }
+
+export enum RedirectURL {
+    ATPOnline = 'http://adjnatec.ru:3000',
+    YOUTUBE = 'https://youtube.com/@AdjnaTech?si=CW-d9vIfmdfmmbxs',
+    VKONTAKTE = 'https://vk.com/club221983077',
+    TELEGRAM = 'https://t.me/AdjnaTech'
+}

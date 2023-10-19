@@ -1,6 +1,7 @@
 import s from './ProgramComplexBlock.module.scss'
 import {ProgramComplexCard} from './ProgramComplexCard/ProgramComplexCard';
 import {ProgramComplexCardMobile} from './ProgramComplexCardMobile/ProgramComplexCardMobile';
+import {RedirectURL} from '../../../../enum';
 
 export type CardType = {
     number: number
@@ -69,7 +70,7 @@ const cardData: Record<string, CardType> = {
 export const ProgramComplexBlock = () => {
 
     const redirectHandler = () => {
-        window.open('http://adjnatech.ru:3000', '_blank')
+        window.open(RedirectURL.ATPOnline, '_blank')
     }
 
     return (

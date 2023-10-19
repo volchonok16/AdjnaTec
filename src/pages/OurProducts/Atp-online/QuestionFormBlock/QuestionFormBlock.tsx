@@ -5,7 +5,7 @@ import telegram from '../../../../assets/image/ATP-online/telegram.svg';
 import vkontakte from '../../../../assets/image/ATP-online/vkontakte.svg'
 import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {RoutPath} from '../../../../enum';
+import {RedirectURL, RoutPath} from '../../../../enum';
 import {sendFeedback, PostFeedbackBody} from '../../../../api/feedback/api';
 import {TextInput} from '../../../../components/TextInput/TextInput';
 import {getValidation} from '../../../../helpers/getValidation';
@@ -123,13 +123,13 @@ export const QuestionFormBlock = () => {
     }
 
     const goToYouTube = () => {
-        window.open('https://youtube.com/@AdjnaTech?si=CW-d9vIfmdfmmbxs', '_blank')
+        window.open(RedirectURL.YOUTUBE, '_blank')
     }
     const goToVkontakte = () => {
-        window.open('https://vk.com/club221983077', '_blank')
+        window.open(RedirectURL.VKONTAKTE, '_blank')
     }
     const goToTelegram = () => {
-        window.open('https://t.me/AdjnaTech', '_blank')
+        window.open(RedirectURL.TELEGRAM, '_blank')
     }
 
     return (

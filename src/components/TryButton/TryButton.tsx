@@ -1,9 +1,10 @@
 import s from './TryButton.module.scss'
+import {RedirectURL} from '../../enum';
 
 export const TryButton = () => {
 
     const redirectHandler = () => {
-        window.open('http://adjnatech.ru:3000', '_blank')
+        window.open(RedirectURL.ATPOnline, '_blank')
     }
 
     return (
