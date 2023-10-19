@@ -8,6 +8,7 @@ import {
     ParamsType
 } from '../../../../api/documentAPI/api';
 import {generatePDFFile} from '../../../../helpers/generatePDF';
+import {Anchor} from '../../../../enum';
 
 
 export type CardDataType = {
@@ -80,7 +81,7 @@ export const DocumentsBlock = () => {
     }
 
     return (
-        <div className={s.documents_container}>
+        <div className={s.documents_container} id={Anchor.DOCUMENTS}>
             <span className={s.title}>
                 <span className={s.title_blue}>ДОКУМЕНТЫ</span> И СЕРТИФИКАТЫ
             </span>

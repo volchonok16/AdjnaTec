@@ -3,6 +3,7 @@
 
 .link {
   text-decoration: none;
+  cursor: pointer;
 
   .linkText {
     @include RobotoRegular(min(18px, calc(12px + 6 * ((100vw - 768px) / 1152))), normal);

@@ -1,5 +1,6 @@
 import s from './AdvantagesBlock.module.scss'
 import {AdvantageCard} from './AdvantageCard/AdvantageCard';
+import {Anchor} from '../../../../enum';
 
 export type AdvantagesDataType = {
     title: string
@@ -28,7 +29,7 @@ const advantagesData: AdvantagesDataType[] = [
 
 export const AdvantagesBlock = () => {
     return (
-        <div className={s.advantages_block_container}>
+        <div className={s.advantages_block_container} id={Anchor.ADVANTAGES}>
             <span className={s.text}>НАШ <span className={s.text_blue}>КОМПЛЕКС</span> ОБЛАДАЕТ РЯДОМ <span
                 className={s.text_blue}>ПРИЕМУЩЕСТВ</span></span>
             <div className={s.advantages_cards_block}>
