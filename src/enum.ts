@@ -24,3 +24,9 @@ export enum RoutPath {
     Contacts = '/contacts',
     Cooperation = '/cooperation'
 }
+
+export enum Anchor {
+    CONTACTS = 'contacts',
+    DOCUMENTS = 'documents',
+    ADVANTAGES = 'advantages'
+}
