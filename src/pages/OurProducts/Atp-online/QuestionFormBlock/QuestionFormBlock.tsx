@@ -28,7 +28,8 @@ export const QuestionFormBlock = () => {
         errorMessage: nameErrorMessage,
         onBlur: nameOnBlur,
         onFocus: nameOnFocus,
-        isFocused: nameIsFocused
+        isFocused: nameIsFocused,
+        reset: nameReset
     } = useInput(nameValidationFunction)
 
     const {
@@ -38,7 +39,8 @@ export const QuestionFormBlock = () => {
         errorMessage: emailErrorMessage,
         onBlur: emailOnBlur,
         onFocus: emailOnFocus,
-        isFocused: emailIsFocused
+        isFocused: emailIsFocused,
+        reset: emailReset
     } = useInput(emailValidationFunction)
 
     const {
@@ -48,7 +50,8 @@ export const QuestionFormBlock = () => {
         errorMessage: phoneErrorMessage,
         onBlur: phoneOnBlur,
         onFocus: phoneOnFocus,
-        isFocused: phoneIsFocused
+        isFocused: phoneIsFocused,
+        reset: phoneReset
     } = useInput(phoneValidationFunction)
 
     const {
@@ -58,8 +61,16 @@ export const QuestionFormBlock = () => {
         onFocus: commentOnFocus,
         isFocused: commentIsFocused,
         error: commentError,
-        errorMessage: commentErrorMessage
+        errorMessage: commentErrorMessage,
+        reset: commentReset
     } = useInput(commentValidationFunction)
+
+    const resetForm = () => {
+        nameReset()
+        emailReset()
+        phoneReset()
+        commentReset()
+    }
 
     const isButtonDisabled = emailError || phoneError || nameError || commentError || !commentValue || !nameValue || (!phoneValue && !emailValue)
 
@@ -75,6 +86,7 @@ export const QuestionFormBlock = () => {
         sendFeedback(requestBody).then((res) => {
             if (res.status === 201) {
                 alert('Сообщение отправлено')
+                resetForm()
             }
         }).catch(error => console.error(error))
     }
