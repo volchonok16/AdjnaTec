@@ -15,40 +15,34 @@ import ECM from '../../assets/image/MainPage/ECM.png'
 export type PossibilitiesCardType = {
     title: string[],
     description: string[],
-    backgroundImage: string,
-    paddingTop: string
+    backgroundImage: string
 }
 
 const possibilitiesCardData: Record<string, PossibilitiesCardType> = {
     'ERP': {
         title: ['ERP системы'],
         description: ['Управление', 'корпоративным', 'цифровым контентом', 'системы электронного', 'документооборота'],
-        backgroundImage: ERP,
-        paddingTop: '35%'
+        backgroundImage: ERP
     },
     'Virtualization': {
         title: ['Визуализация данных'],
         description: ['Эффективный способ', 'интерпертации данных и', 'представления', 'результатов'],
-        backgroundImage: Virtualization,
-        paddingTop: '28%'
+        backgroundImage: Virtualization
     },
     'CPM': {
         title: ['Управление', 'эффективностью', 'предприятия CPM'],
         description: ['Подход СРМ декларирует', 'объединение всех ресурсов', 'компании для достижения', 'стратегических целей'],
-        backgroundImage: CPM,
-        paddingTop: '28%'
+        backgroundImage: CPM
     },
     'DevelopForOrder': {
         title: ['Разработка на заказ'],
         description: ['Ведем проект от', 'составления требований', 'до системного', 'администрирования', 'и поддержки'],
-        backgroundImage: DevelopForOrder,
-        paddingTop: '30%'
+        backgroundImage: DevelopForOrder
     },
     'ECM': {
         title: ['ECM системы'],
         description: ['В ЕСМ у каждого', 'документа есть', 'цифровой образ,', 'который можно', 'подписать', 'и отправить по', 'назначения, не выходя', 'из кабинета'],
-        backgroundImage: ECM,
-        paddingTop: '50%'
+        backgroundImage: ECM
     }
 }
 
@@ -163,19 +157,12 @@ export const MainPage = () => {
                 <div className={s.img_container_tablet}>
                     <div className={s.cards_container_tablet}>
                         <div className={s.cards_column}>
-                            <div className={s.card_1}>
-                                <span className={s.card_text}>ERP системы</span>
-                            </div>
-                            <div className={s.card_4}>
-                                <span className={s.card_text}>Разработка на заказ</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['ERP']}/>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['DevelopForOrder']}/>
                         </div>
                         <div className={s.cards_column}>
-                            <div className={s.card_3}>
-                                <span
-                                    className={s.card_text}>Управление эффективностью</span>
-                                <span className={s.card_text}>предприятия СРМ</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['CPM']}/>
                             <div className={s.card_without_back_tablet}>
         <span className={s.card_without_back_text_tablet}>Команда AdjnaTech  создает IT-решения, включающее  управление проектом,  составление технических заданий, разработку самой системы, а также её тестирование дальнейшее сопровождение.
         </span>
@@ -188,15 +175,11 @@ export const MainPage = () => {
                                 <span className={s.card_without_back_text_tablet}>Мы занимаемся разработкой програмного обеспечения. Создаем системы управления данными и оптимизации бизнес-процессов повышающие эффективность бизнеса наших клиентов.
                                 </span>
                             </div>
-                            <div className={s.card_2}>
-                                <span className={s.card_text}>Виртуализация данных</span>
-                            </div>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['Virtualization']}/>
                         </div>
                         <div className={s.cards_column}>
-                            <div className={s.connect_card_tablet}>
-                                <span
-                                    className={s.connect_card_text_tablet}>ЕСМ системы</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['ECM']}/>
                             <ConnectButton onClick={modalHandler}/>
                         </div>
                     </div>
@@ -208,34 +191,15 @@ export const MainPage = () => {
                     </span>
                     <div className={s.cards_block_mobile}>
                         <div className={s.cards_column_mobile}>
-                            <div className={s.card_1_mobile}>
-                                <span className={s.card_text_mobile}>ERP системы</span>
-                            </div>
-                            <div className={s.card_3_mobile}>
-                                <span className={s.card_text_mobile}>Управление</span>
-                                <span className={s.card_text_mobile}>эффективностью</span>
-                                <span
-                                    className={s.card_text_mobile}>предприятия СРМ</span>
-                            </div>
-                            <div className={s.card_2_mobile}>
-                                <span className={s.card_text_mobile}>Визуалтзация</span>
-                                <span className={s.card_text_mobile}>данных</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['ERP']}/>
+                            <OurPossibilitiesCard data={possibilitiesCardData['CPM']}/>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['Virtualization']}/>
                         </div>
                         <div className={s.cards_column_mobile}>
-                            <div className={s.card_4_mobile}>
-                                <span className={s.card_text_mobile}>
-                                    Разработка
-                                </span>
-                                <span className={s.card_text_mobile}>
-                                    на заказ
-                                </span>
-                            </div>
-                            <div className={s.connect_card_tablet_mobile}>
-                                <span className={s.connect_card_text_tablet_mobile}>
-                                    ECM системы
-                                </span>
-                            </div>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['DevelopForOrder']}/>
+                            <OurPossibilitiesCard data={possibilitiesCardData['ECM']}/>
                         </div>
                     </div>
                     <span className={s.card_without_back_text_mobile}>
