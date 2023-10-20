@@ -197,75 +197,10 @@
               color: $color-black;
             }
           }
-
-          .card_1 {
-            width: 22.8vw;
-            max-width: 442px;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/ERP.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_2 {
-            width: 22.8vw;
-            max-width: 442px;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/Vertyalization.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_3 {
-            width: 22.8vw;
-            max-width: 442px;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/CPM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_4 {
-            width: 22.8vw;
-            max-width: 442px;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/DevelopForOrder.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_text {
-            @include MontserratBolt(30px, normal);
-            color: $color-white;
-          }
         }
 
         .connect_container {
           @include flexBox(2.2vh, column, normal, normal);
-
-          .connect_card {
-            @include flexBox(0, column, center, center);
-            width: 23vw;
-            max-width: 442px;
-            height: 37.8vh;
-            background-image: url("../../assets/image/MainPage/ECM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-
-            .connect_card_text {
-              @include MontserratBolt(30px, normal);
-              color: $color-white;
-            }
-          }
         }
       }
 
@@ -468,70 +403,10 @@
               color: $color-black;
             }
           }
-
-          .card_1 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/ERP.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_2 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/Vertyalization.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_3 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/CPM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_4 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/DevelopForOrder.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_text {
-            @include MontserratBolt(25px, normal);
-            color: $color-white;
-          }
         }
 
         .connect_container {
           @include flexBox(2.2vh, column, normal, normal);
-
-          .connect_card {
-            @include flexBox(0, column, center, center);
-            width: 23vw;
-            height: 37.8vh;
-            background-image: url("../../assets/image/MainPage/ECM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-
-            .connect_card_text {
-              @include MontserratBolt(25px, normal);
-              color: $color-white;
-            }
-          }
         }
       }
 
@@ -734,70 +609,10 @@
               color: $color-black;
             }
           }
-
-          .card_1 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/ERP.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_2 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/Vertyalization.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_3 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/CPM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_4 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/DevelopForOrder.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_text {
-            @include MontserratBolt(23px, normal);
-            color: $color-white;
-          }
         }
 
         .connect_container {
           @include flexBox(2.2vh, column, normal, normal);
-
-          .connect_card {
-            @include flexBox(0, column, center, center);
-            width: 23vw;
-            height: 37.8vh;
-            background-image: url("../../assets/image/MainPage/ECM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-
-            .connect_card_text {
-              @include MontserratBolt(23px, normal);
-              color: $color-white;
-            }
-          }
         }
       }
 
@@ -1001,70 +816,10 @@
               color: $color-black;
             }
           }
-
-          .card_1 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/ERP.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_2 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/Vertyalization.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_3 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/CPM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_4 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/DevelopForOrder.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_text {
-            @include MontserratBolt(20px, normal);
-            color: $color-white;
-          }
         }
 
         .connect_container {
           @include flexBox(2.2vh, column, normal, normal);
-
-          .connect_card {
-            @include flexBox(0, column, center, center);
-            width: 23vw;
-            height: 37.8vh;
-            background-image: url("../../assets/image/MainPage/ECM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-
-            .connect_card_text {
-              @include MontserratBolt(20px, normal);
-              color: $color-white;
-            }
-          }
         }
       }
 
@@ -1268,70 +1023,10 @@
               color: $color-black;
             }
           }
-
-          .card_1 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/ERP.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_2 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/Vertyalization.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_3 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/CPM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_4 {
-            width: 22.8vw;
-            height: 22.77vh;
-            background-image: url("../../assets/image/MainPage/DevelopForOrder.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-            @include flexBox(0, column, center, center);
-          }
-
-          .card_text {
-            @include MontserratBolt(19px, normal);
-            color: $color-white;
-          }
         }
 
         .connect_container {
           @include flexBox(2.2vh, column, normal, normal);
-
-          .connect_card {
-            @include flexBox(0, column, center, center);
-            width: 23vw;
-            height: 37.8vh;
-            background-image: url("../../assets/image/MainPage/ECM.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 20px;
-
-            .connect_card_text {
-              @include MontserratBolt(19px, normal);
-              color: $color-white;
-            }
-          }
         }
       }
 

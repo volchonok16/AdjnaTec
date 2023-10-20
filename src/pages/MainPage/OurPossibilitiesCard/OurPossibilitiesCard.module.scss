@@ -1,0 +1,99 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.card_container {
+  box-sizing: border-box;
+  width: min(445px, 22.8vw);
+  border-radius: 20px;
+  position: relative;
+  transition: all 1.8s;
+  cursor: pointer;
+  overflow: hidden;
+  filter: brightness(0.9);
+  @include flexBox(0, column, center, center);
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  .content_container {
+    @include flexBox(10px, column, center, center);
+    transition: all 1.8s ease;
+    position: relative;
+
+    .title_container {
+      @include flexBox(0, column, center, center);
+
+      .title {
+        @include MontserratMedium(min(28px, calc(18px + 10 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+      }
+    }
+
+    .description_container {
+      @include flexBox(0, column, center, center);
+      opacity: 0;
+      transition: opacity 1.3s;
+
+      &_visible {
+        opacity: 1;
+      }
+
+      .description_text {
+        @include MontserratMedium(min(24px, calc(14px + 10 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .card_container {
+    box-sizing: border-box;
+    /*width: min(445px, 22.8vw);*/
+    width: 47vw;
+    /*height: 150px;*/
+    border-radius: 20px;
+    position: relative;
+    transition: all 1.8s;
+    cursor: pointer;
+    overflow: hidden;
+    filter: brightness(0.9);
+    @include flexBox(0, column, center, center);
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+
+    .content_container {
+      @include flexBox(10px, column, center, center);
+      transition: all 1.8s ease;
+      position: relative;
+
+      .title_container {
+        @include flexBox(0, column, center, center);
+
+        .title {
+          @include MontserratMedium(min(18px, calc(16px + 2 * ((100vw - 768px) / 255))), normal);
+          color: $color-white;
+        }
+      }
+
+      .description_container {
+        @include flexBox(0, column, center, center);
+        opacity: 0;
+        transition: opacity 1.3s;
+
+        &_visible {
+          opacity: 1;
+        }
+
+        .description_text {
+          @include MontserratMedium(min(16px, calc(14px + 2 * ((100vw - 768px) / 255))), normal);
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
