@@ -43,6 +43,13 @@ export function useInput(validate: TValidation) {
         }
     };
 
+    const reset = () => {
+        setValue("");
+        setIsValid(true);
+        setError(false);
+        setErrorMessage("");
+    };
+
     return {
         value,
         isFocused,
@@ -56,6 +63,7 @@ export function useInput(validate: TValidation) {
         setError,
         setErrorMessage,
         setValue,
-        setIsValid
+        setIsValid,
+        reset
     };
 }

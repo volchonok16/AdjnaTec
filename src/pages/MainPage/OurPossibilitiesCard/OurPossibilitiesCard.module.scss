@@ -1,0 +1,188 @@
+@import 'src/assets/styles/utils';
+@import 'src/assets/styles/colors';
+
+.card_container {
+  box-sizing: border-box;
+  width: min(445px, 22.8vw);
+  height: 22.77vh;
+  border-radius: 20px;
+  position: relative;
+  transition: all 1.8s;
+  cursor: pointer;
+  overflow: hidden;
+  filter: brightness(0.9);
+  @include flexBox(0, column, center, center);
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &_connect {
+    height: 37.8vh;
+  }
+
+  .content_container {
+    @include flexBox(10px, column, center, center);
+    transition: all 1.8s ease;
+    position: relative;
+    padding-top: 30%;
+
+    &:hover {
+      padding-top: 0;
+    }
+
+    &_connect {
+      padding-top: 50%;
+    }
+
+    .title_container {
+      @include flexBox(0, column, center, center);
+
+      .title {
+        @include MontserratMedium(min(28px, calc(18px + 10 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+      }
+    }
+
+    .description_container {
+      @include flexBox(0, column, center, center);
+      opacity: 0;
+      transition: opacity 1.3s;
+
+      &_visible {
+        opacity: 1;
+      }
+
+      .description_text {
+        @include MontserratMedium(min(24px, calc(14px + 10 * ((100vw - 1024px) / 896))), normal);
+        color: $color-white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .card_container {
+    box-sizing: border-box;
+    width: 47vw;
+    height: 150px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 1.8s;
+    cursor: pointer;
+    overflow: hidden;
+    filter: brightness(0.9);
+    @include flexBox(0, column, center, center);
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+
+    &_connect {
+      height: 248px;
+    }
+
+    .content_container {
+      @include flexBox(10px, column, center, center);
+      transition: all 1.8s ease;
+      position: relative;
+      padding-top: 22%;
+
+      &:hover {
+        padding-top: 0;
+      }
+
+      &_connect {
+        padding-top: 40%;
+      }
+
+      .title_container {
+        @include flexBox(0, column, center, center);
+
+        .title {
+          @include MontserratMedium(min(18px, calc(16px + 2 * ((100vw - 768px) / 255))), normal);
+          color: $color-white;
+        }
+      }
+
+      .description_container {
+        @include flexBox(0, column, center, center);
+        opacity: 0;
+        transition: opacity 1.3s;
+
+        &_visible {
+          opacity: 1;
+        }
+
+        .description_text {
+          @include MontserratMedium(min(16px, calc(14px + 2 * ((100vw - 768px) / 255))), normal);
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .card_container {
+    box-sizing: border-box;
+    width: 45vw;
+    height: 100px;
+    border-radius: 16px;
+    position: relative;
+    transition: all 1.8s;
+    cursor: pointer;
+    overflow: hidden;
+    filter: brightness(0.9);
+    @include flexBox(0, column, center, center);
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+
+    &_connect {
+      height: 212px;
+    }
+
+    .content_container {
+      @include flexBox(5px, column, center, center);
+      transition: all 1.8s ease;
+      position: relative;
+      padding-top: 35%;
+
+      &:hover {
+        padding-top: 0;
+      }
+
+      &_connect {
+        padding-top: 60%;
+      }
+
+      .title_container {
+        @include flexBox(0, column, center, center);
+
+        .title {
+          @include MontserratMedium(min(14px, calc(11px + 3 * ((100vw - 360px) / 407))), normal);
+          color: $color-white;
+        }
+      }
+
+      .description_container {
+        @include flexBox(0, column, center, center);
+        opacity: 0;
+        transition: opacity 1.3s;
+
+        &_visible {
+          opacity: 1;
+        }
+
+        .description_text {
+          @include MontserratMedium(min(12px, calc(10px + 2 * ((100vw - 360px) / 407))), normal);
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

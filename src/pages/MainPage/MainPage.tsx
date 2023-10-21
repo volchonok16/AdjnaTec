@@ -5,6 +5,46 @@ import {useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../enum';
 import {Modal} from '../../components/Modal/Modal';
 import {ConnectForm} from './ConnectForm/ConnectForm';
+import {OurPossibilitiesCard} from './OurPossibilitiesCard/OurPossibilitiesCard';
+import ERP from '../../assets/image/MainPage/ERP.png'
+import Virtualization from '../../assets/image/MainPage/Vertyalization.png';
+import CPM from '../../assets/image/MainPage/CPM.png';
+import DevelopForOrder from '../../assets/image/MainPage/DevelopForOrder.png';
+import ECM from '../../assets/image/MainPage/ECM.png'
+
+export type PossibilitiesCardType = {
+    title: string[],
+    description: string[],
+    backgroundImage: string
+}
+
+const possibilitiesCardData: Record<string, PossibilitiesCardType> = {
+    'ERP': {
+        title: ['ERP системы'],
+        description: ['Управление', 'корпоративным', 'цифровым контентом', 'системы электронного', 'документооборота'],
+        backgroundImage: ERP
+    },
+    'Virtualization': {
+        title: ['Визуализация данных'],
+        description: ['Эффективный способ', 'интерпертации данных и', 'представления', 'результатов'],
+        backgroundImage: Virtualization
+    },
+    'CPM': {
+        title: ['Управление', 'эффективностью', 'предприятия CPM'],
+        description: ['Подход СРМ декларирует', 'объединение всех ресурсов', 'компании для достижения', 'стратегических целей'],
+        backgroundImage: CPM
+    },
+    'DevelopForOrder': {
+        title: ['Разработка на заказ'],
+        description: ['Ведем проект от', 'составления требований', 'до системного', 'администрирования', 'и поддержки'],
+        backgroundImage: DevelopForOrder
+    },
+    'ECM': {
+        title: ['ECM системы'],
+        description: ['В ЕСМ у каждого', 'документа есть', 'цифровой образ,', 'который можно', 'подписать', 'и отправить по', 'назначения, не выходя', 'из кабинета'],
+        backgroundImage: ECM
+    }
+}
 
 export const MainPage = () => {
 
@@ -20,37 +60,11 @@ export const MainPage = () => {
         navigate(RoutPath.OurProducts)
     }
 
-    //Логика бля блочного скролинга контента
-    /*    const blockRefs = useRef<HTMLDivElement[]>([]);
-
-        const [currentBlock, setCurrentBlock] = useState<number>(0);
-
-        const handleScroll = (e: React.WheelEvent) => {
-            if (e.deltaY > 0) {
-                setCurrentBlock((prevBlock) => Math.min(prevBlock + 1, blockRefs.current.length - 1));
-            } else {
-                setCurrentBlock((prevBlock) => Math.max(prevBlock - 1, 0));
-            }
-        };
-
-        const moveBlocks = () => {
-            const offset = currentBlock ? (-currentBlock * 87) : (-currentBlock * 100)
-            blockRefs.current.forEach((block) => {
-                block.style.transform = `translateY(${offset}vh)`;
-            });
-        };
-
-        useEffect(() => {
-            moveBlocks()
-        })*/
-
 
     return (
         <div className={s.scroll_container}
-            /*onWheel={handleScroll}*/
         >
             <div
-                /*ref={(el: HTMLDivElement) => blockRefs.current[0] = el}*/
                 className={s.advert_block}>
                 <div className={s.adjna_block}>
                     <span className={s.companyName}>{'<AdjnaTec/>'}</span>
@@ -67,7 +81,6 @@ export const MainPage = () => {
                 </div>
             </div>
             <div
-                /*ref={(el: HTMLDivElement) => blockRefs.current[1] = el}*/
                 className={s.product_block}>
                 <span className={s.product_h1}>Как сократить расходы на содержание автопарка?</span>
                 <div className={s.product_container}>
@@ -112,32 +125,23 @@ export const MainPage = () => {
                 </div>
             </div>
             <div
-                /*ref={(el: HTMLDivElement) => blockRefs.current[2] = el}*/
                 className={s.about_us_block}>
                 <span className={s.our_possibilities}>Наши возможности</span>
                 <div className={s.img_container}>
                     <div className={s.cards_container}>
                         <div className={s.cards_line}>
-                            <div className={s.card_1}>
-                                <span className={s.card_text}>ERP системы</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['ERP']}/>
                             <div className={s.card_without_back}>
                             <span className={s.card_without_back_text}>Команда AdjnaTech  создает IT-решения, включающее  управление проектом,  составление технических заданий, разработку самой системы, а также её тестирование и дальнейшее сопровождение.
 </span>
                             </div>
-                            <div className={s.card_2}>
-                                <span className={s.card_text}>Визуализация данных</span>
-                            </div>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['Virtualization']}/>
                         </div>
                         <div className={s.cards_line}>
-                            <div className={s.card_3}>
-                                <span className={s.card_text}>Управление</span>
-                                <span className={s.card_text}>эффективностью</span>
-                                <span className={s.card_text}>предприятия СРМ</span>
-                            </div>
-                            <div className={s.card_4}>
-                                <span className={s.card_text}>Разработка на заказ</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['CPM']}/>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['DevelopForOrder']}/>
                             <div className={s.card_without_back}>
                             <span className={s.card_without_back_text}>Мы занимаемся разработкой програмного обеспечения. Создаем системы управления данными и оптимизации бизнес-процессов повышающие эффективность
 бизнеса наших клиентов.
@@ -146,28 +150,19 @@ export const MainPage = () => {
                         </div>
                     </div>
                     <div className={s.connect_container}>
-                        <div className={s.connect_card}>
-                            <span className={s.connect_card_text}>ЕСМ системы</span>
-                        </div>
+                        <OurPossibilitiesCard data={possibilitiesCardData['ECM']}/>
                         <ConnectButton onClick={modalHandler}/>
                     </div>
                 </div>
                 <div className={s.img_container_tablet}>
                     <div className={s.cards_container_tablet}>
                         <div className={s.cards_column}>
-                            <div className={s.card_1}>
-                                <span className={s.card_text}>ERP системы</span>
-                            </div>
-                            <div className={s.card_4}>
-                                <span className={s.card_text}>Разработка на заказ</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['ERP']}/>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['DevelopForOrder']}/>
                         </div>
                         <div className={s.cards_column}>
-                            <div className={s.card_3}>
-                                <span
-                                    className={s.card_text}>Управление эффективностью</span>
-                                <span className={s.card_text}>предприятия СРМ</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['CPM']}/>
                             <div className={s.card_without_back_tablet}>
         <span className={s.card_without_back_text_tablet}>Команда AdjnaTech  создает IT-решения, включающее  управление проектом,  составление технических заданий, разработку самой системы, а также её тестирование дальнейшее сопровождение.
         </span>
@@ -180,15 +175,11 @@ export const MainPage = () => {
                                 <span className={s.card_without_back_text_tablet}>Мы занимаемся разработкой програмного обеспечения. Создаем системы управления данными и оптимизации бизнес-процессов повышающие эффективность бизнеса наших клиентов.
                                 </span>
                             </div>
-                            <div className={s.card_2}>
-                                <span className={s.card_text}>Виртуализация данных</span>
-                            </div>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['Virtualization']}/>
                         </div>
                         <div className={s.cards_column}>
-                            <div className={s.connect_card_tablet}>
-                                <span
-                                    className={s.connect_card_text_tablet}>ЕСМ системы</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['ECM']}/>
                             <ConnectButton onClick={modalHandler}/>
                         </div>
                     </div>
@@ -200,34 +191,15 @@ export const MainPage = () => {
                     </span>
                     <div className={s.cards_block_mobile}>
                         <div className={s.cards_column_mobile}>
-                            <div className={s.card_1_mobile}>
-                                <span className={s.card_text_mobile}>ERP системы</span>
-                            </div>
-                            <div className={s.card_3_mobile}>
-                                <span className={s.card_text_mobile}>Управление</span>
-                                <span className={s.card_text_mobile}>эффективностью</span>
-                                <span
-                                    className={s.card_text_mobile}>предприятия СРМ</span>
-                            </div>
-                            <div className={s.card_2_mobile}>
-                                <span className={s.card_text_mobile}>Визуалтзация</span>
-                                <span className={s.card_text_mobile}>данных</span>
-                            </div>
+                            <OurPossibilitiesCard data={possibilitiesCardData['ERP']}/>
+                            <OurPossibilitiesCard data={possibilitiesCardData['CPM']}/>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['Virtualization']}/>
                         </div>
                         <div className={s.cards_column_mobile}>
-                            <div className={s.card_4_mobile}>
-                                <span className={s.card_text_mobile}>
-                                    Разработка
-                                </span>
-                                <span className={s.card_text_mobile}>
-                                    на заказ
-                                </span>
-                            </div>
-                            <div className={s.connect_card_tablet_mobile}>
-                                <span className={s.connect_card_text_tablet_mobile}>
-                                    ECM системы
-                                </span>
-                            </div>
+                            <OurPossibilitiesCard
+                                data={possibilitiesCardData['DevelopForOrder']}/>
+                            <OurPossibilitiesCard data={possibilitiesCardData['ECM']}/>
                         </div>
                     </div>
                     <span className={s.card_without_back_text_mobile}>

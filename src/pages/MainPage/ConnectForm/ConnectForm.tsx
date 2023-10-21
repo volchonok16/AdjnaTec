@@ -32,7 +32,8 @@ export const ConnectForm = ({closeModal}: ConnectFormPropsType) => {
         errorMessage: nameErrorMessage,
         onBlur: nameOnBlur,
         onFocus: nameOnFocus,
-        isFocused: nameIsFocused
+        isFocused: nameIsFocused,
+        reset: nameReset
     } = useInput(nameValidationFunction)
 
     const {
@@ -42,7 +43,8 @@ export const ConnectForm = ({closeModal}: ConnectFormPropsType) => {
         errorMessage: emailErrorMessage,
         onBlur: emailOnBlur,
         onFocus: emailOnFocus,
-        isFocused: emailIsFocused
+        isFocused: emailIsFocused,
+        reset: emailReset
     } = useInput(emailValidationFunction)
 
     const {
@@ -52,7 +54,8 @@ export const ConnectForm = ({closeModal}: ConnectFormPropsType) => {
         errorMessage: phoneErrorMessage,
         onBlur: phoneOnBlur,
         onFocus: phoneOnFocus,
-        isFocused: phoneIsFocused
+        isFocused: phoneIsFocused,
+        reset: phoneReset
     } = useInput(phoneValidationFunction)
 
     const {
@@ -62,8 +65,16 @@ export const ConnectForm = ({closeModal}: ConnectFormPropsType) => {
         onFocus: commentOnFocus,
         isFocused: commentIsFocused,
         error: commentError,
-        errorMessage: commentErrorMessage
+        errorMessage: commentErrorMessage,
+        reset: commentReset
     } = useInput(commentValidationFunction)
+
+    const resetForm = () => {
+        nameReset()
+        emailReset()
+        phoneReset()
+        commentReset()
+    }
 
     const isButtonDisabled = emailError || phoneError || nameError || commentError || !commentValue || !nameValue || (!phoneValue && !emailValue)
 
@@ -79,6 +90,7 @@ export const ConnectForm = ({closeModal}: ConnectFormPropsType) => {
         sendFeedback(requestBody).then((res) => {
             if (res.status === 201) {
                 closeModal()
+                resetForm()
                 alert('Сообщение отправлено')
             }
         }).catch(error => console.error(error))
