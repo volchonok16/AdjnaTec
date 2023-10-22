@@ -77,9 +77,13 @@
     @include flexBox(0, row, center, center);
     width: 188px;
     height: 36px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #7CB5FF;
     border: none;
+
+    &_atp_burger_menu {
+      background-color: #7AD3C3;
+    }
 
     &_main_page_form {
       width: min(400px, calc(250px + 150 * ((100vw - 360px) / 407)));

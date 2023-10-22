@@ -9,6 +9,10 @@ import React, {useState} from 'react';
 import {Modal} from '../Modal/Modal';
 import {ConnectForm} from '../../pages/MainPage/ConnectForm/ConnectForm';
 import {BurgerCrossIcon} from '../Icons/BurgerCrossIcon';
+import {YouTubeIcon} from '../Icons/YouTubeIcon';
+import {TelegramIcon} from '../Icons/TelegramIcon';
+import {VkontakteIcon} from '../Icons/VkontakteIcon';
+import {WhatsAppIcon} from '../Icons/WhatsAppIcon';
 
 type BurgerMenuPropsType = {
     isOpen: boolean,
@@ -74,8 +78,28 @@ export const BurgerMenu = ({
                     </div>
                 </div>
                 <div className={s.connect_container}>
-                    <span className={s.email_text}>Info@2lmfa.ru</span>
-                    <ConnectButton onClick={modalHandler}/>
+                    {
+                        isOurProductPage ? (
+                            <>
+                                <div className={s.icon_wrapper}>
+                                    <YouTubeIcon className={s.icon} width={38}
+                                                 height={28}/>
+                                    <TelegramIcon className={s.icon} width={38}
+                                                  height={28}/>
+                                    <VkontakteIcon className={s.icon} width={38}
+                                                   height={28}/>
+                                    <WhatsAppIcon className={s.icon} width={38}
+                                                  height={28}/>
+                                </div>
+                                <ConnectButton onClick={modalHandler} isMainPageBurgerMenu={false}/>
+                            </>
+                        ) : (
+                            <>
+                                <span className={s.email_text}>Info@2lmfa.ru</span>
+                                <ConnectButton onClick={modalHandler}/>
+                            </>
+                        )
+                    }
                 </div>
             </div>
             {
