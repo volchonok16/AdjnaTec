@@ -1,6 +1,5 @@
 import cn from 'classnames';
 import s from './BurgerMenu.module.scss';
-import cross from '../../assets/image/Header/cross.svg';
 import {NavBarLinks, NavBarLinksATP, pathArr} from '../Header/NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
 import {ConnectButton} from '../ConnectButton/ConnectButton';
@@ -9,6 +8,7 @@ import {LinkItemProduct} from '../LinkItemProduct/LinkItemProduct';
 import React, {useState} from 'react';
 import {Modal} from '../Modal/Modal';
 import {ConnectForm} from '../../pages/MainPage/ConnectForm/ConnectForm';
+import {BurgerCrossIcon} from '../Icons/BurgerCrossIcon';
 
 type BurgerMenuPropsType = {
     isOpen: boolean,
@@ -51,8 +51,10 @@ export const BurgerMenu = ({
         )}>
             <div className={s.menu_wrapper}>
                 <div className={s.menu_container}>
-                    <img className={s.burger_open} src={cross} alt={'cross-menu'}
-                         onClick={burgerMenuHandler}/>
+                    <BurgerCrossIcon
+                        className={cn(s.burger_open, {
+                            [s.burger_open_atp]: isOurProductPage
+                        })} onClick={burgerMenuHandler}/>
                     <div className={s.menu_list}>
                         {
                             isOurProductPage ? (

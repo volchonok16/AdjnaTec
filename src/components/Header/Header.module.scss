@@ -309,6 +309,12 @@
 
     .burger_menu {
       padding-right: 10px;
+      stroke: #8365B1;
+      stop-opacity: 0.71;
+
+      &_atp {
+        stroke: #6495ED;
+      }
     }
   }
 }
