@@ -27,8 +27,13 @@
     }
 
     .back_arrow {
-      cursor: pointer;
-      width: 6%;
+      fill: #6495ED;
+      transition: fill 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        fill: #7AD3C3;
+      }
     }
 
     .buttonsBlock {
@@ -66,7 +71,13 @@
     }
 
     .back_arrow {
-      cursor: pointer;
+      fill: #6495ED;
+      transition: fill 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        fill: #7AD3C3;
+      }
     }
 
     .buttonsBlock {
@@ -104,7 +115,13 @@
     }
 
     .back_arrow {
-      cursor: pointer;
+      fill: #6495ED;
+      transition: fill 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        fill: #7AD3C3;
+      }
     }
 
     .buttonsBlock {
@@ -142,7 +159,13 @@
     }
 
     .back_arrow {
-      cursor: pointer;
+      fill: #6495ED;
+      transition: fill 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        fill: #7AD3C3;
+      }
     }
 
     .buttonsBlock {
@@ -180,8 +203,14 @@
     }
 
     .back_arrow {
-      cursor: pointer;
-      width: 7%;
+      fill: #6495ED;
+      width: 50px;
+      transition: fill 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        fill: #7AD3C3;
+      }
     }
 
     .buttonsBlock {
@@ -219,8 +248,14 @@
     }
 
     .back_arrow {
-      cursor: pointer;
-      width: 7%;
+      fill: #6495ED;
+      width: 33px;
+      transition: fill 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        fill: #7AD3C3;
+      }
     }
 
     .buttonsBlock {
@@ -258,8 +293,14 @@
     }
 
     .back_arrow {
-      cursor: pointer;
-      width: 10%;
+      fill: #6495ED;
+      width: 33px;
+      transition: fill 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        fill: #7AD3C3;
+      }
     }
 
     .buttonsBlock {

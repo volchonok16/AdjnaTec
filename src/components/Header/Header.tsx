@@ -1,11 +1,11 @@
 import s from './Header.module.scss';
 import burger from '../../assets/image/Header/burger.svg'
-import back_arrow from '../../assets/image/Header/back_arrow.svg'
 import {NavBarLinks, NavBarLinksATP, pathArr} from './NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
 import {useLocation, useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../enum';
 import {LinkItemProduct} from '../LinkItemProduct/LinkItemProduct';
+import {HeaderBackArrowIcon} from '../Icons/HeaderBackArrowIcon';
 
 type HeaderPropsType = {
     setIsOpen: VoidFunction
@@ -33,8 +33,7 @@ export const Header = ({setIsOpen, activeLinkHandler, currentURL}: HeaderPropsTy
         <div className={s.headerContainer}>
             {
                 isOurProductPage ? (
-                    <img className={s.back_arrow} src={back_arrow} alt={'back-arrow'}
-                         onClick={mainPageHandler}/>
+                    <HeaderBackArrowIcon className={s.back_arrow} onClick={mainPageHandler}/>
                 ) : (
                     <div className={s.logo_container} onClick={mainPageHandler}/>
                 )
