@@ -1,16 +1,15 @@
 import s from './QuestionFormBlock.module.scss';
-import youtube from '../../../../assets/image/ATP-online/youtube.svg';
-import whatsapp from '../../../../assets/image/ATP-online/whatsapp.svg';
-import telegram from '../../../../assets/image/ATP-online/telegram.svg';
-import vkontakte from '../../../../assets/image/ATP-online/vkontakte.svg'
-import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {RedirectURL, RoutPath} from '../../../../enum';
+import {RoutPath} from '../../../../enum';
 import {sendFeedback, PostFeedbackBody} from '../../../../api/feedback/api';
 import {TextInput} from '../../../../components/TextInput/TextInput';
 import {getValidation} from '../../../../helpers/getValidation';
 import {useInput} from '../../../../hooks/useInput';
 import cn from 'classnames';
+import {YouTubeIcon} from '../../../../components/Icons/YouTubeIcon';
+import {WhatsAppIcon} from '../../../../components/Icons/WhatsAppIcon';
+import {TelegramIcon} from '../../../../components/Icons/TelegramIcon';
+import {VkontakteIcon} from '../../../../components/Icons/VkontakteIcon';
 
 export const QuestionFormBlock = () => {
 
@@ -91,45 +90,8 @@ export const QuestionFormBlock = () => {
         }).catch(error => console.error(error))
     }
 
-    const [scale, setScale] = useState(1);
-
-    useEffect(() => {
-        const updateScale = () => {
-            const screenWidth = window.innerWidth;
-
-            if (screenWidth <= 1024) {
-                setScale(0.5);
-            } else if (screenWidth <= 1280) {
-                setScale(0.6);
-            } else if (screenWidth <= 1440) {
-                setScale(0.7);
-            } else if (screenWidth <= 1600) {
-                setScale(0.8);
-            } else {
-                setScale(1.0);
-            }
-        };
-
-        window.addEventListener('resize', updateScale);
-        updateScale();
-
-        return () => {
-            window.removeEventListener('resize', updateScale);
-        };
-    }, []);
-
     const goToPrivacyPolicyPage = () => {
         navigate(RoutPath.PrivacyPolicy)
-    }
-
-    const goToYouTube = () => {
-        window.open(RedirectURL.YOUTUBE, '_blank')
-    }
-    const goToVkontakte = () => {
-        window.open(RedirectURL.VKONTAKTE, '_blank')
-    }
-    const goToTelegram = () => {
-        window.open(RedirectURL.TELEGRAM, '_blank')
     }
 
     return (
@@ -140,14 +102,10 @@ export const QuestionFormBlock = () => {
                     <span className={s.description}>Вы можете задать любой интересующий вас вопрос нашим специалистам. Менеджеры компании с радостью ответят на ваши вопросы, произведут расчет стоимости услуг и подготовят коммерческое предложение.</span>
                 </div>
                 <div className={s.icon_wrapper}>
-                    <img className={s.icon} style={{transform: `scale(${scale})`}}
-                         src={youtube} onClick={goToYouTube} alt={'youtube'}/>
-                    <img className={s.icon} style={{transform: `scale(${scale})`}}
-                         src={whatsapp} alt={'whatsapp'}/>
-                    <img className={s.icon} style={{transform: `scale(${scale})`}}
-                         src={telegram} onClick={goToTelegram} alt={'telegram'}/>
-                    <img className={s.icon} style={{transform: `scale(${scale})`}}
-                         src={vkontakte} onClick={goToVkontakte} alt={'vkontakte'}/>
+                    <YouTubeIcon className={s.icon_youtube}/>
+                    <WhatsAppIcon className={s.icon_whatsapp}/>
+                    <TelegramIcon className={s.icon_telegram}/>
+                    <VkontakteIcon className={s.icon_vkontakte}/>
                 </div>
             </div>
             <div className={s.right_container}>
@@ -210,15 +168,10 @@ export const QuestionFormBlock = () => {
                             <span className={s.description}>Вы можете задать любой интересующий вас вопрос нашим специалистам. Менеджеры компании с радостью ответят на ваши вопросы, произведут расчет стоимости услуг и подготовят коммерческое предложение.</span>
                         </div>
                         <div className={s.icon_wrapper}>
-                            <img className={s.icon} style={{transform: `scale(${scale})`}}
-                                 src={youtube} onClick={goToYouTube} alt={'youtube'}/>
-                            <img className={s.icon} style={{transform: `scale(${scale})`}}
-                                 src={whatsapp} alt={'whatsapp'}/>
-                            <img className={s.icon} style={{transform: `scale(${scale})`}}
-                                 src={telegram} onClick={goToTelegram} alt={'telegram'}/>
-                            <img className={s.icon} style={{transform: `scale(${scale})`}}
-                                 src={vkontakte} onClick={goToVkontakte}
-                                 alt={'vkontakte'}/>
+                            <YouTubeIcon className={s.icon_youtube}/>
+                            <WhatsAppIcon className={s.icon_whatsapp}/>
+                            <TelegramIcon className={s.icon_telegram}/>
+                            <VkontakteIcon className={s.icon_vkontakte}/>
                         </div>
                     </div>
                     <div className={s.right_container}>

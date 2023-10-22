@@ -1,11 +1,12 @@
 import s from './Header.module.scss';
-import burger from '../../assets/image/Header/burger.svg'
-import back_arrow from '../../assets/image/Header/back_arrow.svg'
 import {NavBarLinks, NavBarLinksATP, pathArr} from './NavBarLinks';
 import {LinkItem} from '../LinkItem/LinkItem';
 import {useLocation, useNavigate} from 'react-router-dom';
 import {RoutPath} from '../../enum';
 import {LinkItemProduct} from '../LinkItemProduct/LinkItemProduct';
+import {HeaderBackArrowIcon} from '../Icons/HeaderBackArrowIcon';
+import {BurgerIcon} from '../Icons/BurgerIcon';
+import cn from 'classnames';
 
 type HeaderPropsType = {
     setIsOpen: VoidFunction
@@ -33,8 +34,8 @@ export const Header = ({setIsOpen, activeLinkHandler, currentURL}: HeaderPropsTy
         <div className={s.headerContainer}>
             {
                 isOurProductPage ? (
-                    <img className={s.back_arrow} src={back_arrow} alt={'back-arrow'}
-                         onClick={mainPageHandler}/>
+                    <HeaderBackArrowIcon className={s.back_arrow}
+                                         onClick={mainPageHandler}/>
                 ) : (
                     <div className={s.logo_container} onClick={mainPageHandler}/>
                 )
@@ -44,8 +45,8 @@ export const Header = ({setIsOpen, activeLinkHandler, currentURL}: HeaderPropsTy
                     isOurProductPage ? (
                             NavBarLinksATP.map((item) => {
                                 return <LinkItemProduct item={item} currentURL={currentURL}
-                                                 key={item.path}
-                                                 onActivateLink={activeLinkHandler}/>
+                                                        key={item.path}
+                                                        onActivateLink={activeLinkHandler}/>
                             }))
                         : (
                             NavBarLinks.map((item) => {
@@ -55,8 +56,9 @@ export const Header = ({setIsOpen, activeLinkHandler, currentURL}: HeaderPropsTy
                             }))
                 }
             </div>
-            <img className={s.burger_menu} src={burger} alt={'burger menu'}
-                 onClick={burgerMenuHandler}/>
+            <BurgerIcon className={cn(s.burger_menu, {
+                [s.burger_menu_atp]: isOurProductPage
+            })} onClick={burgerMenuHandler}/>
         </div>
     )
 }

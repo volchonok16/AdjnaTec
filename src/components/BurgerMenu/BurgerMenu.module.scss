@@ -32,8 +32,12 @@
 
       .burger_open {
         padding-right: 10px;
-        width: 15px;
-        height: 15px;
+        stroke: #8365B1;
+        stop-opacity: 0.71;
+
+        &_atp {
+          stroke: #6495ED;
+        }
       }
 
       .menu_list {
@@ -44,6 +48,15 @@
 
     .connect_container {
       @include flexBox(11px, column, center, center);
+
+      .icon_wrapper {
+        @include flexBox(5px, row, center, center);
+
+        .icon {
+          fill: #6495ED;
+          fill-opacity: 0.7
+        }
+      }
 
       .email_text {
         @include RobotoRegular(15px, normal);

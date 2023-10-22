@@ -33,14 +33,38 @@
     }
 
     .icon_wrapper {
-      @include flexBox(1vw, row, normal, flex-start);
+      @include flexBox(2vw, row, normal, flex-start);
 
-      .icon {
 
-        &:hover {
-          cursor: pointer;
-          fill: $color-white;
-        }
+      .icon_youtube {
+        width: min(99px, calc(66px + 33 * ((100vw - 1024px) / 896)));
+        height: min(67px, calc(46px + 21 * ((100vw - 1024px) / 896)));
+      }
+
+      .icon_whatsapp {
+        width: min(69px, calc(51px + 18 * ((100vw - 1024px) / 896)));
+        height: min(67px, calc(46px + 21 * ((100vw - 1024px) / 896)));
+      }
+
+      .icon_telegram {
+        width: min(71px, calc(52px + 19 * ((100vw - 1024px) / 896)));
+        height: min(68px, calc(46px + 22 * ((100vw - 1024px) / 896)));
+      }
+
+      .icon_vkontakte {
+        width: min(102px, calc(68px + 34 * ((100vw - 1024px) / 896)));
+        height: min(63px, calc(42px + 21 * ((100vw - 1024px) / 896)));
+      }
+    }
+
+    .icon_wrapper svg {
+      fill: $color-white;
+      fill-opacity: 0.72;
+
+      &:hover {
+        cursor: pointer;
+        fill: $color-white;
+        fill-opacity: 100;
       }
     }
   }
@@ -168,14 +192,37 @@
           }
 
           .icon_wrapper {
-            @include flexBox(0, row, normal, flex-start);
+            @include flexBox(2vw, row, normal, flex-start);
 
-            .icon {
+            .icon_youtube {
+              width: min(66px, calc(51px + 15 * ((100vw - 768px) / 255)));
+              height: min(46px, calc(36px + 10 * ((100vw - 768px) / 255)));
+            }
 
-              &:hover {
-                cursor: pointer;
-                fill: $color-white;
-              }
+            .icon_whatsapp {
+              width: min(51px, calc(36px + 15 * ((100vw - 768px) / 255)));
+              height: min(46px, calc(36px + 10 * ((100vw - 768px) / 255)));
+            }
+
+            .icon_telegram {
+              width: min(52px, calc(37px + 15 * ((100vw - 768px) / 255)));
+              height: min(46px, calc(36px + 10 * ((100vw - 768px) / 255)));
+            }
+
+            .icon_vkontakte {
+              width: min(68px, calc(53px + 15 * ((100vw - 768px) / 255)));
+              height: min(42px, calc(32px + 10 * ((100vw - 768px) / 255)));
+            }
+          }
+
+          .icon_wrapper svg {
+            fill: $color-white;
+            fill-opacity: 0.72;
+
+            &:hover {
+              cursor: pointer;
+              fill: $color-white;
+              fill-opacity: 100;
             }
           }
         }
