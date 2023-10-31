@@ -88,6 +88,7 @@ export const QuestionFormBlock = () => {
                 resetForm()
             }
         }).catch(error => console.error(error))
+        
     }
 
     const goToPrivacyPolicyPage = () => {

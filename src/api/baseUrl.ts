@@ -1,0 +1,1 @@
+export const BASE_URL = 'http://adjnatec.ru:2000/'

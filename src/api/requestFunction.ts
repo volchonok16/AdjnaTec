@@ -1,10 +1,12 @@
+import { BASE_URL } from "./baseUrl";
+
 export function requestWithBody(
     url: string,
     method: string,
     body: string | number | object | undefined
 ) {
 
-    return fetch(process.env.REACT_APP_API_URL + url, {
+    return fetch(BASE_URL + url, {
         method,
         body: JSON.stringify(body),
         credentials: 'same-origin',
