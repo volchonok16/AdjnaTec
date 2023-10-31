@@ -1,6 +1,8 @@
+import { BASE_URL } from "./baseUrl";
+
 export function freeBodyRequest(url: string, method: string) {
 
-    return fetch(process.env.REACT_APP_API_URL + url, {
+    return fetch(BASE_URL + url, {
         method,
         credentials: "same-origin",
         headers: {

@@ -1,5 +1,6 @@
 import {freeBodyRequest} from '../freeBodyRequest';
 import {DOWNLOAD_DOCUMENT, LOOK_DOCUMENT} from '../constantAPI';
+import { BASE_URL } from '../baseUrl';
 
 export type ParamsType = 'functional' | 'staff_card' | 'benefit' | 'instructions'
 
@@ -8,7 +9,7 @@ export const lookDocument = (params: ParamsType) => {
 }
 
 export const downloadDocument = (params: ParamsType) => {
-    return fetch(process.env.REACT_APP_API_URL + `${DOWNLOAD_DOCUMENT}?document=${params}`, {
+    return fetch(BASE_URL + `${DOWNLOAD_DOCUMENT}?document=${params}`, {
         method: 'GET',
         credentials: 'same-origin',
         headers: {
