@@ -4,7 +4,7 @@
 .documents_container {
   width: 100%;
   margin-top: 5vh;
-  @include flexBox(8.7vh, column, normal, normal);
+  @include flexBox(8.7vh, column, center, normal);
 
   .title {
     @include RobotoRegular(min(54px, calc(29px + 25 * ((100vw - 1024px) / 896))), normal);
@@ -34,8 +34,7 @@
   .documents_container {
     width: 100%;
     margin-top: 5vh;
-    @include flexBox(8.7vh, column, normal, normal);
-
+    
     .title {
       @include RobotoRegular(min(29px, calc(26px + 3 * ((100vw - 768px) / 255))), normal);
       color: $color-black;
@@ -69,8 +68,7 @@
   .documents_container {
     width: 100%;
     margin-top: 9vh;
-    @include flexBox(4.7vh, column, normal, normal);
-
+    
     .title {
       @include RobotoRegular(min(24px, calc(16px + 8 * ((100vw - 360px) / 407))), normal);
       color: $color-black;

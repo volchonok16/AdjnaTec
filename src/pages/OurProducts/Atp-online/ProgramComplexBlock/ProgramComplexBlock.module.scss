@@ -4,7 +4,7 @@
 .program_complex_block_container {
   width: 100%;
   margin-top: 24vh;
-  @include flexBox(3.7vh, column, normal, normal);
+  @include flexBox(3.7vh, column, center, normal);
 
   .row_container {
     width: 100%;
@@ -68,8 +68,7 @@
   .program_complex_block_container {
     width: 100%;
     margin-top: 24vh;
-    @include flexBox(9.2vh, column, normal, normal);
-
+    
     .row_container {
       display: none;
     }
@@ -148,8 +147,7 @@
   .program_complex_block_container {
     width: 100%;
     margin-top: 10vh;
-    @include flexBox(9.2vh, column, normal, normal);
-
+    
     .row_container {
       display: none;
     }

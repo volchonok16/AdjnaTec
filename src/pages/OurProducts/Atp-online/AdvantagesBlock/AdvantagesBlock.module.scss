@@ -4,7 +4,7 @@
 .advantages_block_container {
   width: 100%;
   margin-top: 19.4vh;
-  @include flexBox(8.3vh, column, normal, normal);
+  @include flexBox(8.3vh, column, center, normal);
 
   .text {
     @include RobotoRegular(min(54px, calc(29px + 25 * ((100vw - 1024px) / 896))), normal);
@@ -25,8 +25,7 @@
   .advantages_block_container {
     width: 100%;
     margin-top: 19.4vh;
-    @include flexBox(8.3vh, column, normal, normal);
-
+    
     .text {
       @include RobotoRegular(min(29px, calc(23px + 6 * ((100vw - 768px) / 255))), normal);
       color: $color-black;
@@ -47,8 +46,7 @@
   .advantages_block_container {
     width: 100%;
     margin-top: 10vh;
-    @include flexBox(5.3vh, column, normal, normal);
-
+    
     .text {
       @include RobotoRegular(min(23px, calc(16px + 7 * ((100vw - 360px) / 407))), normal);
       color: $color-black;
